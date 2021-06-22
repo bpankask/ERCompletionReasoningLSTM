@@ -1,0 +1,352 @@
+Piecewise LSTM Part One
+Training Statistics
+Prediction Mean Squared Error,0.0051498133689165115
+Learned Reduction MSE,0.23928889632225037
+Increase MSE on Test,0.0005816915072500706
+Training Percent Change MSE,-98.12672138214111
+
+Piecewise LSTM Part Two
+Training Statistics
+Prediction Mean Squared Error,0.00628462852910161
+Learned Reduction MSE,0.2133905440568924
+Increase MSE on Test,0.0006448738276958466
+Training Percent Change MSE,-97.42512106895447
+
+Reasoner Support Test Data Evaluation
+
+No Nums
+Levenshtein Distance From Reasoner to Random Data,1008
+Levenshtein Distance From Random to Reasoner Data,1654
+Levenshtein Distance From Reasoner to Predicted Data,1558
+Levenshtein Distance From Prediction to Reasoner Data,1634
+Average Levenshtein Distance From Reasoner to Random Statement,1.256857855361596
+Average Levenshtein Distance From Random to Reasoner Statement,0.5513333333333333
+Average Levenshtein Distance From Reasoner to Predicted Statement,1.942643391521197
+Average Levenshtein Distance From Prediction to Reasoner Statement,2.060529634300126
+
+Prediction Accuracy For this Distance Measure
+True Positives,0
+False Positives,793
+False Negatives,802
+Precision,0.0
+Recall,0.0
+F1 Score,0
+
+Random Accuracy For this Distance Measure
+True Positives,29
+False Positives,2971
+False Negatives,773
+Precision,0.009666666666666667
+Recall,0.03615960099750624
+F1 Score,0.015255128879537087
+
+Nums
+Levenshtein Distance From Reasoner to Random Data,1291
+Levenshtein Distance From Random to Reasoner Data,1989
+Levenshtein Distance From Reasoner to Predicted Data,2303
+Levenshtein Distance From Prediction to Reasoner Data,2158
+Average Levenshtein Distance From Reasoner to Random Statement,1.6097256857855362
+Average Levenshtein Distance From Random to Reasoner Statement,0.663
+Average Levenshtein Distance From Reasoner to Predicted Statement,2.871571072319202
+Average Levenshtein Distance From Prediction to Reasoner Statement,2.721311475409836
+
+Prediction Accuracy For this Distance Measure
+True Positives,0
+False Positives,793
+False Negatives,802
+Precision,0.0
+Recall,0.0
+F1 Score,0
+
+Random Accuracy For this Distance Measure
+True Positives,16
+False Positives,2984
+False Negatives,786
+Precision,0.005333333333333333
+Recall,0.0199501246882793
+F1 Score,0.008416622830089426
+
+Custom
+Custom Distance From Reasoner to Random Data,3689
+Custom Distance From Random to Reasoner Data,9740
+Custom Distance From Reasoner to Predicted Data,12739
+Custom Distance From Predicted to Reasoner Data,10428
+Average Custom Distance From Reasoner to Random Statement,4.5997506234413965
+Average Custom Distance From Random to Reasoner Statement,3.2466666666666666
+Average Custom Distance From Reasoner to Predicted Statement,15.884039900249377
+Average Custom Distance From Prediction to Reasoner Statement,13.150063051702396
+
+Prediction Accuracy For this Distance Measure
+True Positives,0
+False Positives,793
+False Negatives,802
+Precision,0.0
+Recall,0.0
+F1 Score,0
+
+Random Accuracy For this Distance Measure
+True Positives,10
+False Positives,2990
+False Negatives,792
+Precision,0.0033333333333333335
+Recall,0.012468827930174564
+F1 Score,0.005260389268805892
+
+Saved Test Data From Previous LSTM Evaluation
+
+Testing Statistic
+Increase MSE on Saved,0.010346908122301102
+
+No Nums
+Levenshtein Distance From Reasoner to Random Data,1008
+Levenshtein Distance From Random to Reasoner Data,1654
+Levenshtein Distance From Reasoner to Predicted Data,1507
+Levenshtein Distance From Prediction to Reasoner Data,1683
+Average Levenshtein Distance From Reasoner to Random Statement,1.256857855361596
+Average Levenshtein Distance From Random to Reasoner Statement,0.5513333333333333
+Average Levenshtein Distance From Reasoner to Predicted Statement,1.8790523690773067
+Average Levenshtein Distance From Prediction to Reasoner Statement,2.10375
+
+Prediction Accuracy For this Distance Measure
+True Positives,0
+False Positives,800
+False Negatives,802
+Precision,0.0
+Recall,0.0
+F1 Score,0
+
+Random Accuracy For this Distance Measure
+True Positives,29
+False Positives,2971
+False Negatives,773
+Precision,0.009666666666666667
+Recall,0.03615960099750624
+F1 Score,0.015255128879537087
+
+Nums
+Levenshtein Distance From Reasoner to Random Data,1291
+Levenshtein Distance From Random to Reasoner Data,1989
+Levenshtein Distance From Reasoner to Predicted Data,2253
+Levenshtein Distance From Prediction to Reasoner Data,2204
+Average Levenshtein Distance From Reasoner to Random Statement,1.6097256857855362
+Average Levenshtein Distance From Random to Reasoner Statement,0.663
+Average Levenshtein Distance From Reasoner to Predicted Statement,2.809226932668329
+Average Levenshtein Distance From Prediction to Reasoner Statement,2.755
+
+Prediction Accuracy For this Distance Measure
+True Positives,0
+False Positives,800
+False Negatives,802
+Precision,0.0
+Recall,0.0
+F1 Score,0
+
+Random Accuracy For this Distance Measure
+True Positives,16
+False Positives,2984
+False Negatives,786
+Precision,0.005333333333333333
+Recall,0.0199501246882793
+F1 Score,0.008416622830089426
+
+Custom
+Custom Distance From Reasoner to Random Data,3689
+Custom Distance From Random to Reasoner Data,9740
+Custom Distance From Reasoner to Predicted Data,12676
+Custom Distance From Predicted to Reasoner Data,11066
+Average Custom Distance From Reasoner to Random Statement,4.5997506234413965
+Average Custom Distance From Random to Reasoner Statement,3.2466666666666666
+Average Custom Distance From Reasoner to Predicted Statement,15.805486284289277
+Average Custom Distance From Prediction to Reasoner Statement,13.8325
+
+Prediction Accuracy For this Distance Measure
+True Positives,0
+False Positives,800
+False Negatives,802
+Precision,0.0
+Recall,0.0
+F1 Score,0
+
+Random Accuracy For this Distance Measure
+True Positives,10
+False Positives,2990
+False Negatives,792
+Precision,0.0033333333333333335
+Recall,0.012468827930174564
+F1 Score,0.005260389268805892
+
+Deep LSTM
+
+Training Statistics
+Prediction Mean Squared Error,0.011422853916883469
+Learned Reduction MSE,0.2017402946949005
+Increase MSE on Test,0.002800414338707924
+Training Percent Change MSE,-95.90115547180176
+
+Test Data Evaluation
+
+No Nums
+Levenshtein Distance From Reasoner to Random Data,1008
+Levenshtein Distance From Random to Reasoner Data,1654
+Levenshtein Distance From Reasoner to Predicted Data,1620
+Levenshtein Distance From Prediction to Reasoner Data,1588
+Average Levenshtein Distance From Reasoner to Random Statement,1.256857855361596
+Average Levenshtein Distance From Random to Reasoner Statement,0.5513333333333333
+Average Levenshtein Distance From Reasoner to Predicted Statement,2.0199501246882794
+Average Levenshtein Distance From Prediction to Reasoner Statement,2.094986807387863
+
+Prediction Accuracy For this Distance Measure
+True Positives,0
+False Positives,758
+False Negatives,802
+Precision,0.0
+Recall,0.0
+F1 Score,0
+
+Random Accuracy For this Distance Measure
+True Positives,29
+False Positives,2971
+False Negatives,773
+Precision,0.009666666666666667
+Recall,0.03615960099750624
+F1 Score,0.015255128879537087
+
+Nums
+Levenshtein Distance From Reasoner to Random Data,1291
+Levenshtein Distance From Random to Reasoner Data,1989
+Levenshtein Distance From Reasoner to Predicted Data,2366
+Levenshtein Distance From Prediction to Reasoner Data,2081
+Average Levenshtein Distance From Reasoner to Random Statement,1.6097256857855362
+Average Levenshtein Distance From Random to Reasoner Statement,0.663
+Average Levenshtein Distance From Reasoner to Predicted Statement,2.9501246882793017
+Average Levenshtein Distance From Prediction to Reasoner Statement,2.7453825857519787
+
+Prediction Accuracy For this Distance Measure
+True Positives,0
+False Positives,758
+False Negatives,802
+Precision,0.0
+Recall,0.0
+F1 Score,0
+
+Random Accuracy For this Distance Measure
+True Positives,16
+False Positives,2984
+False Negatives,786
+Precision,0.005333333333333333
+Recall,0.0199501246882793
+F1 Score,0.008416622830089426
+
+Custom
+Custom Distance From Reasoner to Random Data,3689
+Custom Distance From Random to Reasoner Data,9740
+Custom Distance From Reasoner to Predicted Data,12973
+Custom Distance From Predicted to Reasoner Data,10165
+Average Custom Distance From Reasoner to Random Statement,4.5997506234413965
+Average Custom Distance From Random to Reasoner Statement,3.2466666666666666
+Average Custom Distance From Reasoner to Predicted Statement,16.17581047381546
+Average Custom Distance From Prediction to Reasoner Statement,13.410290237467018
+
+Prediction Accuracy For this Distance Measure
+True Positives,0
+False Positives,758
+False Negatives,802
+Precision,0.0
+Recall,0.0
+F1 Score,0
+
+Random Accuracy For this Distance Measure
+True Positives,10
+False Positives,2990
+False Negatives,792
+Precision,0.0033333333333333335
+Recall,0.012468827930174564
+F1 Score,0.005260389268805892
+
+Flat LSTM
+
+Training Statistics
+Prediction Mean Squared Error,0.014256729744374752
+Learned Reduction MSE,0.21705809235572815
+Increase MSE on Test,0.0024199988692998886
+Training Percent Change MSE,-94.82874274253845
+
+Test Data Evaluation
+
+No Nums
+Levenshtein Distance From Reasoner to Random Data,1008
+Levenshtein Distance From Random to Reasoner Data,1654
+Levenshtein Distance From Reasoner to Predicted Data,1546
+Levenshtein Distance From Prediction to Reasoner Data,1642
+Average Levenshtein Distance From Reasoner to Random Statement,1.256857855361596
+Average Levenshtein Distance From Random to Reasoner Statement,0.5513333333333333
+Average Levenshtein Distance From Reasoner to Predicted Statement,1.9276807980049875
+Average Levenshtein Distance From Prediction to Reasoner Statement,2.0970625798212006
+
+Prediction Accuracy For this Distance Measure
+True Positives,0
+False Positives,783
+False Negatives,802
+Precision,0.0
+Recall,0.0
+F1 Score,0
+
+Random Accuracy For this Distance Measure
+True Positives,29
+False Positives,2971
+False Negatives,773
+Precision,0.009666666666666667
+Recall,0.03615960099750624
+F1 Score,0.015255128879537087
+
+Nums
+Levenshtein Distance From Reasoner to Random Data,1291
+Levenshtein Distance From Random to Reasoner Data,1989
+Levenshtein Distance From Reasoner to Predicted Data,2250
+Levenshtein Distance From Prediction to Reasoner Data,2151
+Average Levenshtein Distance From Reasoner to Random Statement,1.6097256857855362
+Average Levenshtein Distance From Random to Reasoner Statement,0.663
+Average Levenshtein Distance From Reasoner to Predicted Statement,2.8054862842892767
+Average Levenshtein Distance From Prediction to Reasoner Statement,2.7471264367816093
+
+Prediction Accuracy For this Distance Measure
+True Positives,0
+False Positives,783
+False Negatives,802
+Precision,0.0
+Recall,0.0
+F1 Score,0
+
+Random Accuracy For this Distance Measure
+True Positives,16
+False Positives,2984
+False Negatives,786
+Precision,0.005333333333333333
+Recall,0.0199501246882793
+F1 Score,0.008416622830089426
+
+Custom
+Custom Distance From Reasoner to Random Data,3689
+Custom Distance From Random to Reasoner Data,9740
+Custom Distance From Reasoner to Predicted Data,12684
+Custom Distance From Predicted to Reasoner Data,10717
+Average Custom Distance From Reasoner to Random Statement,4.5997506234413965
+Average Custom Distance From Random to Reasoner Statement,3.2466666666666666
+Average Custom Distance From Reasoner to Predicted Statement,15.815461346633416
+Average Custom Distance From Prediction to Reasoner Statement,13.687100893997446
+
+Prediction Accuracy For this Distance Measure
+True Positives,0
+False Positives,783
+False Negatives,802
+Precision,0.0
+Recall,0.0
+F1 Score,0
+
+Random Accuracy For this Distance Measure
+True Positives,10
+False Positives,2990
+False Negatives,792
+Precision,0.0033333333333333335
+Recall,0.012468827930174564
+F1 Score,0.005260389268805892
