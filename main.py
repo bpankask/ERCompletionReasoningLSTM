@@ -8,7 +8,7 @@ import tensorflow as tf
 
 tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
-#Measuring Metrics------------------------------------------------------------------------------------------------------
+# Measuring Metrics-----------------------------------------------------------------------------------------------------
 '''
 def precision(TP, FP):
     return 0 if TP == 0 and FP == 0 else TP / (TP + FP)
@@ -182,18 +182,6 @@ def writeVectorFileWithMap(filename, vector, mapping):
     file = open(filename, "w")
     for i in range(len(vector)):
         print(mapping[i])
-        file.write("Trial: {}\n".format(i))
-        for j in range(len(vector[i])):
-            file.write("\tStep: {}\n".format(j))
-            for k in range(len(vector[i][j])):
-                file.write("\t\t{}\n".format(vector[i][j][k]))
-        file.write("\n")
-    file.close()
-
-
-def writeVectorFile(filename, vector):
-    file = io.open(filename, "w", encoding='utf-8')
-    for i in range(len(vector)):
         file.write("Trial: {}\n".format(i))
         for j in range(len(vector[i])):
             file.write("\tStep: {}\n".format(j))
@@ -557,40 +545,19 @@ def runNthTime(trainlog, evallog, epochs, learningRate, conceptSpace, roleSpace,
         return evals1[0], evals1[1], evals2[0], evals2[1], evals3[0], evals3[1]
     else:
         return evals1, evals2, evals3
-'''
 
-def nTimesCrossValidate(n, epochs, learningRate):
+def nTimesCrossValidate(n, epochs, learningRate, dataFile):
+    # Sets up logging.
     if not os.path.isdir("crossValidationFolds"): os.mkdir("crossValidationFolds")
     if not os.path.isdir("crossValidationFolds/training"): os.mkdir("crossValidationFolds/training")
     if not os.path.isdir("crossValidationFolds/evals"): os.mkdir("crossValidationFolds/evals")
     if not os.path.isdir("crossValidationFolds/saves"): os.mkdir("crossValidationFolds/saves")
 
-# If else statements to decide where to pull the data from. Synthetic vs actual
-    if os.path.isfile("saves/{}foldData.npz".format(n):
-        data = numpy.load("{}saves/{}foldData{}{}.npz".format("" if syn else "s", n, "Mixed" if mix else "",
-                                                              "Err[{}]".format(str(pert)) if pert >= 0 else ""), allow_pickle=True)
+    # Gets raw data. 
+    KB, supports, outputs, labels, stats = getRDFData(dataFile)
         
-        allTheData = data['arr_0'], data['arr_1'], data['arr_2'], data['arr_3'], data['arr_4'], data['arr_5'], data[
-            'arr_6'], data['arr_7'], data['arr_8'], data['arr_9'], data['arr_10']
-    else: # Actual Data
-        if pert >= 0 and os.path.isfile("ssaves/messData{}.npz".format(pert)):
-            data = numpy.load("ssaves/messData{}.npz".format(pert), allow_pickle=True)
-            KBs, supports, outputs, localMaps, stats, mKBs, mouts = data['arr_0'], data['arr_1'], data['arr_2'], data[
-                'arr_3'], data['arr_4'], data['arr_5'], data['arr_6']
-        else:
-            KBs, supports, outputs, localMaps, stats = getSnoDataFromFile(
-                'ssaves/data.npz')  # !!!!!!!!!!!This is probably where I would put my stuff!!!!!!!!!!!!!!!!
-            mKBs = None
-            mouts = None
-        # Creates labels for roles and concepts.
-        labels = collapseLabelMap(localMaps, stats[0][2], stats[1][2], stats[4][1])
-        if mix and pert == 0:
-            sKBs, ssupports, soutputs = getSynDataFromFile('saves/data.npz')
-            allTheData = crossValidationSplitAllData(n, KBs, supports, outputs, sKBs, ssupports, soutputs, labels, mKBs,
-                                                     mouts, conceptSpace, roleSpace, syn, mix, pert)
-        else:
-            allTheData = crossValidationSplitAllData(n, KBs, supports, outputs, None, None, None, labels, mKBs, mouts,
-                                                     conceptSpace, roleSpace, syn, mix, pert)
+    # Processes data.
+    allTheData = crossValidationSplitAllData(n, KB, supports, outputs, labels)
 
    #crossKBsTest, crossKBsTrain, crossSupportsTrain, crossSupportsTest, crossOutputsTrain, crossOutputsTest, nTruePreds, nTrueStatements, crossLabels, nErrsPreds, nErrStatements
     KBs_tests,    KBs_trains,    X_trains,           X_tests,           y_trains,          y_tests,          truePredss, trueStatementss, labelss,     nErrsPreds, nErrStatements = allTheData
@@ -673,17 +640,15 @@ def nTimesCrossValidate(n, epochs, learningRate):
     print("\nDone")
 
     return avgResult
+'''
 
-#Data manipulation------------------------------------------------------------------------------------------------------
-def crossValidationSplitAllData(n, KBs, supports, outputs, sKBs, ssupports, soutputs, localMaps, mKBs, mouts,
-                                conceptSpace, roleSpace, syn, mix, pert):
-    maxout = None if not isinstance(mouts, numpy.ndarray) else len(max(mouts, key=lambda coll: len(coll))[0])
+# Data manipulation-----------------------------------------------------------------------------------------------------
+def crossValidationSplitAllData(n, KBs, supports, outputs, localMaps):
+    # maxout = None if not isinstance(mouts, numpy.ndarray) else len(max(mouts, key=lambda coll: len(coll))[0])
 
     # Potentially calculates size of the 3D tensor which will be padded and passed to the LSTM.
     fileShapes1 = [len(supports[0]), len(max(supports, key=lambda coll: len(coll[0]))[0]),
                    len(max(outputs, key=lambda coll: len(coll[0]))[0])]
-    fileShapes2 = [len(ssupports[0]), len(max(ssupports, key=lambda coll: len(coll[0]))[0]),
-                   len(max(soutputs, key=lambda coll: len(coll[0]))[0])] if mix else [0, 0, 0]
 
     print("Repeating KBs")
     # Creates a new 3D tensor where the original KB is copied once per timestep.
@@ -710,11 +675,13 @@ def crossValidationSplitAllData(n, KBs, supports, outputs, sKBs, ssupports, sout
     # Basically just splitting KBs n times.
     crossKBsTest = numpy.zeros((len(indices), len(indices[0]), len(KBs[0]), len(KBs[0][0])), dtype=float)
     crossSupportsTest = numpy.zeros(
-        (len(indices), len(indices[0]), len(supports[0]), fileShapes1[1] if not mix else fileShapes2[1]), dtype=float)
+        (len(indices), len(indices[0]), len(supports[0]), fileShapes1[1]), dtype=float)
     crossOutputsTest = numpy.zeros(
-        (len(indices), len(indices[0]), len(outputs[0]), fileShapes1[2] if not mix else fileShapes2[2]), dtype=float)
-    crossErrTest = None if not isinstance(mKBs, numpy.ndarray) else numpy.zeros(
-        (len(indices), len(indices[0]), len(mouts[0]), maxout), dtype=float)
+        (len(indices), len(indices[0]), len(outputs[0]), fileShapes1[2]), dtype=float)
+
+    # Probably don't need yet.
+    # crossErrTest = None if not isinstance(mKBs, numpy.ndarray) else numpy.zeros(
+    #     (len(indices), len(indices[0]), len(mouts[0]), maxout), dtype=float)
 
     # If localMap is provided then create empty crossLabels array.
     if isinstance(localMaps, numpy.ndarray):
@@ -726,29 +693,14 @@ def crossValidationSplitAllData(n, KBs, supports, outputs, sKBs, ssupports, sout
     for i in range(len(indices)):
         KBns = []
         for j in range(len(indices[i])):
-            if not mix:
-                if pert >= 0.0 and isinstance(mKBs, numpy.ndarray):
-                    crossKBsTest[i][j] = mKBs[indices[i][j]]
-                    placeholder, KBn = vecToStatement(KBs[indices[i][j]], conceptSpace, roleSpace)
-                    KBns.append(KBn)
-                    crossErrTest[i][j] = numpy.hstack(
-                        [mouts[indices[i][j]], numpy.zeros([fileShapes1[0], maxout - len(mouts[indices[i][j]][0])])])
-                else:
-                    crossKBsTest[i][j] = KBs[indices[i][j]]
-                crossSupportsTest[i][j] = numpy.hstack([supports[indices[i][j]], numpy.zeros(
-                    [fileShapes1[0], fileShapes1[1] - len(supports[indices[i][j]][0])])])
-                crossOutputsTest[i][j] = numpy.hstack([outputs[indices[i][j]], numpy.zeros(
-                    [fileShapes1[0], fileShapes1[2] - len(outputs[indices[i][j]][0])])])
-            else: # Mixed values
-                crossKBsTest[i][j] = sKBs[indices[i][j]]
-                crossSupportsTest[i][j] = numpy.hstack([ssupports[indices[i][j]], numpy.zeros(
-                    [fileShapes2[0], fileShapes2[1] - len(ssupports[indices[i][j]][0])])])
-                crossOutputsTest[i][j] = numpy.hstack([soutputs[indices[i][j]], numpy.zeros(
-                    [fileShapes2[0], fileShapes2[2] - len(soutputs[indices[i][j]][0])])])
+            crossKBsTest[i][j] = KBs[indices[i][j]]
+            crossSupportsTest[i][j] = numpy.hstack([supports[indices[i][j]], numpy.zeros(
+                [fileShapes1[0], fileShapes1[1] - len(supports[indices[i][j]][0])])])
+            crossOutputsTest[i][j] = numpy.hstack([outputs[indices[i][j]], numpy.zeros(
+                [fileShapes1[0], fileShapes1[2] - len(outputs[indices[i][j]][0])])])
             if isinstance(localMaps, numpy.ndarray):
                 crossLabels[i][j] = localMaps[indices[i][j]]
-        writeVectorFile("crossValidationFolds/{}output/originalKBsIn[{}].txt".format("sn" if not syn else "", i),
-                        array(KBns))
+        writeVectorFile("crossValidationFolds/{}output/originalKBsIn[{}].txt".format("rdf", i), array(KBns))
 
     crossKBsTrain = numpy.zeros((n, len(KBs) - len(crossKBsTest[0]), len(KBs[0]), len(KBs[0][0])), dtype=float)
     crossOutputsTrain = numpy.zeros((n, len(KBs) - len(crossKBsTest[0]), len(outputs[0]), fileShapes1[2]), dtype=float)
@@ -767,48 +719,59 @@ def crossValidationSplitAllData(n, KBs, supports, outputs, sKBs, ssupports, sout
                 crossOutputsTrain[i][j] = numpy.hstack(
                     [outputs[train[k]], numpy.zeros([fileShapes1[0], fileShapes1[2] - len(outputs[train[k]][0])])])
 
-    print("Saving Reasoner Answers")
-    nTruePreds = numpy.empty(n, dtype=numpy.ndarray)
-    nTrueStatements = numpy.empty(n, dtype=numpy.ndarray)
-    nErrsPreds = numpy.empty(n, dtype=numpy.ndarray)
-    nErrStatements = numpy.empty(n, dtype=numpy.ndarray)
-    for i in range(n):
-        if not syn or (syn and mix):
-            placeholder, KBn = vecToStatementsWithLabels(crossKBsTest[i], conceptSpace, roleSpace, crossLabels[i])
-            placeholder, nTrueStatementsLabeled = vecToStatementsWithLabels(crossOutputsTest[i], conceptSpace,
-                                                                            roleSpace, crossLabels[i])
-            placeholder, inputs = vecToStatementsWithLabels(crossSupportsTest[i], conceptSpace, roleSpace,
-                                                            crossLabels[i])
-
-            writeVectorFile(
-                "crossValidationFolds/{}output/reasonerCompletion[{}].txt".format("sn" if not syn else "", i),
-                nTrueStatementsLabeled)
-
-            nTruePreds[i], nTrueStatements[i] = vecToStatements(crossOutputsTest[i], conceptSpace, roleSpace)
-            if pert >= 0:
-                nErrsPreds[i], nErrStatements[i] = vecToStatements(crossErrTest[i], conceptSpace, roleSpace)
-                writeVectorFile(
-                    "crossValidationFolds/{}output/ruinedCompletion[{}].txt".format("sn" if not syn else "", i),
-                    nErrStatements[i])
-        else:
-            placeholder, KBn = vecToStatements(crossKBsTest[i], conceptSpace, roleSpace)
-            nTruePreds[i], nTrueStatements[i] = vecToStatements(crossOutputsTest[i], conceptSpace, roleSpace)
-            if pert >= 0:
-                nErrsPreds[i], nErrStatements[i] = vecToStatements(crossErrTest[i], conceptSpace, roleSpace)
-                writeVectorFile(
-                    "crossValidationFolds/{}output/ruinedCompletion[{}].txt".format("sn" if not syn else "", i),
-                    nErrStatements[i])
-            placeholder, inputs = vecToStatements(crossSupportsTest[i], conceptSpace, roleSpace)
-
-            writeVectorFile(
-                "crossValidationFolds/{}output/reasonerCompletion[{}].txt".format("sn" if not syn else "", i),
-                nTrueStatements[i])
-
-        writeVectorFile("crossValidationFolds/{}output/{}KBsIn[{}].txt".format("sn" if not syn else "",
-                                                                               "Messed" if pert >= 0 else "", i), KBn)
-        # writeVectorFile("crossValidationFolds/{}output/supports[{}].txt".format("sn" if not syn else "",i),inputs)
+    # print("Saving Reasoner Answers")
+    # nTruePreds = numpy.empty(n, dtype=numpy.ndarray)
+    # nTrueStatements = numpy.empty(n, dtype=numpy.ndarray)
+    # nErrsPreds = numpy.empty(n, dtype=numpy.ndarray)
+    # nErrStatements = numpy.empty(n, dtype=numpy.ndarray)
+    # for i in range(n):
+    #     if not syn or (syn and mix):
+    #         placeholder, KBn = vecToStatementsWithLabels(crossKBsTest[i], conceptSpace, roleSpace, crossLabels[i])
+    #         placeholder, nTrueStatementsLabeled = vecToStatementsWithLabels(crossOutputsTest[i], conceptSpace,
+    #                                                                         roleSpace, crossLabels[i])
+    #         placeholder, inputs = vecToStatementsWithLabels(crossSupportsTest[i], conceptSpace, roleSpace,
+    #                                                         crossLabels[i])
+    #
+    #         writeVectorFile(
+    #             "crossValidationFolds/{}output/reasonerCompletion[{}].txt".format("sn" if not syn else "", i),
+    #             nTrueStatementsLabeled)
+    #
+    #         nTruePreds[i], nTrueStatements[i] = vecToStatements(crossOutputsTest[i], conceptSpace, roleSpace)
+    #         if pert >= 0:
+    #             nErrsPreds[i], nErrStatements[i] = vecToStatements(crossErrTest[i], conceptSpace, roleSpace)
+    #             writeVectorFile(
+    #                 "crossValidationFolds/{}output/ruinedCompletion[{}].txt".format("sn" if not syn else "", i),
+    #                 nErrStatements[i])
+    #     else:
+    #         placeholder, KBn = vecToStatements(crossKBsTest[i], conceptSpace, roleSpace)
+    #         nTruePreds[i], nTrueStatements[i] = vecToStatements(crossOutputsTest[i], conceptSpace, roleSpace)
+    #         if pert >= 0:
+    #             nErrsPreds[i], nErrStatements[i] = vecToStatements(crossErrTest[i], conceptSpace, roleSpace)
+    #             writeVectorFile(
+    #                 "crossValidationFolds/{}output/ruinedCompletion[{}].txt".format("sn" if not syn else "", i),
+    #                 nErrStatements[i])
+    #         placeholder, inputs = vecToStatements(crossSupportsTest[i], conceptSpace, roleSpace)
+    #
+    #         writeVectorFile(
+    #             "crossValidationFolds/{}output/reasonerCompletion[{}].txt".format("sn" if not syn else "", i),
+    #             nTrueStatements[i])
+    #
+    #     writeVectorFile("crossValidationFolds/{}output/{}KBsIn[{}].txt".format("sn" if not syn else "",
+    #                                                                            "Messed" if pert >= 0 else "", i), KBn)
+    #     # writeVectorFile("crossValidationFolds/{}output/supports[{}].txt".format("sn" if not syn else "",i),inputs)
 
     return crossKBsTest, crossKBsTrain, crossSupportsTrain, crossSupportsTest, crossOutputsTrain, crossOutputsTest, nTruePreds, nTrueStatements, crossLabels, nErrsPreds, nErrStatements
+
+def writeVectorFile(filename, vector):
+    file = io.open(filename, "w", encoding='utf-8')
+    for i in range(len(vector)):
+        file.write("Trial: {}\n".format(i))
+        for j in range(len(vector[i])):
+            file.write("\tStep: {}\n".format(j))
+            for k in range(len(vector[i][j])):
+                file.write("\t\t{}\n".format(vector[i][j][k]))
+        file.write("\n")
+    file.close()
 
 def getRDFData(file):
     with open(file) as f:
