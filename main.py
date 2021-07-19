@@ -179,13 +179,17 @@ def vecToStatementsWithLabels(vec,conceptSpace,roleSpace,labels):
     four = []
     statementStr = []
     statementPred = []
-    
+
+    # For each piece of sample data in the predicted y from model.
     for i in range(len(vec)):
         trialStr = []
         trialPred = []
+
+        # For each timestep in the sample
         for j in range(len(vec[i])):
             stepStr = []
             stepPred = []
+
             for k in range(len(vec[i][j])):
                 if len(four) == 3:
                     four.append(vec[i][j][k])
