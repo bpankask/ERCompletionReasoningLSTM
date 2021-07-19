@@ -91,65 +91,6 @@ def levDistanceNoNums(shape, newStatements, trueStatements, conceptSpace, roleSp
     return levTR, levRT, levTN, levNT, sizeTrue, sizeNew, sizeRan, F1s, rF1s
 
 
-def levDistance(shape, newStatements, trueStatements, conceptSpace, roleSpace, syn, mix):
-    if (syn and os.path.isfile("saves/randoStr.npz")) or os.path.isfile("ssaves/randoStr.npz"):
-        rando = numpy.load("saves/randoStr.npz" if syn else "ssaves/randoStr.npz", allow_pickle=True)
-        rando = rando['arr_0'].tolist()
-    else:
-        rando = makeRandomStrCompletions(shape, conceptSpace, roleSpace, syn)
-
-    flatTrue = [[item for sublist in x for item in sublist] for x in trueStatements]
-    flatRand = [[item for sublist in x for item in sublist] for x in rando]
-    flatNew = [[item for sublist in x for item in sublist] for x in newStatements]
-
-    F1s = array([0, 0, 0])
-    rF1s = array([0, 0, 0])
-
-    levTR = 0
-    levRT = 0
-    levTN = 0
-    levNT = 0
-
-    countRan = 0
-    countTrue = 0
-    countNew = 0
-
-    for i in range(len(rando)):
-        for j in range(len(rando[i])):
-            for k in range(len(rando[i][j])):
-                countRan = countRan + 1
-                if len(trueStatements) > i and len(trueStatements[i]) > j and len(
-                        trueStatements[i][j]) > k:  # FOR VERY TRUE STATEMENT
-                    countTrue = countTrue + 1
-                    levTR = levTR + findBestMatch(trueStatements[i][j][k],
-                                                  flatRand[i])  # compare to best match in random and vice versa
-                    best = findBestMatch(rando[i][j][k], flatTrue[i])
-                    if best == 0: rF1s[0] = rF1s[0] + 1
-                    levRT = levRT + best
-
-                    if (len(newStatements) > i and len(newStatements[i]) > 0):
-                        levTN = levTN + findBestMatch(trueStatements[i][j][k], flatNew[
-                            i])  # if there are predictions for this KB, compare to best match in there
-                    elif not mix:
-                        levTN = levTN + levenshtein(trueStatements[i][j][k], '')  # otherwise compare with no prediction
-
-                if len(newStatements) > i and len(newStatements[i]) > j and len(
-                        newStatements[i][j]) > k:  # FOR EVERY PREDICTION
-                    countNew = countNew + 1
-                    if (len(trueStatements) > i and len(trueStatements[i]) > 0):
-                        best = findBestMatch(newStatements[i][j][k], flatTrue[i])
-                        if best == 0: F1s[0] = F1s[0] + 1
-                        levNT = levNT + best  # if there are true values for this KB, compare to best match in there
-                    elif not mix:
-                        levNT = levNT + levenshtein(newStatements[i][j][k], '')  # otherwise compare with no true value
-
-    F1s[1] = countNew - F1s[0]
-    F1s[2] = countTrue - F1s[0]
-    rF1s[1] = countRan - rF1s[0]
-    rF1s[2] = countTrue - rF1s[0]
-    return levTR, levRT, levTN, levNT, countTrue, countNew, countRan, F1s, rF1s
-
-
 def findBestMatch(statement, reasonerSteps):
     return min(map(partial(levenshtein, statement), reasonerSteps))
 
@@ -227,20 +168,51 @@ def customDistance(shape, newPred, truePred, conceptSpace, roleSpace, syn, mix):
     return custTR, custRT, custTN, custNT, countTrue, countNew, countRan, F1s, rF1s
 
 
+def convertAllNumsToAtoms(s1, s2):
+    dic = {}
+    a = 'a'
+    st = ""
+    longer = False
+    for i in range(len(s1)):
+        if s1[i].isdigit() and not longer:
+            st = s1[i]
+            for j in range(i + 1, len(s1)):
+                if s1[j].isdigit():
+                    longer = True
+                    st = st + s1[j]
+                else:
+                    break
+            if not int(st) in dic.keys():
+                dic[int(st)] = a
+                a = chr(ord(a) + 1)
+        elif not s1[i].isdigit():
+            longer = False
+    longer = False
+    for i in range(len(s2)):
+        if s2[i].isdigit() and not longer:
+            st = s2[i]
+            for j in range(i + 1, len(s2)):
+                if s2[j].isdigit():
+                    longer = True
+                    st = st + s2[j]
+                else:
+                    break
+            if not int(st) in dic.keys():
+                dic[int(st)] = a
+                a = chr(ord(a) + 1)
+        elif not s1[i].isdigit():
+            longer = False
+
+    for key in sorted(dic, reverse=True):
+        s1 = s1.replace(str(key), dic[key])
+        s2 = s2.replace(str(key), dic[key])
+    s1 = s1.replace(" ", "")
+    s2 = s2.replace(" ", "")
+    return s1, s2
+
+
 def findBestPredMatch(statement, otherKB, conceptSpace, roleSpace):
     return min(map(partial(custom, conceptSpace, roleSpace, statement), otherKB))
-
-
-def precision(TP, FP):
-    return 0 if TP == 0 and FP == 0 else TP / (TP + FP)
-
-
-def recall(TP, FN):
-    return 0 if TP == 0 and FN == 0 else TP / (TP + FN)
-
-
-def F1(precision, recall):
-    return 0 if precision == 0 and recall == 0 else 2 * (precision * recall) / (precision + recall)
 
 
 def distanceEvaluations(log, shape, newPreds, truePreds, newStatements, trueStatements):
@@ -287,55 +259,71 @@ def distanceEvaluations(log, shape, newPreds, truePreds, newStatements, trueStat
 
         c = write_evaluation_measures(F13, F131, log)
 
-        return array([array([levTR, levRT, levTN, levNT, sizeTrue, sizeNew, sizeRan, a]),
-                      array([levTR2, levRT2, levTN2, levNT2, sizeTrue2, sizeNew2, sizeRan2, b]),
-                      array([custTR, custRT, custTN, custNT, countTrue, countNew, countRan, c])])
+        return numpy.array([numpy.array([levTR, levRT, levTN, levNT, sizeTrue, sizeNew, sizeRan, a]),
+                      numpy.array([levTR2, levRT2, levTN2, levNT2, sizeTrue2, sizeNew2, sizeRan2, b]),
+                      numpy.array([custTR, custRT, custTN, custNT, countTrue, countNew, countRan, c])])
 
 
+def levDistance(shape, newStatements, trueStatements):
+    if (syn and os.path.isfile("saves/randoStr.npz")) or os.path.isfile("ssaves/randoStr.npz"):
+        rando = numpy.load("saves/randoStr.npz" if syn else "ssaves/randoStr.npz", allow_pickle=True)
+        rando = rando['arr_0'].tolist()
+    else:
+        rando = makeRandomStrCompletions(shape, conceptSpace, roleSpace, syn)
 
-def convertAllNumsToAtoms(s1, s2):
-    dic = {}
-    a = 'a'
-    st = ""
-    longer = False
-    for i in range(len(s1)):
-        if s1[i].isdigit() and not longer:
-            st = s1[i]
-            for j in range(i + 1, len(s1)):
-                if s1[j].isdigit():
-                    longer = True
-                    st = st + s1[j]
-                else:
-                    break
-            if not int(st) in dic.keys():
-                dic[int(st)] = a
-                a = chr(ord(a) + 1)
-        elif not s1[i].isdigit():
-            longer = False
-    longer = False
-    for i in range(len(s2)):
-        if s2[i].isdigit() and not longer:
-            st = s2[i]
-            for j in range(i + 1, len(s2)):
-                if s2[j].isdigit():
-                    longer = True
-                    st = st + s2[j]
-                else:
-                    break
-            if not int(st) in dic.keys():
-                dic[int(st)] = a
-                a = chr(ord(a) + 1)
-        elif not s1[i].isdigit():
-            longer = False
+    flatTrue = [[item for sublist in x for item in sublist] for x in trueStatements]
+    flatRand = [[item for sublist in x for item in sublist] for x in rando]
+    flatNew = [[item for sublist in x for item in sublist] for x in newStatements]
 
-    for key in sorted(dic, reverse=True):
-        s1 = s1.replace(str(key), dic[key])
-        s2 = s2.replace(str(key), dic[key])
-    s1 = s1.replace(" ", "")
-    s2 = s2.replace(" ", "")
-    return s1, s2
+    F1s = numpy.array([0, 0, 0])
+    rF1s = numpy.array([0, 0, 0])
+
+    levTR = 0
+    levRT = 0
+    levTN = 0
+    levNT = 0
+
+    countRan = 0
+    countTrue = 0
+    countNew = 0
+
+    for i in range(len(rando)):
+        for j in range(len(rando[i])):
+            for k in range(len(rando[i][j])):
+                countRan = countRan + 1
+                if len(trueStatements) > i and len(trueStatements[i]) > j and len(
+                        trueStatements[i][j]) > k:  # FOR VERY TRUE STATEMENT
+                    countTrue = countTrue + 1
+                    levTR = levTR + findBestMatch(trueStatements[i][j][k],
+                                                  flatRand[i])  # compare to best match in random and vice versa
+                    best = findBestMatch(rando[i][j][k], flatTrue[i])
+                    if best == 0: rF1s[0] = rF1s[0] + 1
+                    levRT = levRT + best
+
+                    if (len(newStatements) > i and len(newStatements[i]) > 0):
+                        levTN = levTN + findBestMatch(trueStatements[i][j][k], flatNew[
+                            i])  # if there are predictions for this KB, compare to best match in there
+                    elif not mix:
+                        levTN = levTN + levenshtein(trueStatements[i][j][k], '')  # otherwise compare with no prediction
+
+                if len(newStatements) > i and len(newStatements[i]) > j and len(
+                        newStatements[i][j]) > k:  # FOR EVERY PREDICTION
+                    countNew = countNew + 1
+                    if (len(trueStatements) > i and len(trueStatements[i]) > 0):
+                        best = findBestMatch(newStatements[i][j][k], flatTrue[i])
+                        if best == 0: F1s[0] = F1s[0] + 1
+                        levNT = levNT + best  # if there are true values for this KB, compare to best match in there
+                    elif not mix:
+                        levNT = levNT + levenshtein(newStatements[i][j][k], '')  # otherwise compare with no true value
+
+    F1s[1] = countNew - F1s[0]
+    F1s[2] = countTrue - F1s[0]
+    rF1s[1] = countRan - rF1s[0]
+    rF1s[2] = countTrue - rF1s[0]
+    return levTR, levRT, levTN, levNT, countTrue, countNew, countRan, F1s, rF1s
 
 
+# ----------------------------------------------------------------------------------------------------------------------
 def write_evaluation_measures(F, rF, log):
     TPs, FPs, FNs = F
     pre = precision(TPs, FPs)
@@ -358,3 +346,15 @@ def write_evaluation_measures(F, rF, log):
             TPs, FPs, FNs, pre, rec, F))
 
     return numpy.array([x, numpy.array([TPs, FPs, FNs, pre, rec, F])])
+
+
+def precision(TP, FP):
+    return 0 if TP == 0 and FP == 0 else TP / (TP + FP)
+
+
+def recall(TP, FN):
+    return 0 if TP == 0 and FN == 0 else TP / (TP + FN)
+
+
+def F1(precision, recall):
+    return 0 if precision == 0 and recall == 0 else 2 * (precision * recall) / (precision + recall)

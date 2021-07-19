@@ -795,13 +795,18 @@ def get_rdf_data(file):
 
 
 def pad_list_of_lists(list):
+    """Pads a list of lists so that each list within the main list is equal sizes."""
     for i in range(len(list)):
         element = list[i]
         targetPadNum = 0
+
+        # Gets the max padding length
         for j in range(len(element)):
             temp = element[j]
             if(len(temp) > targetPadNum):
                 targetPadNum = len(temp)
+
+        # Pads each list within the main list
         for j in range(len(element)):
             temp = element[j]
             while len(temp) < targetPadNum:
@@ -854,7 +859,7 @@ if __name__ == "__main__":
     tf.disable_v2_behavior()
     tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
-    # args = read_inputs()
-    #
-    # n_times_cross_validate(n=args.cross, epochs=args.epochs, learningRate=args.learningRate,
-    #                        dataFile="rdfData/test1.1.json")
+    args = read_inputs()
+
+    n_times_cross_validate(n=args.cross, epochs=args.epochs, learningRate=args.learningRate,
+                           dataFile="rdfData/test1.1.json")
