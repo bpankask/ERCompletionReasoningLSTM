@@ -1,0 +1,8 @@
+
+Flat LSTM
+
+Training Statistics
+Prediction Mean Squared Error,0.05457649007439613
+Learned Reduction MSE,0.10519884526729584
+Increase MSE on Test,0.00016166642308235168
+Training Percent Change MSE,-65.90842008590698

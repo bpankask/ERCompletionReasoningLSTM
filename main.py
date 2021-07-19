@@ -2,11 +2,7 @@ import os, sys, shutil, argparse, random, numpy, math
 import io
 import json
 from numpy import array
-from functools import partial
-import tensorflow as tf
-# from tensorflow.contrib import rnn
-
-tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+import tensorflow.compat.v1 as tf
 
 # Measuring Metrics-----------------------------------------------------------------------------------------------------
 '''
@@ -189,12 +185,6 @@ def writeVectorFileWithMap(filename, vector, mapping):
                 file.write("\t\t{}\n".format(vector[i][j][k]))
         file.write("\n")
     file.close()
-
-
-def trainingStats(log, mseNew, mse0, mseL):
-    log.write(
-        "Training Statistics\nPrediction Mean Squared Error,{}\nLearned Reduction MSE,{}\nIncrease MSE on Test,{}\nTraining Percent Change MSE,{}\n".format(
-            numpy.float32(mseNew), mse0 - mseL, numpy.float32(mseNew) - mseL, (mseL - mse0) / mse0 * 100))
 
 
 #Helpers for learning models--------------------------------------------------------------------------------------------
@@ -424,66 +414,6 @@ def repeatAndSplitKBs(kbs, steps, splitSize):
 #                                    conceptSpace, roleSpace, syn, mix, errPreds, errStatements)
 
 
-def flatSystem(n_epochs2, learning_rate2, trainlog, evallog, conceptSpace, roleSpace, allTheData, syn, mix, n):
-    """"The base line recurrent model for comparison with other rnn models."""
-    KBs_test, KBs_train, X_train, X_test, y_train, y_test, truePreds, trueStatements, labels, errPreds, errStatements = allTheData
-
-    trainlog.write("Flat LSTM\nEpoch,Mean Squared Error,Root Mean Squared Error\n")
-    evallog.write("\nFlat LSTM\n\n")
-    print("")
-
-    X0 = tf.placeholder(tf.float32, shape=[None, KBs_train.shape[1], KBs_train.shape[2]])
-    y1 = tf.placeholder(tf.float32, shape=[None, y_train.shape[1], y_train.shape[2]])
-
-    outputs2, states2 = tf.nn.dynamic_rnn(tf.contrib.rnn.LSTMCell(num_units=y_train.shape[2]), X0, dtype=tf.float32)
-
-    loss2 = tf.losses.mean_squared_error(y1, outputs2)
-    optimizer2 = tf.train.AdamOptimizer(learning_rate=learning_rate2)
-    training_op2 = optimizer2.minimize(loss2)
-
-    # saver = tf.train.Saver()
-
-    init2 = tf.global_variables_initializer()
-
-    with tf.Session() as sess:
-        init2.run()
-        mse0 = 0
-        mseL = 0
-        for epoch in range(n_epochs2):
-            print("Flat System\t\tEpoch: {}".format(epoch))
-            ynew, a = sess.run([outputs2, training_op2], feed_dict={X0: KBs_train, y1: y_train})
-            mse = loss2.eval(feed_dict={outputs2: ynew, y1: y_train})
-            if epoch == 0: mse0 = mse
-            if epoch == n_epochs2 - 1: mseL = mse
-            trainlog.write("{},{},{}\n".format(epoch, mse, math.sqrt(mse)))
-            if mse < 0.0001:
-                mseL = mse
-                break
-
-        print("\nEvaluating Result\n")
-
-        y_pred = sess.run(outputs2, feed_dict={X0: KBs_test})
-        mseNew = loss2.eval(feed_dict={outputs2: y_pred, y1: y_test})
-
-        trainingStats(evallog, mseNew, mse0, mseL)
-
-        evallog.write("\nTest Data Evaluation\n")
-
-        newPreds, newStatements = vecToStatementsWithLabels(y_pred, conceptSpace, roleSpace, labels) if (
-                    not mix and not syn) else vecToStatements(y_pred, conceptSpace, roleSpace)
-
-        writeVectorFile(
-            "crossValidationFolds/{}output/predictionFlatArchitecture[{}].txt".format("" if syn else "sn", n),
-            newStatements)
-
-        if (not mix and not syn):
-            newPreds, newStatements = vecToStatements(y_pred, conceptSpace, roleSpace)
-
-        # saver.save(sess,"{}{}saves/deepModel[{}]".format("" if n == 1 else "crossValidationFolds/","" if syn else "s",n))
-
-        return distanceEvaluations(evallog, y_pred.shape, newPreds, truePreds, newStatements, trueStatements,
-                                   conceptSpace, roleSpace, syn, mix, errPreds, errStatements)
-
 
 #Important for Running--------------------------------------------------------------------------------------------------
 
@@ -522,128 +452,188 @@ def runOnce(trainlog, evallog, epochs, learningRate, conceptSpace, roleSpace, sy
 
     print("\nDone")
 
+'''
 
-def runNthTime(trainlog, evallog, epochs, learningRate, conceptSpace, roleSpace, nthData, syn, mix, n):
+
+def training_stats(log, mseNew, mse0, mseL):
+    log.write(
+        "Training Statistics\nPrediction Mean Squared Error,{}\nLearned Reduction MSE,{}\nIncrease MSE on Test,{}\nTraining Percent Change MSE,{}\n".format(
+            numpy.float32(mseNew), mse0 - mseL, numpy.float32(mseNew) - mseL, (mseL - mse0) / mse0 * 100))
+
+
+def flat_system(n_epochs2, learning_rate2, trainlog, evallog, allTheData, n):
+    """"The base line recurrent model for comparison with other rnn models."""
+    KBs_test, KBs_train, X_train, X_test, y_train, y_test, labels, = allTheData
+
+    trainlog.write("Flat LSTM\nEpoch,Mean Squared Error,Root Mean Squared Error\n")
+    evallog.write("\nFlat LSTM\n\n")
+    print("")
+
+    X0 = tf.compat.v1.placeholder(tf.float32, shape=[None, KBs_train.shape[1], KBs_train.shape[2]])
+    y1 = tf.compat.v1.placeholder(tf.float32, shape=[None, y_train.shape[1], y_train.shape[2]])
+
+    outputs2, states2 = tf.nn.dynamic_rnn(tf.nn.rnn_cell.LSTMCell(num_units=y_train.shape[2]), X0, dtype=tf.float32)
+
+    loss2 = tf.losses.mean_squared_error(y1, outputs2)
+    optimizer2 = tf.train.AdamOptimizer(learning_rate=learning_rate2)
+    training_op2 = optimizer2.minimize(loss2)
+
+    # saver = tf.train.Saver()
+
+    init2 = tf.global_variables_initializer()
+
+    with tf.Session() as sess:
+        init2.run()
+        mse0 = 0
+        mseL = 0
+        for epoch in range(n_epochs2):
+            print("Flat System\t\tEpoch: {}".format(epoch))
+            ynew, a = sess.run([outputs2, training_op2], feed_dict={X0: KBs_train, y1: y_train})
+            mse = loss2.eval(feed_dict={outputs2: ynew, y1: y_train})
+            if epoch == 0: mse0 = mse
+            if epoch == n_epochs2 - 1: mseL = mse
+            trainlog.write("{},{},{}\n".format(epoch, mse, math.sqrt(mse)))
+            if mse < 0.0001:
+                mseL = mse
+                break
+
+        print("\nEvaluating Result\n")
+
+        y_pred = sess.run(outputs2, feed_dict={X0: KBs_test})
+        mseNew = loss2.eval(feed_dict={outputs2: y_pred, y1: y_test})
+
+        training_stats(evallog, mseNew, mse0, mseL)
+
+        # evallog.write("\nTest Data Evaluation\n")
+        #
+        # newPreds, newStatements = vecToStatementsWithLabels(y_pred, conceptSpace, roleSpace, labels) if (
+        #             not mix and not syn) else vecToStatements(y_pred, conceptSpace, roleSpace)
+        #
+        # writeVectorFile("crossValidationFolds/output/predictionFlatArchitecture[{}].txt".format(n), newStatements)
+        #
+        # # newPreds, newStatements = vecToStatements(y_pred, conceptSpace, roleSpace)
+        #
+        # # saver.save(sess,"{}{}saves/deepModel[{}]".format("" if n == 1 else "crossValidationFolds/","" if syn else "s",n))
+        #
+        # return distanceEvaluations(evallog, y_pred.shape, newPreds, truePreds, newStatements, trueStatements,
+        #                            conceptSpace, roleSpace, syn, mix, errPreds, errStatements)
+
+
+# def vecToStatementsWithLabels(vec, conceptSpace, roleSpace, labels):
+#     four = []
+#     statementStr = []
+#     statementPred = []
+#
+#     for i in range(len(vec)):
+#         trialStr = []
+#         trialPred = []
+#         for j in range(len(vec[i])):
+#             stepStr = []
+#             stepPred = []
+#             for k in range(len(vec[i][j])):
+#                 if len(four) == 3:
+#                     four.append(vec[i][j][k])
+#                     pred, stri = convertToStatementWithLabels(four, conceptSpace, roleSpace, labels[i])
+#                     if stri != None: stepStr.append(stri)
+#                     if pred != None: stepPred.append(pred)
+#                     four = []
+#                 else:
+#                     four.append(vec[i][j][k])
+#             if len(stepStr) > 0:
+#                 trialStr.append(stepStr)
+#             if len(stepPred) > 0:
+#                 trialPred.append(stepPred)
+#         statementStr.append(trialStr)
+#         statementPred.append(trialPred)
+#
+#     return statementPred, statementStr
+
+
+def run_nth_time(trainlog, evallog, epochs, learningRate, nthData, n):
     """Runs and collects results from shallow, deep, and flat models for one cycle of the cross validation."""
-    evals1 = shallowSystem(int(epochs / 2), learningRate, trainlog, evallog, conceptSpace, roleSpace, nthData, syn, mix,
-                           n)
+    # evals1 = shallowSystem(int(epochs / 2), learningRate, trainlog, evallog, conceptSpace, roleSpace, nthData, syn, mix,
+    #                        n)
+    #
+    # tf.reset_default_graph()
+    #
+    # evals2 = deepSystem(epochs, learningRate / 2, trainlog, evallog, conceptSpace, roleSpace, nthData, syn, mix, n)
+    #
+    # tf.reset_default_graph()
 
-    tf.reset_default_graph()
-
-    evals2 = deepSystem(epochs, learningRate / 2, trainlog, evallog, conceptSpace, roleSpace, nthData, syn, mix, n)
-
-    tf.reset_default_graph()
-
-    evals3 = flatSystem(epochs, learningRate / 2, trainlog, evallog, conceptSpace, roleSpace, nthData, syn, mix, n)
+    evals3 = flat_system(epochs, learningRate / 2, trainlog, evallog, nthData, n)
 
     tf.reset_default_graph()
 
     trainlog.close()
     evallog.close()
 
-    if mix:
-        return evals1[0], evals1[1], evals2[0], evals2[1], evals3[0], evals3[1]
-    else:
-        return evals1, evals2, evals3
+    # return evals1, evals2, evals3
+    return evals3
 
-def nTimesCrossValidate(n, epochs, learningRate, dataFile):
+
+def n_times_cross_validate(n, epochs, learningRate, dataFile):
     # Sets up logging.
     if not os.path.isdir("crossValidationFolds"): os.mkdir("crossValidationFolds")
     if not os.path.isdir("crossValidationFolds/training"): os.mkdir("crossValidationFolds/training")
     if not os.path.isdir("crossValidationFolds/evals"): os.mkdir("crossValidationFolds/evals")
     if not os.path.isdir("crossValidationFolds/saves"): os.mkdir("crossValidationFolds/saves")
+    if not os.path.isdir("crossValidationFolds/output"): os.mkdir("crossValidationFolds/output")
 
     # Gets raw data. 
-    KB, supports, outputs, labels, stats = getRDFData(dataFile)
-        
-    # Processes data.
-    allTheData = crossValidationSplitAllData(n, KB, supports, outputs, labels)
+    KB, supports, outputs, labels = convert_data_to_arrays(get_rdf_data(dataFile))
 
-   #crossKBsTest, crossKBsTrain, crossSupportsTrain, crossSupportsTest, crossOutputsTrain, crossOutputsTest, nTruePreds, nTrueStatements, crossLabels, nErrsPreds, nErrStatements
-    KBs_tests,    KBs_trains,    X_trains,           X_tests,           y_trains,          y_tests,          truePredss, trueStatementss, labelss,     nErrsPreds, nErrStatements = allTheData
-    # Saves all the data in a file for some reason.
-    numpy.savez("{}saves/{}foldData{}{}.npz".format("" if syn else "s", n, "Mixed" if mix else "",
-                                                    "Err[{}]".format(str(pert)) if pert >= 0 else ""), KBs_tests,
-                KBs_trains, X_trains, X_tests, y_trains, y_tests, truePredss, trueStatementss, labelss, nErrsPreds,
-                nErrStatements)
+    # Processes data.
+    allTheData = cross_validation_split_all_data(n, KB, supports, outputs, labels)
+
+    KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss = allTheData
+
+    # Saves all the data in a file for some reason?
+    numpy.savez("saves/{}foldData.npz".format(n), KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss)
 
     if isinstance(labelss, numpy.ndarray):
         if (labelss.ndim and labelss.size) == 0:
             labelss = None
 
-    evals = numpy.zeros(((6, 3, 8) if mix else ((3, 3, 9) if pert >= 0 else (3, 3, 8))), dtype=numpy.float64)
+    evals = numpy.zeros((3, 3, 8), dtype=numpy.float64)
     for i in range(n):
-        print("\nCross Validation Fold {}\n\nTraining With {} Data\nTesting With {} Data\n".format(i,
-                                                                                                   "Synthetic" if syn else "SNOMED",
-                                                                                                   "Synthetic" if syn else "SNOMED"))
-        x = runNthTime(open("crossValidationFolds/training/trainFold[{}].csv".format(i), "w"),
-                       open("crossValidationFolds/evals/evalFold[{}].csv".format(i), "w"), epochs, learningRate,
-                       conceptSpace, roleSpace, (
-                       KBs_tests[i], KBs_trains[i], X_trains[i], X_tests[i], y_trains[i], y_tests[i], truePredss[i],
-                       trueStatementss[i], (labelss[i] if isinstance(labelss, numpy.ndarray) else None), nErrsPreds[i],
-                       nErrStatements[i]), syn, mix, i)
-        evals = evals + x
+        print("\nCross Validation Fold {}\n\nTraining With {} Data\nTesting With {} Data\n".format(i, "RDF", "RDF"))
+        run_nth_time(open("crossValidationFolds/training/trainFold[{}].csv".format(i), "w"),
+                         open("crossValidationFolds/evals/evalFold[{}].csv".format(i), "w"), epochs, learningRate,
+                         (KBs_tests[i], KBs_trains[i], X_trains[i], X_tests[i], y_trains[i], y_tests[i],
+                          (labelss[i] if isinstance(labelss, numpy.ndarray) else None)), i)
+        evals = evals
+
     evals = evals / n
 
     print("Summarizing All Results")
 
     avgResult = evals.tolist()
 
-    log = open("crossValidationFolds/evalAllFolds[avg].csv", "w")
+    # log = open("crossValidationFolds/evalAllFolds[avg].csv", "w")
 
-    if mix:
+    # log.write("Piecewise System\n")
 
-        log.write("Trained With {} Data\nTested With {} Data\n\nRegular Distances\n\nPiecewise System\n".format(
-            "Synthetic" if syn else "SNOMED", "Synthetic" if syn else "SNOMED"))
+    # # writeFinalAverageDataMess(avgResult[0],log)
+    # writeFinalAverageData(avgResult[0], log)
+    #
+    # log.write("\nDeep System\n")
+    #
+    # # writeFinalAverageDataMess(avgResult[1],log)
+    # writeFinalAverageData(avgResult[1], log)
 
-        writeFinalAverageData(avgResult[0], log)
-
-        log.write("\nDeep System\n")
-
-        writeFinalAverageData(avgResult[1], log)
-
-        log.write("\nFlat System\n")
-
-        writeFinalAverageData(avgResult[2], log)
-
-        log.write("\n\nDistance Ignoring Prediction Gaps\n\nPiecewise System\n")
-
-        writeFinalAverageData(avgResult[3], log)
-
-        log.write("\nDeep System\n")
-
-        writeFinalAverageData(avgResult[4], log)
-
-        log.write("\nFlat System\n")
-
-        writeFinalAverageData(avgResult[5], log)
-
-    else:
-
-        log.write("Piecewise System\n")
-
-        # writeFinalAverageDataMess(avgResult[0],log)
-        writeFinalAverageData(avgResult[0], log)
-
-        log.write("\nDeep System\n")
-
-        # writeFinalAverageDataMess(avgResult[1],log)
-        writeFinalAverageData(avgResult[1], log)
-
-        log.write("\nFlat System\n")
-
-        # writeFinalAverageDataMess(avgResult[2],log)
-        writeFinalAverageData(avgResult[2], log)
-
-    log.close()
+    # log.write("\nFlat System\n")
+    #
+    # # writeFinalAverageDataMess(avgResult[2],log)
+    # writeFinalAverageData(avgResult[2], log)
+    #
+    # log.close()
 
     print("\nDone")
 
     return avgResult
-'''
 
-# Data manipulation-----------------------------------------------------------------------------------------------------
-def crossValidationSplitAllData(n, KBs, supports, outputs, localMaps):
+
+def cross_validation_split_all_data(n, KBs, supports, outputs, localMaps):
     # maxout = None if not isinstance(mouts, numpy.ndarray) else len(max(mouts, key=lambda coll: len(coll))[0])
 
     # Potentially calculates size of the 3D tensor which will be padded and passed to the LSTM.
@@ -700,12 +690,11 @@ def crossValidationSplitAllData(n, KBs, supports, outputs, localMaps):
                 [fileShapes1[0], fileShapes1[2] - len(outputs[indices[i][j]][0])])])
             if isinstance(localMaps, numpy.ndarray):
                 crossLabels[i][j] = localMaps[indices[i][j]]
-        writeVectorFile("crossValidationFolds/{}output/originalKBsIn[{}].txt".format("rdf", i), array(KBns))
+        write_vector_file("crossValidationFolds/output/originalKBsIn[{}].txt".format(i), array(KBns))
 
     crossKBsTrain = numpy.zeros((n, len(KBs) - len(crossKBsTest[0]), len(KBs[0]), len(KBs[0][0])), dtype=float)
     crossOutputsTrain = numpy.zeros((n, len(KBs) - len(crossKBsTest[0]), len(outputs[0]), fileShapes1[2]), dtype=float)
-    crossSupportsTrain = numpy.zeros((n, len(KBs) - len(crossKBsTest[0]), len(supports[0]), fileShapes1[1]),
-                                     dtype=float)
+    crossSupportsTrain = numpy.zeros((n, len(KBs) - len(crossKBsTest[0]), len(supports[0]), fileShapes1[1]), dtype=float)
 
     print("Extracting Train Sets")
     for i in range(len(indices)):
@@ -758,11 +747,12 @@ def crossValidationSplitAllData(n, KBs, supports, outputs, localMaps):
     #
     #     writeVectorFile("crossValidationFolds/{}output/{}KBsIn[{}].txt".format("sn" if not syn else "",
     #                                                                            "Messed" if pert >= 0 else "", i), KBn)
-    #     # writeVectorFile("crossValidationFolds/{}output/supports[{}].txt".format("sn" if not syn else "",i),inputs)
+    # writeVectorFile("crossValidationFolds/{}output/supports[{}].txt".format("sn" if not syn else "",i),inputs)
 
-    return crossKBsTest, crossKBsTrain, crossSupportsTrain, crossSupportsTest, crossOutputsTrain, crossOutputsTest, nTruePreds, nTrueStatements, crossLabels, nErrsPreds, nErrStatements
+    return crossKBsTest, crossKBsTrain, crossSupportsTrain, crossSupportsTest, crossOutputsTrain, crossOutputsTest, crossLabels
 
-def writeVectorFile(filename, vector):
+
+def write_vector_file(filename, vector):
     file = io.open(filename, "w", encoding='utf-8')
     for i in range(len(vector)):
         file.write("Trial: {}\n".format(i))
@@ -773,31 +763,81 @@ def writeVectorFile(filename, vector):
         file.write("\n")
     file.close()
 
-def getRDFData(file):
+
+# https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Python
+def levenshtein(s1, s2):
+    if len(s1) < len(s2):
+        return levenshtein(s2, s1)
+
+    # len(s1) >= len(s2)
+    if len(s2) == 0:
+        return len(s1)
+
+    previous_row = range(len(s2) + 1)
+    for i, c1 in enumerate(s1):
+        current_row = [i + 1]
+        for j, c2 in enumerate(s2):
+            insertions = previous_row[
+                             j + 1] + 1  # j+1 instead of j since previous_row and current_row are one character longer
+            deletions = current_row[j] + 1  # than s2
+            substitutions = previous_row[j] + (c1 != c2)
+            current_row.append(min(insertions, deletions, substitutions))
+        previous_row = current_row
+
+    return previous_row[-1]
+
+
+def get_rdf_data(file):
+    """Gets RDF data from json file specified."""
     with open(file) as f:
         data = json.load(f)
-        kb = data['kB']
-        supp = data['supports']
-        outs = data['outputs']
-        map = data['vectorMap']
-        return kb, supp, outs, map
+        return data
 
-def readInputs():
-    """Collects arguments to be passed into the model"""
+
+def pad_list_of_lists(list):
+    for i in range(len(list)):
+        element = list[i]
+        targetPadNum = 0
+        for j in range(len(element)):
+            temp = element[j]
+            if(len(temp) > targetPadNum):
+                targetPadNum = len(temp)
+        for j in range(len(element)):
+            temp = element[j]
+            while len(temp) < targetPadNum:
+                temp.append(0.0)
+    return list
+
+
+def convert_data_to_arrays(data):
+    """Takes data and makes sure they are arrays."""
+    kb, supp, outs, numToStmMap = data['kB'], data['supports'], data['outputs'], data['vectorMap']
+    Kb = numpy.array(kb)
+
+    supp = pad_list_of_lists(supp)
+    outs = pad_list_of_lists(outs)
+
+    Supp = numpy.zeros((len(supp)), dtype=numpy.ndarray)
+    Outs = numpy.zeros((len(outs)), dtype=numpy.ndarray)
+
+    for i in range(len(supp)):
+        Supp[i] = numpy.array(supp[i])
+
+    for i in range(len(outs)):
+        Outs[i] = numpy.array(outs[i])
+
+    return Kb, Supp, Outs, numToStmMap
+
+
+def read_inputs():
+    """Collects arguments to be passed into the model."""
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-e", "--epochs", help="number of epochs for each system", type=int, default=10)  # 20000
+    parser.add_argument("-e", "--epochs", help="number of epochs for each system", type=int, default=1000)  # 20000
     parser.add_argument("-l", "--learningRate", help="learning rate of each system", type=float, default=0.0001)
-    parser.add_argument("-s", "--snomed", help="use SNOMED dataset", action="store_true", default=True)  # False
-    parser.add_argument("-m", "--mix", help="use test set from different souce than train", action="store_true",
-                        default=False)  # True
     parser.add_argument("-c", "--cross", help="cross validation k", type=int, default=2)  # 10
-    parser.add_argument("-p", "--perturb", help="disturb each kb for comparison", type=float, default=-1.0)
 
     args = parser.parse_args()
-
-    if args.mix and args.perturb >= 0:
-        raise IOError("Can't use two test sets simultaneously")
 
     if args.epochs and args.epochs < 2:
         raise ValueError("Try a bigger number maybe!")
@@ -810,12 +850,11 @@ def readInputs():
 
 
 if __name__ == "__main__":
-
-    KB, Supp, Outs, Map = getRDFData("rdfData/test1.1.json")
-
-
-    args = readInputs()
-
     tf.compat.v1.disable_eager_execution()
+    tf.disable_v2_behavior()
+    tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
-    nTimesCrossValidate(n=args.cross, epochs=args.epochs, learningRate=args.learningRate)
+    # args = read_inputs()
+    #
+    # n_times_cross_validate(n=args.cross, epochs=args.epochs, learningRate=args.learningRate,
+    #                        dataFile="rdfData/test1.1.json")
