@@ -1,6 +1,9 @@
-import os, sys, shutil, argparse, random, numpy, math
+import os, sys, shutil, argparse, random, math
 import io
 import json
+import numpy as np
+import numpy
+import math
 from numpy import array
 import tensorflow.compat.v1 as tf
 
@@ -454,16 +457,152 @@ def runOnce(trainlog, evallog, epochs, learningRate, conceptSpace, roleSpace, sy
 
 '''
 
+def distanceEvaluations(log, shape, newPreds, truePreds, newStatements, trueStatements):
+    if False:
+        print()
+    else:
+        levTR, levRT, levTN, levNT, sizeTrue, sizeNew, sizeRan, F11, F111 = levDistanceNoNums(shape, newStatements,
+                                                                                              trueStatements)
+
+        log.write(
+            "\nNo Nums\nLevenshtein Distance From Reasoner to Random Data,{}\nLevenshtein Distance From Random to Reasoner Data,{}\nLevenshtein Distance From Reasoner to Predicted Data,{}\nLevenshtein Distance From Prediction to Reasoner Data,{}\n".format(
+                levTR, levRT, levTN, levNT))
+        log.write(
+            "Average Levenshtein Distance From Reasoner to Random Statement,{}\nAverage Levenshtein Distance From Random to Reasoner Statement,{}\nAverage Levenshtein Distance From Reasoner to Predicted Statement,{}\nAverage Levenshtein Distance From Prediction to Reasoner Statement,{}\n".format(
+                levTR / sizeTrue, levRT / sizeRan, levTN / sizeTrue, 0 if sizeNew == 0 else levNT / sizeNew))
+
+        a = write_evaluation_measures(F11, F111, log)
+
+        levTR2, levRT2, levTN2, levNT2, sizeTrue2, sizeNew2, sizeRan2, F12, F121 = levDistance(shape, newStatements,
+                                                                                               trueStatements,
+                                                                                               conceptSpace, roleSpace,
+                                                                                               syn, mix)
+
+        log.write(
+            "\nNums\nLevenshtein Distance From Reasoner to Random Data,{}\nLevenshtein Distance From Random to Reasoner Data,{}\nLevenshtein Distance From Reasoner to Predicted Data,{}\nLevenshtein Distance From Prediction to Reasoner Data,{}\n".format(
+                levTR2, levRT2, levTN2, levNT2))
+        log.write(
+            "Average Levenshtein Distance From Reasoner to Random Statement,{}\nAverage Levenshtein Distance From Random to Reasoner Statement,{}\nAverage Levenshtein Distance From Reasoner to Predicted Statement,{}\nAverage Levenshtein Distance From Prediction to Reasoner Statement,{}\n".format(
+                levTR2 / sizeTrue2, levRT2 / sizeRan2, levTN2 / sizeTrue2, 0 if sizeNew2 == 0 else levNT2 / sizeNew2))
+
+        b = write_evaluation_measures(F12, F121, log)
+
+        custTR, custRT, custTN, custNT, countTrue, countNew, countRan, F13, F131 = customDistance(shape, newPreds,
+                                                                                                  truePreds,
+                                                                                                  conceptSpace,
+                                                                                                  roleSpace, syn, mix)
+
+        log.write(
+            "\nCustom\nCustom Distance From Reasoner to Random Data,{}\nCustom Distance From Random to Reasoner Data,{}\nCustom Distance From Reasoner to Predicted Data,{}\nCustom Distance From Predicted to Reasoner Data,{}\n".format(
+                custTR, custRT, custTN, custNT))
+        log.write(
+            "Average Custom Distance From Reasoner to Random Statement,{}\nAverage Custom Distance From Random to Reasoner Statement,{}\nAverage Custom Distance From Reasoner to Predicted Statement,{}\nAverage Custom Distance From Prediction to Reasoner Statement,{}\n".format(
+                custTR / countTrue, custRT / countRan, custTN / countTrue, 0 if countNew == 0 else custNT / countNew))
+
+        c = write_evaluation_measures(F13, F131, log)
+
+        return numpy.array([numpy.array([levTR, levRT, levTN, levNT, sizeTrue, sizeNew, sizeRan, a]),
+                      numpy.array([levTR2, levRT2, levTN2, levNT2, sizeTrue2, sizeNew2, sizeRan2, b]),
+                      numpy.array([custTR, custRT, custTN, custNT, countTrue, countNew, countRan, c])])
+
+def get_predicted_label_and_iri_from_encoding(encodedPredictions, labelMap, numConcepts, numRoles):
+    """Gets closest label and iri for a model prediction."""
+
+    labelPredictions = np.zeros((encodedPredictions.shape[0], encodedPredictions.shape[1]), dtype=tuple)
+    stringPredictions = np.zeros((encodedPredictions.shape[0], encodedPredictions.shape[1]), dtype=tuple)
+
+    sampleBatchIndex = 0
+    for sampleBatch in encodedPredictions:
+        timeStepIndex = 0
+        for timeStep in sampleBatch:
+            labelsForTimeStep = []
+            strForTimeStep = []
+            tempLabels = []
+            tempStr = []
+
+            for item in timeStep:
+                intLabel, strIri = convert_encoding_to_label_and_iri(item, labelMap, numConcepts, numRoles)
+                tempLabels.append(intLabel)
+                tempStr.append(strIri)
+
+                if len(tempLabels) == 3:
+                    if len(tempStr) == 3:
+                        labelsForTimeStep.append(tuple((tempLabels[0], tempLabels[1], tempLabels[2])))
+                        strForTimeStep.append(tuple((tempStr[0], tempStr[1], tempStr[2])))
+                        tempLabels = []
+                        tempStr = []
+                    else:
+                        print("Error in get_predicted_label_and_iri_from_encoding: ???")
+
+            labelPredictions[sampleBatchIndex][timeStepIndex] = labelsForTimeStep
+            stringPredictions[sampleBatchIndex][timeStepIndex] = strForTimeStep
+            labelsForTimeStep = []
+            strForTimeStep = []
+            timeStepIndex += 1
+        sampleBatchIndex += 1
+    return labelPredictions, stringPredictions
+
+
+def convert_encoding_to_label_and_iri(enc, labelMap, numConcepts, numRoles):
+    """Converts a float representing an encoding into an int label and its string iri."""
+    if(enc > 0):
+        label = int(enc * numConcepts)
+
+        # Makes sure it is in range
+        if label > numConcepts:
+            label = label - 1
+
+        iriStr = labelMap.get(str(label))
+
+        return label, iriStr
+
+    else:
+        label = int(enc * numRoles)
+
+        # Makes sure it is in range
+        if label < (-1 * numRoles):
+            label = label + 1
+
+        iriStr = labelMap.get(str(label))
+
+        return label, iriStr
+
+    return None, None
+
+
+# https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Python
+def levenshtein(s1, s2):
+    """Calculates basic Levenshtein edit distance between the given strings."""
+    if len(s1) < len(s2):
+        return levenshtein(s2, s1)
+
+    # len(s1) >= len(s2)
+    if len(s2) == 0:
+        return len(s1)
+
+    previous_row = range(len(s2) + 1)
+    for i, c1 in enumerate(s1):
+        current_row = [i + 1]
+        for j, c2 in enumerate(s2):
+            insertions = previous_row[
+                             j + 1] + 1  # j+1 instead of j since previous_row and current_row are one character longer
+            deletions = current_row[j] + 1  # than s2
+            substitutions = previous_row[j] + (c1 != c2)
+            current_row.append(min(insertions, deletions, substitutions))
+        previous_row = current_row
+
+    return previous_row[-1]
+
 
 def training_stats(log, mseNew, mse0, mseL):
     log.write(
         "Training Statistics\nPrediction Mean Squared Error,{}\nLearned Reduction MSE,{}\nIncrease MSE on Test,{}\nTraining Percent Change MSE,{}\n".format(
-            numpy.float32(mseNew), mse0 - mseL, numpy.float32(mseNew) - mseL, (mseL - mse0) / mse0 * 100))
+            np.float32(mseNew), mse0 - mseL, np.float32(mseNew) - mseL, (mseL - mse0) / mse0 * 100))
 
 
 def flat_system(n_epochs2, learning_rate2, trainlog, evallog, allTheData, n):
     """"The base line recurrent model for comparison with other rnn models."""
-    KBs_test, KBs_train, X_train, X_test, y_train, y_test, labels, = allTheData
+    KBs_test, KBs_train, X_train, X_test, y_train, y_test, iriMap, labels, numConcepts, numRoles = allTheData
 
     trainlog.write("Flat LSTM\nEpoch,Mean Squared Error,Root Mean Squared Error\n")
     evallog.write("\nFlat LSTM\n\n")
@@ -504,49 +643,14 @@ def flat_system(n_epochs2, learning_rate2, trainlog, evallog, allTheData, n):
 
         training_stats(evallog, mseNew, mse0, mseL)
 
-        # evallog.write("\nTest Data Evaluation\n")
-        #
-        # newPreds, newStatements = vecToStatementsWithLabels(y_pred, conceptSpace, roleSpace, labels) if (
-        #             not mix and not syn) else vecToStatements(y_pred, conceptSpace, roleSpace)
-        #
-        # writeVectorFile("crossValidationFolds/output/predictionFlatArchitecture[{}].txt".format(n), newStatements)
-        #
-        # # newPreds, newStatements = vecToStatements(y_pred, conceptSpace, roleSpace)
-        #
-        # # saver.save(sess,"{}{}saves/deepModel[{}]".format("" if n == 1 else "crossValidationFolds/","" if syn else "s",n))
-        #
-        # return distanceEvaluations(evallog, y_pred.shape, newPreds, truePreds, newStatements, trueStatements,
-        #                            conceptSpace, roleSpace, syn, mix, errPreds, errStatements)
+        evallog.write("\nTest Data Evaluation\n")
 
+        newPredictions, newStrIRI = get_predicted_label_and_iri_from_encoding(y_pred, labels, numConcepts, numRoles)
 
-# def vecToStatementsWithLabels(vec, conceptSpace, roleSpace, labels):
-#     four = []
-#     statementStr = []
-#     statementPred = []
-#
-#     for i in range(len(vec)):
-#         trialStr = []
-#         trialPred = []
-#         for j in range(len(vec[i])):
-#             stepStr = []
-#             stepPred = []
-#             for k in range(len(vec[i][j])):
-#                 if len(four) == 3:
-#                     four.append(vec[i][j][k])
-#                     pred, stri = convertToStatementWithLabels(four, conceptSpace, roleSpace, labels[i])
-#                     if stri != None: stepStr.append(stri)
-#                     if pred != None: stepPred.append(pred)
-#                     four = []
-#                 else:
-#                     four.append(vec[i][j][k])
-#             if len(stepStr) > 0:
-#                 trialStr.append(stepStr)
-#             if len(stepPred) > 0:
-#                 trialPred.append(stepPred)
-#         statementStr.append(trialStr)
-#         statementPred.append(trialPred)
-#
-#     return statementPred, statementStr
+        write_vector_file("crossValidationFolds/output/predictionFlatArchitecture[{}].txt".format(n), newStrIRI)
+
+        return distanceEvaluations(evallog, y_pred.shape, newPredictions, truePrediction, newStrIRI, trueStrIRI,
+                                   numConcepts, numRoles)
 
 
 def run_nth_time(trainlog, evallog, epochs, learningRate, nthData, n):
@@ -580,10 +684,10 @@ def n_times_cross_validate(n, epochs, learningRate, dataFile):
     if not os.path.isdir("crossValidationFolds/output"): os.mkdir("crossValidationFolds/output")
 
     # Gets raw data. 
-    KB, supports, outputs, labels = convert_data_to_arrays(get_rdf_data(dataFile))
+    KB, supports, outputs, encodingMap, labels = convert_data_to_arrays(get_rdf_data(dataFile))
 
     # Processes data.
-    allTheData = cross_validation_split_all_data(n, KB, supports, outputs, labels)
+    allTheData = cross_validation_split_all_data(n, KB, supports, outputs, encodingMap)
 
     KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss = allTheData
 
@@ -594,13 +698,15 @@ def n_times_cross_validate(n, epochs, learningRate, dataFile):
         if (labelss.ndim and labelss.size) == 0:
             labelss = None
 
+    numConcepts, numRoles = get_concept_and_role_count(labels)
+
     evals = numpy.zeros((3, 3, 8), dtype=numpy.float64)
     for i in range(n):
         print("\nCross Validation Fold {}\n\nTraining With {} Data\nTesting With {} Data\n".format(i, "RDF", "RDF"))
         run_nth_time(open("crossValidationFolds/training/trainFold[{}].csv".format(i), "w"),
                          open("crossValidationFolds/evals/evalFold[{}].csv".format(i), "w"), epochs, learningRate,
                          (KBs_tests[i], KBs_trains[i], X_trains[i], X_tests[i], y_trains[i], y_tests[i],
-                          (labelss[i] if isinstance(labelss, numpy.ndarray) else None)), i)
+                          (labelss[i] if isinstance(labelss, numpy.ndarray) else None), labels, numConcepts, numRoles), i)
         evals = evals
 
     evals = evals / n
@@ -633,7 +739,21 @@ def n_times_cross_validate(n, epochs, learningRate, dataFile):
     return avgResult
 
 
-def cross_validation_split_all_data(n, KBs, supports, outputs, localMaps):
+def get_concept_and_role_count(labelMap):
+    """Finds the number of concepts and roles in a given labelMap.  Roles have negative keys and concepts positive."""
+    numConcepts = 0
+    numRoles = 0
+
+    for key in labelMap:
+        if int(key) > 0:
+            numConcepts = numConcepts + 1
+        else:
+            numRoles = numRoles + 1
+
+    return numConcepts, numRoles
+
+
+def cross_validation_split_all_data(n, KBs, supports, outputs, encodedMap):
     # maxout = None if not isinstance(mouts, numpy.ndarray) else len(max(mouts, key=lambda coll: len(coll))[0])
 
     # Potentially calculates size of the 3D tensor which will be padded and passed to the LSTM.
@@ -674,7 +794,7 @@ def cross_validation_split_all_data(n, KBs, supports, outputs, localMaps):
     #     (len(indices), len(indices[0]), len(mouts[0]), maxout), dtype=float)
 
     # If localMap is provided then create empty crossLabels array.
-    if isinstance(localMaps, numpy.ndarray):
+    if isinstance(encodedMap, numpy.ndarray):
         crossLabels = numpy.empty((len(indices), len(indices[0])), dtype=dict)
     else:
         crossLabels = None
@@ -688,8 +808,8 @@ def cross_validation_split_all_data(n, KBs, supports, outputs, localMaps):
                 [fileShapes1[0], fileShapes1[1] - len(supports[indices[i][j]][0])])])
             crossOutputsTest[i][j] = numpy.hstack([outputs[indices[i][j]], numpy.zeros(
                 [fileShapes1[0], fileShapes1[2] - len(outputs[indices[i][j]][0])])])
-            if isinstance(localMaps, numpy.ndarray):
-                crossLabels[i][j] = localMaps[indices[i][j]]
+            if isinstance(encodedMap, numpy.ndarray):
+                crossLabels[i][j] = encodedMap[indices[i][j]]
         write_vector_file("crossValidationFolds/output/originalKBsIn[{}].txt".format(i), array(KBns))
 
     crossKBsTrain = numpy.zeros((n, len(KBs) - len(crossKBsTest[0]), len(KBs[0]), len(KBs[0][0])), dtype=float)
@@ -764,29 +884,6 @@ def write_vector_file(filename, vector):
     file.close()
 
 
-# https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Python
-def levenshtein(s1, s2):
-    if len(s1) < len(s2):
-        return levenshtein(s2, s1)
-
-    # len(s1) >= len(s2)
-    if len(s2) == 0:
-        return len(s1)
-
-    previous_row = range(len(s2) + 1)
-    for i, c1 in enumerate(s1):
-        current_row = [i + 1]
-        for j, c2 in enumerate(s2):
-            insertions = previous_row[
-                             j + 1] + 1  # j+1 instead of j since previous_row and current_row are one character longer
-            deletions = current_row[j] + 1  # than s2
-            substitutions = previous_row[j] + (c1 != c2)
-            current_row.append(min(insertions, deletions, substitutions))
-        previous_row = current_row
-
-    return previous_row[-1]
-
-
 def get_rdf_data(file):
     """Gets RDF data from json file specified."""
     with open(file) as f:
@@ -816,7 +913,8 @@ def pad_list_of_lists(list):
 
 def convert_data_to_arrays(data):
     """Takes data and makes sure they are arrays."""
-    kb, supp, outs, numToStmMap = data['kB'], data['supports'], data['outputs'], data['vectorMap']
+    kb, supp, outs, numToStmMap, labelMap = data['kB'], data['supports'], data['outputs'], data['vectorMap'],\
+                                            data['labelMap']
     Kb = numpy.array(kb)
 
     supp = pad_list_of_lists(supp)
@@ -831,14 +929,16 @@ def convert_data_to_arrays(data):
     for i in range(len(outs)):
         Outs[i] = numpy.array(outs[i])
 
-    return Kb, Supp, Outs, numToStmMap
+    numToStmMap = numpy.array(numToStmMap)
+
+    return Kb, Supp, Outs, numToStmMap, labelMap
 
 
 def read_inputs():
     """Collects arguments to be passed into the model."""
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-e", "--epochs", help="number of epochs for each system", type=int, default=1000)  # 20000
+    parser.add_argument("-e", "--epochs", help="number of epochs for each system", type=int, default=10000)  # 20000
     parser.add_argument("-l", "--learningRate", help="learning rate of each system", type=float, default=0.0001)
     parser.add_argument("-c", "--cross", help="cross validation k", type=int, default=2)  # 10
 

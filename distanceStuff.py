@@ -215,55 +215,6 @@ def findBestPredMatch(statement, otherKB, conceptSpace, roleSpace):
     return min(map(partial(custom, conceptSpace, roleSpace, statement), otherKB))
 
 
-def distanceEvaluations(log, shape, newPreds, truePreds, newStatements, trueStatements):
-    if False:
-        print()
-    else:
-        levTR, levRT, levTN, levNT, sizeTrue, sizeNew, sizeRan, F11, F111 = levDistanceNoNums(shape, newStatements,
-                                                                                              trueStatements)
-
-        log.write(
-            "\nNo Nums\nLevenshtein Distance From Reasoner to Random Data,{}\nLevenshtein Distance From Random to Reasoner Data,{}\nLevenshtein Distance From Reasoner to Predicted Data,{}\nLevenshtein Distance From Prediction to Reasoner Data,{}\n".format(
-                levTR, levRT, levTN, levNT))
-        log.write(
-            "Average Levenshtein Distance From Reasoner to Random Statement,{}\nAverage Levenshtein Distance From Random to Reasoner Statement,{}\nAverage Levenshtein Distance From Reasoner to Predicted Statement,{}\nAverage Levenshtein Distance From Prediction to Reasoner Statement,{}\n".format(
-                levTR / sizeTrue, levRT / sizeRan, levTN / sizeTrue, 0 if sizeNew == 0 else levNT / sizeNew))
-
-        a = write_evaluation_measures(F11, F111, log)
-
-        levTR2, levRT2, levTN2, levNT2, sizeTrue2, sizeNew2, sizeRan2, F12, F121 = levDistance(shape, newStatements,
-                                                                                               trueStatements,
-                                                                                               conceptSpace, roleSpace,
-                                                                                               syn, mix)
-
-        log.write(
-            "\nNums\nLevenshtein Distance From Reasoner to Random Data,{}\nLevenshtein Distance From Random to Reasoner Data,{}\nLevenshtein Distance From Reasoner to Predicted Data,{}\nLevenshtein Distance From Prediction to Reasoner Data,{}\n".format(
-                levTR2, levRT2, levTN2, levNT2))
-        log.write(
-            "Average Levenshtein Distance From Reasoner to Random Statement,{}\nAverage Levenshtein Distance From Random to Reasoner Statement,{}\nAverage Levenshtein Distance From Reasoner to Predicted Statement,{}\nAverage Levenshtein Distance From Prediction to Reasoner Statement,{}\n".format(
-                levTR2 / sizeTrue2, levRT2 / sizeRan2, levTN2 / sizeTrue2, 0 if sizeNew2 == 0 else levNT2 / sizeNew2))
-
-        b = write_evaluation_measures(F12, F121, log)
-
-        custTR, custRT, custTN, custNT, countTrue, countNew, countRan, F13, F131 = customDistance(shape, newPreds,
-                                                                                                  truePreds,
-                                                                                                  conceptSpace,
-                                                                                                  roleSpace, syn, mix)
-
-        log.write(
-            "\nCustom\nCustom Distance From Reasoner to Random Data,{}\nCustom Distance From Random to Reasoner Data,{}\nCustom Distance From Reasoner to Predicted Data,{}\nCustom Distance From Predicted to Reasoner Data,{}\n".format(
-                custTR, custRT, custTN, custNT))
-        log.write(
-            "Average Custom Distance From Reasoner to Random Statement,{}\nAverage Custom Distance From Random to Reasoner Statement,{}\nAverage Custom Distance From Reasoner to Predicted Statement,{}\nAverage Custom Distance From Prediction to Reasoner Statement,{}\n".format(
-                custTR / countTrue, custRT / countRan, custTN / countTrue, 0 if countNew == 0 else custNT / countNew))
-
-        c = write_evaluation_measures(F13, F131, log)
-
-        return numpy.array([numpy.array([levTR, levRT, levTN, levNT, sizeTrue, sizeNew, sizeRan, a]),
-                      numpy.array([levTR2, levRT2, levTN2, levNT2, sizeTrue2, sizeNew2, sizeRan2, b]),
-                      numpy.array([custTR, custRT, custTN, custNT, countTrue, countNew, countRan, c])])
-
-
 def levDistance(shape, newStatements, trueStatements):
     if (syn and os.path.isfile("saves/randoStr.npz")) or os.path.isfile("ssaves/randoStr.npz"):
         rando = numpy.load("saves/randoStr.npz" if syn else "ssaves/randoStr.npz", allow_pickle=True)
