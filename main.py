@@ -395,13 +395,13 @@ def shallowSystem(n_epochs0, learning_rate0, trainlog, evallog, allTheData, n):
 
 def run_nth_time(trainlog, evallog, epochs, learningRate, nthData, n):
     """Runs and collects results from shallow, deep, and flat models for one cycle of the cross validation."""
-    evals1 = shallowSystem(int(epochs / 2), learningRate, trainlog, evallog, nthData, n)
-
-    tf.reset_default_graph()
-
-    evals2 = deep_system(epochs, learningRate / 2, trainlog, evallog, nthData, n)
-
-    tf.reset_default_graph()
+    # evals1 = shallowSystem(int(epochs / 2), learningRate, trainlog, evallog, nthData, n)
+    #
+    # tf.reset_default_graph()
+    #
+    # evals2 = deep_system(epochs, learningRate / 2, trainlog, evallog, nthData, n)
+    #
+    # tf.reset_default_graph()
 
     evals3 = flat_system(epochs, learningRate / 2, trainlog, evallog, nthData, n)
 
@@ -410,7 +410,8 @@ def run_nth_time(trainlog, evallog, epochs, learningRate, nthData, n):
     trainlog.close()
     evallog.close()
 
-    return evals1, evals2, evals3
+    # return evals1, evals2, evals3
+    return evals3
 
 
 def n_times_cross_validate(n, epochs, learningRate, dataFile):
@@ -433,6 +434,14 @@ def n_times_cross_validate(n, epochs, learningRate, dataFile):
 
     # Saves all the data in a file for some reason?
     numpy.savez("saves/{}foldData.npz".format(n), KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss)
+
+    tempCount = 0
+    count = 0
+    for b in range(len(trueLabels[0])):
+        count += 1
+        tempCount += first_correct_guess(trueLabels[b], numConcepts, numRoles)
+
+    avgCount = tempCount / count
 
     if isinstance(labelss, numpy.ndarray):
         if (labelss.ndim and labelss.size) == 0:
@@ -521,8 +530,21 @@ def distanceEvaluations(log, shape, newPredictions, trueLabels, newStrIRI, trueI
 
     c = write_evaluation_measures(newEvalInfo, randEvalInfo, log)
 
+
+
     return np.array([np.array([levTR2, levRT2, levTN2, levNT2, sizeTrue2, sizeNew2, sizeRan2, b]),
                     np.array([custTR, custRT, custTN, custNT, countTrue, countNew, countRan, c])])
+
+
+def first_correct_guess(trueLabels, numConcepts, numRoles):
+    count = 0
+    while True:
+        count += 1
+        singleGuess = create_random_label_predictions((1, 1, 1), numConcepts=numConcepts, numRoles=numRoles)
+        for timeStep in trueLabels[0]:
+            for triple in timeStep:
+                if singleGuess[0][0][0] == triple:
+                    return count
 
 
 def custom_distance(sampleShape, newPred, trueLabels, conceptSpace, roleSpace):
@@ -575,6 +597,7 @@ def custom_distance(sampleShape, newPred, trueLabels, conceptSpace, roleSpace):
                         custNT = custNT + best
                     else:
                         custNT = custNT + custom(conceptSpace, roleSpace, newPred[i][j][k], [])
+
 
     # Calculating False positives.
     evalInfoNew[1] = countNew - evalInfoNew[0]
@@ -925,12 +948,27 @@ def create_random_label_predictions(shape, numConcepts, numRoles):
         for timeStep in range(shape[1]):
             tempTimeStepLabels = []
             for tup in range(shape[2]):
-                tempTimeStepLabels.append(("C" + str(random.randint(1, numConcepts)), "R" +
-                                           str(random.randint(1, numRoles)),
-                                           "C" + str(random.randint(1, numConcepts))))
+                tempTimeStepLabels.append((get_random_label(numConcepts, numRoles),
+                                           "R" + str(random.randint(0, numRoles)),
+                                           get_random_label(numConcepts, numRoles)))
             randLabels[sample][timeStep] = tempTimeStepLabels
 
     return randLabels
+
+
+def get_random_label(numConcepts, numRoles):
+    """Returns a random string label for use in the subject or object place in a triple."""
+    x = random.randint(0, numConcepts)
+    if x == 0:
+        return "R0"
+    elif x <= numRoles:
+        temp = random.randint(0, 1)
+        if temp == 0:
+            return "C" + str(x)
+        else:
+            return "R" + str(x)
+    else:
+        return "C" + str(x)
 
 
 def create_random_IRI_predictions(shape, map, numConcepts, numRoles):
@@ -954,7 +992,7 @@ def read_inputs():
 
     parser.add_argument("-e", "--epochs", help="number of epochs for each system", type=int, default=10000)  # 20000
     parser.add_argument("-l", "--learningRate", help="learning rate of each system", type=float, default=0.0001)
-    parser.add_argument("-c", "--cross", help="cross validation k", type=int, default=2)  # 10
+    parser.add_argument("-c", "--cross", help="cross validation k", type=int, default=10)  # 10
 
     args = parser.parse_args()
 

@@ -69,3 +69,18 @@ class DataWranglingTests(TestCase):
             for j in range(len(element)-1):
                 self.assertEqual(len(element[j]), len(element[j+1]))
 
+    def test_random_label_creator(self):
+        from main import create_random_label_predictions as randLabel
+        shape = (3, 2, 10)
+        numConcepts = 20
+        numRoles = 5
+        rando = randLabel(shape, numConcepts, numRoles)
+        for i in range(rando.shape[0]):
+            for j in range(rando.shape[1]):
+                for tup in range(len(rando[i][j])):
+                    for label in rando[i][j][tup]:
+                        self.assertTrue(label[0] == "C" or label[0] == "R")
+                        if label[0] == "C":
+                            self.assertTrue(numConcepts >= int(label[1:]) > 0)
+                        elif label[0] == "R":
+                            self.assertTrue(numRoles >= int(label[1:]) >= 0)
