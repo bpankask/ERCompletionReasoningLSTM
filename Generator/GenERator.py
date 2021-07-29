@@ -1,4 +1,3 @@
-from Statement import *
 import random,time
 
 class GenERator:
