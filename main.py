@@ -1387,15 +1387,10 @@ def runNthTime(trainlog, evallog, epochs, learningRate, conceptSpace, roleSpace,
 
 
 def writeFinalAverageDataMess(result, log):
-    levTR, levRT, levTN, levNT, sizeTrue, sizeNew, sizeRan, (
-    (TPs, FPs, FNs, pre, rec, F), (rTPs, rFPs, rFNs, rpre, rrec, rF)), (
-    h, i, j, k, (mTPs, mFPs, mFNs, mpre, mrec, mF)) = result[0]
-    levTR2, levRT2, levTN2, levNT2, sizeTrue2, sizeNew2, sizeRan2, (
-    (TPs1, FPs1, FNs1, pre1, rec1, F1), (rTPs1, rFPs1, rFNs1, rpre1, rrec1, rF1)), (
-    h1, i1, j1, k1, (mTPs1, mFPs1, mFNs1, mpre1, mrec1, mF1)) = result[1]
-    custTR, custRT, custTN, custNT, countTrue, countNew, countRan, (
-    (TPs2, FPs2, FNs2, pre2, rec2, F2), (rTPs2, rFPs2, rFNs2, rpre2, rrec2, rF2)), (
-    h2, i2, j2, k2, (mTPs2, mFPs2, mFNs2, mpre2, mrec2, mF2)) = result[2]
+    levTR, levRT, levTN, levNT, sizeTrue, sizeNew, sizeRan, ((TPs, FPs, FNs, pre, rec, F), (rTPs, rFPs, rFNs, rpre, rrec, rF)), (h, i, j, k, (mTPs, mFPs, mFNs, mpre, mrec, mF)) = result[0]
+    levTR2, levRT2, levTN2, levNT2, sizeTrue2, sizeNew2, sizeRan2, ((TPs1, FPs1, FNs1, pre1, rec1, F1), (rTPs1, rFPs1, rFNs1, rpre1, rrec1, rF1)), (h1, i1, j1, k1, (mTPs1, mFPs1, mFNs1, mpre1, mrec1, mF1)) = result[1]
+    custTR, custRT, custTN, custNT, countTrue, countNew, countRan, ((TPs2, FPs2, FNs2, pre2, rec2, F2), (rTPs2, rFPs2, rFNs2, rpre2, rrec2, rF2)), (h2, i2, j2, k2, (mTPs2, mFPs2, mFNs2, mpre2, mrec2, mF2)) = result[2]
+
     log.write(
         "\nNo Nums\nAverage Levenshtein Distance From Reasoner to Random Data,{}\nAverage Levenshtein Distance From Random to Reasoner Data,{}\nAverage Levenshtein Distance From Reasoner to Predicted Data,{}\nAverage Levenshtein Distance From Prediction to Reasoner Data,{}\n".format(
             levTR, levRT, levTN, levNT))
@@ -1630,15 +1625,15 @@ def nTimesCrossValidate(n, epochs, learningRate, conceptSpace, roleSpace, syn, m
 
         log.write("Piecewise System\n")
 
-        writeFinalAverageDataMess(avgResult[0], log)
+        writeFinalAverageData(avgResult[0], log)
 
         log.write("\nDeep System\n")
 
-        writeFinalAverageDataMess(avgResult[1], log)
+        writeFinalAverageData(avgResult[1], log)
 
         log.write("\nFlat System\n")
 
-        writeFinalAverageDataMess(avgResult[2], log)
+        writeFinalAverageData(avgResult[2], log)
 
     log.close()
 
