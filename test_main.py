@@ -29,6 +29,24 @@ class DistanceEvalTests(TestCase):
         for i in range(len(guess)):
             self.assertEqual(distExpect[i], cust(None, None, guess[i], true[i]))
 
+    # def test_custom_distance(self):
+    #     from main import custom_distance
+    #     shape = (1,2,3)
+    #     newPred = [
+    #         [
+    #             [('C1', 'R2', 'C6'), ('C18', 'R8', 'C12')],
+    #             [('C2', 'C1', 'C13'), ('C7', 'R12', 'C9')]
+    #         ]
+    #     ]
+    #     trueLabels = [
+    #         [
+    #             [('C1', 'R1', 'C3'), ('C12', 'R4', 'C1')],
+    #             [('C4', 'R1', 'C8')]
+    #         ]
+    #     ]
+    #     # 22
+    #     # 8
+    #     custom_distance(shape, newPred, trueLabels, 0, 0)
 
 class EvaluationMetricTests(TestCase):
 
@@ -56,7 +74,6 @@ class EvaluationMetricTests(TestCase):
         for x in range(len(prec)):
             self.assertEqual(answers[x], round(f1(prec[x], recall[x]), 8))
 
-
 class LoggingFunctionTests(TestCase):
     def test_training_stats(self):
         from main import training_stats as ts
@@ -75,7 +92,6 @@ class LoggingFunctionTests(TestCase):
         wfinalav(((1, 1, 2, 2, (0, 0, 0, 0, 0, 0)), (11, 11, 22, 22, (0, 0, 0, 0, 0, 0))),
                  open("test_write_final_average_data.txt", "w"))
 
-
 class DataWranglingTests(TestCase):
 
     def test_pad_list_of_lists_same_size(self):
@@ -89,6 +105,35 @@ class DataWranglingTests(TestCase):
             element = list[i]
             for j in range(len(element)-1):
                 self.assertEqual(len(element[j]), len(element[j+1]))
+
+    def test_remove_padding(self):
+        from main import remove_padding, get_label_and_iri_from_encoding
+        from main import convert_data_to_arrays, get_rdf_data, get_concept_and_role_count, \
+            cross_validation_split_all_data
+
+        KB, supports, outputs, encodingMap, labels = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
+
+        numConcepts, numRoles = get_concept_and_role_count(labels)
+
+        # Processes data.
+        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, trueLabels, trueIRIs, labelss = \
+            cross_validation_split_all_data(8, KB, supports, outputs, encodingMap, labels, numConcepts, numRoles)
+
+        data = get_label_and_iri_from_encoding(y_tests[0], labels, numConcepts, numRoles)
+        data = remove_padding(data[0])
+
+        for sampleNum in range(len(data)):
+            for timestepNum in range(len(data[sampleNum])):
+                for tripleNum in range(len(data[sampleNum][timestepNum])):
+                    self.assertTrue(data[sampleNum][timestepNum][tripleNum] != ('0', '0', '0'))
+
+        data = get_label_and_iri_from_encoding(X_tests[0], labels, numConcepts, numRoles)
+        data = remove_padding(data[0])
+
+        for sampleNum in range(len(data)):
+            for timestepNum in range(len(data[sampleNum])):
+                for tripleNum in range(len(data[sampleNum][timestepNum])):
+                    self.assertTrue(data[sampleNum][timestepNum][tripleNum] != ('0', '0', '0'))
 
     def test_get_label_and_iri_from_encoding(self):
         from main import get_label_and_iri_from_encoding

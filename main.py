@@ -8,7 +8,7 @@ import random
 import numpy
 import io
 import numpy as np
-
+import copy
 
 # Tested
 def precision(TP, FP):
@@ -61,6 +61,9 @@ def distanceEvaluations(log, shape, newPredictions, trueLabels, newStrIRI, trueI
 def custom_distance(shape, newPred, trueLabels, conceptSpace, roleSpace):
     """Finds the number of true and false positives and false negatives.  Also collects distance data which is recorded."""
 
+    newPred = remove_padding(newPred)
+    trueLabels = remove_padding(trueLabels)
+
     # Combines all the timestep lists together so can compare whole samples.
     flatTrue = [[item for sublist in x for item in sublist] for x in trueLabels]
     flatNew = [[item for sublist in x for item in sublist] for x in newPred]
@@ -79,8 +82,7 @@ def custom_distance(shape, newPred, trueLabels, conceptSpace, roleSpace):
         for timestepNum in range(shape[1]):
             for tripleNum in range(shape[2]):
 
-                if len(trueLabels) > sampleNum and len(trueLabels[sampleNum]) > timestepNum and len(trueLabels[sampleNum][timestepNum]) > tripleNum and \
-                        trueLabels[sampleNum][timestepNum][tripleNum] != ('R0', 'R0', 'R0'):
+                if len(trueLabels) > sampleNum and len(trueLabels[sampleNum]) > timestepNum and len(trueLabels[sampleNum][timestepNum]) > tripleNum:
 
                     countTrue = countTrue + 1
                     if len(newPred) > sampleNum and len(newPred[sampleNum]) > 0:
@@ -88,8 +90,7 @@ def custom_distance(shape, newPred, trueLabels, conceptSpace, roleSpace):
                     else:
                         custTN = custTN + custom(conceptSpace, roleSpace, trueLabels[sampleNum][timestepNum][tripleNum], [])
 
-                if len(newPred) > sampleNum and len(newPred[sampleNum]) > timestepNum and len(newPred[sampleNum][timestepNum]) > tripleNum and \
-                        newPred[sampleNum][timestepNum][tripleNum] != ('R0', 'R0', 'R0'):  # Out of bounds check
+                if len(newPred) > sampleNum and len(newPred[sampleNum]) > timestepNum and len(newPred[sampleNum][timestepNum]) > tripleNum:  # Out of bounds check
                     countNew = countNew + 1
                     if len(trueLabels) > sampleNum and len(trueLabels[sampleNum]) > 0:
                         best = find_best_pred_match(newPred[sampleNum][timestepNum][tripleNum], flatTrue[sampleNum], conceptSpace, roleSpace)
@@ -489,6 +490,8 @@ def convert_encoding_to_label_and_iri(enc, labelMap, numConcepts, numRoles):
         # Makes sure it is in range
         if label > numConcepts:
             label = label - 1
+        if label == 0:
+            return '0', '0'
 
         iriStr = labelMap.get(str(label))
 
@@ -500,236 +503,27 @@ def convert_encoding_to_label_and_iri(enc, labelMap, numConcepts, numRoles):
         # Makes sure it is in range
         if label < (-1 * numRoles):
             label = label + 1
+        if label == 0:
+            return '0', '0'
 
         iriStr = labelMap.get(str(label))
 
         return "R" + str(abs(label)), iriStr
-
-
-# $$
-
-
-def flat_system(n_epochs2, learning_rate2, trainlog, evallog, allTheData, n):
-    """"The base line recurrent model for comparison with other rnn models."""
-    KBs_test, KBs_train, X_train, X_test, y_train, y_test, iriMap, trueLabels, trueIRIs, labels, numConcepts, numRoles = allTheData
-
-    trainlog.write("Flat LSTM\nEpoch,Mean Squared Error,Root Mean Squared Error\n")
-    evallog.write("\nFlat LSTM\n\n")
-    print("")
-
-    X0 = tf.compat.v1.placeholder(tf.float32, shape=[None, KBs_train.shape[1], KBs_train.shape[2]])
-    y1 = tf.compat.v1.placeholder(tf.float32, shape=[None, y_train.shape[1], y_train.shape[2]])
-
-    outputs2, states2 = tf.nn.dynamic_rnn(tf.nn.rnn_cell.LSTMCell(num_units=y_train.shape[2]), X0, dtype=tf.float32)
-
-    loss2 = tf.losses.mean_squared_error(y1, outputs2)
-    optimizer2 = tf.train.AdamOptimizer(learning_rate=learning_rate2)
-    training_op2 = optimizer2.minimize(loss2)
-
-    # saver = tf.train.Saver()
-
-    init2 = tf.global_variables_initializer()
-
-    with tf.Session() as sess:
-        init2.run()
-        mse0 = 0
-        mseL = 0
-        for epoch in range(n_epochs2):
-            print("Flat System\t\tEpoch: {}".format(epoch))
-            ynew, a = sess.run([outputs2, training_op2], feed_dict={X0: KBs_train, y1: y_train})
-            mse = loss2.eval(feed_dict={outputs2: ynew, y1: y_train})
-            if epoch == 0: mse0 = mse
-            if epoch == n_epochs2 - 1: mseL = mse
-            trainlog.write("{},{},{}\n".format(epoch, mse, math.sqrt(mse)))
-            if mse < 0.0001:
-                mseL = mse
-                break
-
-        print("\nEvaluating Result\n")
-
-        y_pred = sess.run(outputs2, feed_dict={X0: KBs_test})
-        mseNew = loss2.eval(feed_dict={outputs2: y_pred, y1: y_test})
-
-        training_stats(evallog, mseNew, mse0, mseL)
-
-        evallog.write("\nTest Data Evaluation\n")
-
-        newPredictions, newStrIRI = get_label_and_iri_from_encoding(y_pred, labels, numConcepts, numRoles)
-
-        write_vector_file("crossValidationFolds/output/predictionFlatArchitecture[{}].txt".format(n), newStrIRI)
-
-        return distanceEvaluations(evallog, y_pred.shape, newPredictions, trueLabels, newStrIRI, trueIRIs,
-                                   numConcepts, numRoles, labels)
-
-
-def deep_system(n_epochs2, learning_rate2, trainlog, evallog, allTheData, n):
-    KBs_test, KBs_train, X_train, X_test, y_train, y_test, iriMap, trueLabels, trueIRIs, labels, numConcepts, numRoles = allTheData
-
-    trainlog.write("Deep LSTM\nEpoch,Mean Squared Error,Root Mean Squared Error\n")
-    evallog.write("\nDeep LSTM\n\n")
-    print("")
-
-    return numConcepts, numRoles
 
 
 # Tested
-def cross_validation_split_all_data(n, KBs, supports, outputs, encodedMap, labels, numConcepts, numRoles):
-    # Potentially calculates size of the 3D tensor which will be padded and passed to the LSTM.
-    fileShapes1 = [len(supports[0]), len(max(supports, key=lambda coll: len(coll[0]))[0]),
-                   len(max(outputs, key=lambda coll: len(coll[0]))[0])]
+def remove_padding(origData):
+    data = np.array(origData)
 
-    print("Repeating KBs")
-    # Creates a new 3D tensor where the original KB sample is copied once per timestep.
-    newKBs = numpy.zeros([KBs.shape[0], fileShapes1[0], KBs.shape[1]], dtype=float)
-    # Goes through for every line of the KB
-    for crossNum in range(len(newKBs)):
-        for sampleNum in range(fileShapes1[0]):
-            # The same KB line is copied timestep times in the sampleNum's place.
-            newKBs[crossNum][sampleNum] = KBs[crossNum]
-
-    KBs = newKBs
-
-    print("Shuffling Split Indices")
-    # Creates a list of test_indices up to the length of the # of Batch size?
-    test_indices = list(range(len(KBs)))
-    random.shuffle(test_indices)
-    # k is the quotient and m is the remainder
-    k, m = divmod(len(test_indices), n)
-    # Creating num of cross validations of lists and assigning which test_indices are going to each one.
-    test_indices = list(test_indices[i * k + min(i, m):(i + 1) * k + min(i + 1, m)] for i in range(n))
-
-    # Creating place holding arrays of correct shape to be filled later.
-    crossKBsTest = numpy.zeros((len(test_indices), len(test_indices[0]), len(KBs[0]), len(KBs[0][0])), dtype=float)
-    crossSupportsTest = numpy.zeros(
-        (len(test_indices), len(test_indices[0]), len(supports[0]), fileShapes1[1]), dtype=float)
-    crossOutputsTest = numpy.zeros(
-        (len(test_indices), len(test_indices[0]), len(outputs[0]), fileShapes1[2]), dtype=float)
-
-    # Probably don't need yet.
-    # crossErrTest = None if not isinstance(mKBs, numpy.ndarray) else numpy.zeros(
-    #     (len(test_indices), len(test_indices[0]), len(mouts[0]), maxout), dtype=float)
-
-    # If localMap is provided then create empty crossLabels array.
-    if isinstance(encodedMap, numpy.ndarray):
-        crossLabels = numpy.empty((len(test_indices), len(test_indices[0])), dtype=dict)
-    else:
-        crossLabels = None
-
-    print("Extracting Test Sets")
-    for crossNum in range(len(test_indices)): # crossNum is each cross validation fold.
-        KBns = []
-        for sampleNum in range(len(test_indices[crossNum])): # sampleNum is each index in the crossNum validation fold.
-            crossKBsTest[crossNum][sampleNum] = KBs[test_indices[crossNum][sampleNum]] # assigning whole (timestep x numbers) arrays
-
-            # I think the hstack is padding each support and output with zeros to match the max len.
-            crossSupportsTest[crossNum][sampleNum] = numpy.hstack([supports[test_indices[crossNum][sampleNum]], numpy.zeros(
-                [fileShapes1[0], fileShapes1[1] - len(supports[test_indices[crossNum][sampleNum]][0])])])
-            crossOutputsTest[crossNum][sampleNum] = numpy.hstack([outputs[test_indices[crossNum][sampleNum]], numpy.zeros(
-                [fileShapes1[0], fileShapes1[2] - len(outputs[test_indices[crossNum][sampleNum]][0])])])
-
-        write_vector_file("crossValidationFolds/output/originalKBsIn[{}].txt".format(crossNum), numpy.array(KBns))
-
-    crossKBsTrain = numpy.zeros((n, len(KBs) - len(crossKBsTest[0]), len(KBs[0]), len(KBs[0][0])), dtype=float)
-    crossOutputsTrain = numpy.zeros((n, len(KBs) - len(crossKBsTest[0]), len(outputs[0]), fileShapes1[2]), dtype=float)
-    crossSupportsTrain = numpy.zeros((n, len(KBs) - len(crossKBsTest[0]), len(supports[0]), fileShapes1[1]), dtype=float)
-
-    print("Extracting Train Sets")
-    for crossNum in range(len(test_indices)):
-
-        all_indices = set(range(len(KBs)))
-        trainIndices = list(all_indices.difference(set(test_indices[crossNum])))
-        random.shuffle(trainIndices)
-
-        for sampleNum in range(len(crossKBsTrain[crossNum])):
-
-            crossKBsTrain[crossNum][sampleNum] = KBs[trainIndices[sampleNum]]
-
-            crossSupportsTrain[crossNum][sampleNum] = numpy.hstack([supports[trainIndices[sampleNum]], numpy.zeros(
-                [fileShapes1[0], fileShapes1[1] - len(supports[trainIndices[sampleNum]][0])])])
-
-            crossOutputsTrain[crossNum][sampleNum] = numpy.hstack([outputs[trainIndices[sampleNum]],
-                                                                   numpy.zeros([fileShapes1[0], fileShapes1[2] - len(
-                                                                       outputs[trainIndices[sampleNum]][0])])])
-
-    print("Saving Reasoner Answers")
-    nTrueLabels = numpy.empty(n, dtype=numpy.ndarray)
-    nTrueIRIs = numpy.empty(n, dtype=numpy.ndarray)
-    for crossNum in range(n):
-        # placeholder, KBn = get_label_and_iri_from_encoding(crossKBsTest[crossNum], labels, numConcepts, numRoles)
-
-        nTrueLabels[crossNum], nTrueIRIs[crossNum] = get_label_and_iri_from_encoding(crossOutputsTest[crossNum], labels, numConcepts, numRoles)
-
-        # placeholder, inputs = get_label_and_iri_from_encoding(crossSupportsTest[crossNum], labels, numConcepts, numRoles)
-
-    #     write_vector_file("crossValidationFolds/output/reasonerCompletion[{}].txt".format(crossNum), nTrueIRIs[crossNum])
-    #
-    #     write_vector_file("crossValidationFolds/output/KBsIn[{}].txt".format(crossNum), KBn)
-    #
-    # write_vector_file("crossValidationFolds/output/supports[{}].txt".format(crossNum),inputs)
-
-    return crossKBsTest, crossKBsTrain, crossSupportsTrain, crossSupportsTest, crossOutputsTrain, crossOutputsTest,\
-        nTrueLabels, nTrueIRIs, crossLabels
-
-
-def get_label_and_iri_from_encoding(encodedPredictions, labelMap, numConcepts, numRoles):
-    """Gets closest label and iri for a model prediction."""
-
-    labelPredictions = np.zeros((encodedPredictions.shape[0], encodedPredictions.shape[1]), dtype=tuple)
-    stringPredictions = np.zeros((encodedPredictions.shape[0], encodedPredictions.shape[1]), dtype=tuple)
-
-    sampleBatchIndex = 0
-    for sampleBatch in encodedPredictions:
-        timeStepIndex = 0
-        for timeStep in sampleBatch:
-            labelsForTimeStep = []
-            strForTimeStep = []
-            tempLabels = []
-            tempStr = []
-
-            for item in timeStep:
-                intLabel, strIri = convert_encoding_to_label_and_iri(item, labelMap, numConcepts, numRoles)
-                tempLabels.append(intLabel)
-                tempStr.append(strIri)
-
-                if len(tempLabels) == 3:
-                    if len(tempStr) == 3:
-                        labelsForTimeStep.append(tuple((tempLabels[0], tempLabels[1], tempLabels[2])))
-                        strForTimeStep.append(tuple((tempStr[0], tempStr[1], tempStr[2])))
-                        tempLabels = []
-                        tempStr = []
-                    else:
-                        print("Error in get_predicted_label_and_iri_from_encoding: ???")
-
-            labelPredictions[sampleBatchIndex][timeStepIndex] = labelsForTimeStep
-            stringPredictions[sampleBatchIndex][timeStepIndex] = strForTimeStep
-            timeStepIndex += 1
-        sampleBatchIndex += 1
-    return labelPredictions, stringPredictions
-
-
-def convert_encoding_to_label_and_iri(enc, labelMap, numConcepts, numRoles):
-    """Converts a float representing an encoding into an int label and its string iri."""
-    if (enc > 0):
-        label = int(enc * numConcepts)
-
-        # Makes sure it is in range
-        if label > numConcepts:
-            label = label - 1
-
-        iriStr = labelMap.get(str(label))
-
-        return "C" + str(label), iriStr
-
-    else:
-        label = int(enc * numRoles)
-
-        # Makes sure it is in range
-        if label < (-1 * numRoles):
-            label = label + 1
-
-        iriStr = labelMap.get(str(label))
-
-        return "R" + str(abs(label)), iriStr
+    for sampleNum in range(len(data)):
+        for timeStepNum in range(len(data[sampleNum])):
+            tripleNum = 0
+            while tripleNum < len(data[sampleNum][timeStepNum]):
+                if data[sampleNum][timeStepNum][tripleNum] == ('0', '0', '0'):
+                    data[sampleNum][timeStepNum].pop(tripleNum)
+                else:
+                    tripleNum += 1
+    return data
 
 
 # $$
@@ -1039,7 +833,7 @@ def read_inputs():
     """Collects arguments to be passed into the model."""
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-e", "--epochs", help="number of epochs for each system", type=int, default=100)  # 20000
+    parser.add_argument("-e", "--epochs", help="number of epochs for each system", type=int, default=10)  # 20000
     parser.add_argument("-l", "--learningRate", help="learning rate of each system", type=float, default=0.0001)
     parser.add_argument("-c", "--cross", help="cross validation k", type=int, default=2)  # 10
 
