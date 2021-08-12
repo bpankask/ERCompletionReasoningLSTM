@@ -1,0 +1,585 @@
+Trial: 0
+	Step: 0
+		('L62OoI0pmIwOshUPVUfXTQ==', 'http://purl.org/dc/terms/relation', 'jmuQvxiGGL7dWzMrT1pBTw==')
+		('http://purl.org/dc/terms/ISO639-3', 'http://purl.org/dc/terms/relation', 'i16PJAhtVP2KnCpsnmj3Jw==')
+		('http://dublincore.org/usage/terms/history/#MediaType-001', 'http://purl.org/dc/elements/1.1/date', 'http://dublincore.org/usage/terms/history/#Agent-001')
+		('http://www.w3.org/2004/02/skos/core#note', 'http://www.w3.org/2004/02/skos/core#note', 'Source@en')
+		('Date Available@en', 'http://purl.org/dc/elements/1.1/description', 'L/jBRY/2K/A2Gy0lKPh5TA==')
+	Step: 1
+		('The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource.@en', 'http://purl.org/dc/terms/description', 'Bibliographic Resource@en')
+	Step: 2
+		('0j+wMnLwrb77NaJXYjW1KQ==', 'http://www.w3.org/2000/01/rdf-schema#range', 'http://dublincore.org/usage/terms/history/#educationLevel-002')
+		('http://dublincore.org/usage/terms/history/#dateAccepted-002', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#Property', 'http://dublincore.org/usage/terms/history/#audience-003')
+		('Language@en', 'Frequency@en', 'LCC@en')
+		('The set of tags constructed according to RFC 4646 for the identification of languages.@en', 'http://purl.org/dc/terms/modified', 'A language of the resource.@en')
+	Step: 3
+		('hz+xuqph6zWISFnNO8bzvw==', 'http://www.w3.org/2000/01/rdf-schema#range', 'http://purl.org/dc/terms/isRequiredBy')
+	Step: 4
+		('gSeWeyZ1iuuj2lkG0Q/c5A==', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'NqqZ9jiNSLI04lF8Is0eVg==')
+	Step: 5
+		('The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.@en', 'http://www.w3.org/2000/01/rdf-schema#range', 'nSQS6RtmYAseBL5fGALiZA==')
+
+Trial: 1
+	Step: 0
+		('Cm/81NigsZgao/mbBtKj3w==', 'http://www.w3.org/2000/01/rdf-schema#comment', 'hv+IOWHf/rq7GmtGqI/XGg==')
+		('RFC 3066@en', 'http://purl.org/dc/terms/relation', 'ebPqZiCxds61SczSsfQhbA==')
+		('mAkWpJRHnGXOyWJTooRuEw==', 'http://purl.org/dc/elements/1.1/relation', 'Examples of resources to which a Date Submitted may be relevant are a thesis (submitted to a university department) or an article (submitted to a journal).@en')
+		('2003-02-15^^http://www.w3.org/2001/XMLSchema#date', 'http://purl.org/dc/terms/relation', 'ZlBdJGVRp8vNQiu+6My3dA==')
+		('A spatial region or named place.@en', 'http://purl.org/dc/elements/1.1/date', 's8ahGmSen2f8CyGCidzO8w==')
+		('http://purl.org/dc/terms/RFC5646', 'http://www.w3.org/2000/01/rdf-schema#range', 'I4k8AglEak1+o9FzzpSqgg==')
+		('http://www.getty.edu/research/tools/vocabulary/tgn/index.html', 'http://purl.org/dc/elements/1.1/relation', 'http://dublincore.org/usage/terms/history/#dateSubmitted-002')
+		('Bibliographic Resource@en', 'http://purl.org/dc/elements/1.1/date', 'A dimension or extent, or a time taken to play or execute.@en')
+		('P91/eFILLXS4v9Ze49Glqw==', 'http://purl.org/dc/elements/1.1/publisher', 'Date Submitted@en')
+		('http://dublincore.org/usage/terms/history/#audience-003', 'http://purl.org/dc/terms/hasVersion', 'http://dublincore.org/usage/terms/history/#LicenseDocument-001')
+		('http://purl.org/dc/terms/date', 'http://dublincore.org/usage/terms/history/#MediaTypeOrExtent-001', 'http://www.w3.org/2000/01/rdf-schema#subPropertyOf')
+	Step: 1
+		('http://purl.org/dc/terms/MediaTypeOrExtent', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'Date Available@en')
+	Step: 2
+		('http://dublincore.org/usage/terms/history/#RFC4646-001', 'http://www.w3.org/2000/01/rdf-schema#range', 'ISIlvYhJmY/z8F0943GzIQ==')
+	Step: 3
+		('25aM+XsoZGHInFBH2Vt5hw==', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'A bibliographic reference for the resource.@en')
+		('http://purl.org/dc/terms/date', 'http://purl.org/dc/terms/publisher', 'http://purl.org/dc/terms/date')
+	Step: 4
+		('http://www.w3.org/2000/01/rdf-schema#subPropertyOf', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'A related resource that requires the described resource to support its function, delivery, or coherence.@en')
+	Step: 5
+		('FmVKcurdboSpNTe+GDmhSg==', 'http://www.w3.org/2000/01/rdf-schema#range', 'TjLiT8ePeufKYax7a5bhkQ==')
+		('http://dublincore.org/usage/terms/history/#spatial-003', 'http://www.w3.org/2000/01/rdf-schema#label', 'http://purl.org/dc/dcmitype/Collection')
+
+Trial: 2
+	Step: 0
+		('2001-05-21^^http://www.w3.org/2001/XMLSchema#date', 'http://purl.org/dc/elements/1.1/relation', 'RFC 5646@en')
+		('http://purl.org/dc/terms/spatial', 'http://purl.org/dc/elements/1.1/publisher', 'A related resource that is a version, edition, or adaptation of the described resource.@en')
+		('http://purl.org/dc/terms/URI', 'http://purl.org/dc/elements/1.1/description', 'http://www.w3.org/2000/01/rdf-schema#domain')
+		('bIYBtGR8iz1nKbsrd6VdzQ==', 'http://www.w3.org/2004/02/skos/core#note', 'http://dublincore.org/usage/terms/history/#PhysicalMedium-001')
+		('The set of media types specified by the Internet Assigned Numbers Authority.@en', 'http://www.w3.org/2004/02/skos/core#note', 'http://www.oclc.org/dewey/')
+		('RFC 3066@en', 'http://purl.org/dc/elements/1.1/relation', 'Spatial Coverage@en')
+		('http://purl.org/dc/terms/MediaType', 'http://purl.org/dc/terms/title', 'owBLBcDZxofZEasrW7nisw==')
+		('yCcyH93RixCkr0efQ7RgSA==', 'http://purl.org/dc/terms/modified', 'RFC 4646@en')
+		('An unambiguous reference to the resource within a given context.@en', 'http://purl.org/dc/terms/hasVersion', 'http://dublincore.org/usage/terms/history/#RFC1766-003')
+	Step: 1
+		('U4BL+11yOZKfH/p8KnVTPQ==', 'http://www.w3.org/2000/01/rdf-schema#range', 'Vi+VH/WZ32x77+iB4Ka/OQ==')
+	Step: 2
+		('http://purl.org/dc/elements/1.1/relation', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'http://www.iso.org/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html')
+		('LCC@en', '9U2ScSJ7PLbH9G9CIaQ27Q==', 'A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \\"DCMI Metadata Terms\\" (http://dublincore.org/documents/dcmi-terms/) for an explanation.@en')
+	Step: 3
+		('http://purl.org/dc/terms/SizeOrDuration', 'http://www.w3.org/2004/02/skos/core#note', '30+2AHYEYU0mtn3j92BJbw==')
+	Step: 4
+		('ISIlvYhJmY/z8F0943GzIQ==', 'http://www.w3.org/2000/01/rdf-schema#isDefinedBy', 'http://dublincore.org/usage/terms/history/#ISO639-3-001')
+	Step: 5
+		('http://purl.org/dc/terms/description', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://dublincore.org/usage/terms/history/#requires-003')
+
+Trial: 3
+	Step: 0
+		('http://purl.org/dc/terms/identifier', 'http://purl.org/dc/elements/1.1/publisher', 'http://www.ietf.org/rfc/rfc3986.txt')
+		('http://purl.org/dc/elements/1.1/rights', 'http://purl.org/dc/terms/issued', 'An entity that mediates access to the resource and for whom the resource is intended or useful.@en')
+		('License Document@en', 'http://purl.org/dc/terms/relation', 'http://purl.org/dc/elements/1.1/relation')
+		('Dk1fiPsrl9Heewe74zLlqg==', 'http://www.w3.org/2004/02/skos/core#note', '64ORA0k6oGY6Lr2U7ySIRg==')
+		('Instructional Method@en', 'http://www.w3.org/2004/02/skos/core#note', 'http://dublincore.org/usage/terms/history/#tableOfContents-003')
+		('RFC 4646 obsoletes RFC 3066.@en', 'http://www.w3.org/2004/02/skos/core#note', 'UM4UtrvT9kLk7r382yq1tg==')
+		('A basis for comparison; a reference point against which other things can be evaluated.@en', 'http://www.w3.org/2004/02/skos/core#note', 'Xhn6peZ7ZRrex9zbxz0i+w==')
+		('The set of three-letter codes listed in ISO 639-3 for the representation of names of languages.@en', 'http://purl.org/dc/terms/hasVersion', 'pzqNtMaxZxP+1JjT6Ga2GQ==')
+	Step: 1
+		('http://dublincore.org/usage/terms/history/#tableOfContents-003', 'http://www.w3.org/2000/01/rdf-schema#range', 'http://purl.org/dc/terms/SizeOrDuration')
+	Step: 2
+		('sPPbQc7atuY0BjB57xbLQA==', 'http://www.w3.org/2000/01/rdf-schema#range', 'http://www.nlm.nih.gov/mesh/meshhome.html')
+		('LCC@en', 'gSeWeyZ1iuuj2lkG0Q/c5A==', 'http://purl.org/dc/terms/date')
+		('http://dublincore.org/usage/terms/history/#MediaTypeOrExtent-001', 'gSeWeyZ1iuuj2lkG0Q/c5A==', 'The set of tags constructed according to RFC 4646 for the identification of languages.@en')
+	Step: 3
+		('nJuCTIPv08xfd03CSUOUxA==', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'http://purl.org/dc/terms/identifier')
+	Step: 4
+		('Access Rights@en', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', '38MiClf1t1lXKwS7r7Prog==')
+	Step: 5
+		('http://www.w3.org/2000/01/rdf-schema#Resource', 'http://www.w3.org/2000/01/rdf-schema#range', 'of4mgEOrkMRDj89tf66Ykw==')
+
+Trial: 4
+	Step: 0
+		('http://dublincore.org/usage/terms/history/#ISO3166-004', 'http://purl.org/dc/elements/1.1/publisher', 'http://purl.org/dc/elements/1.1/format')
+		('vSjwp/eY9ymqvAwhmtvNLQ==', 'http://purl.org/dc/elements/1.1/relation', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate')
+		('NLoh3eslsP+DrBUcrWDx5Q==', 'http://purl.org/dc/terms/description', 'xZ1BGmVQu/PO2D3fHBQaPw==')
+		('http://purl.org/dc/terms/SizeOrDuration', 'http://purl.org/dc/terms/hasVersion', 'The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.@en')
+		('http://www.w3.org/TR/NOTE-datetime', 'http://purl.org/dc/terms/hasVersion', 'Conforms To@en')
+		('The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.@en', 'http://purl.org/dc/terms/title', 'http://dublincore.org/usage/terms/history/#LCSH-003')
+	Step: 1
+		('cNdcl30ck1yGeuO3XlwoVw==', 'http://purl.org/dc/terms/description', 'http://www.w3.org/2002/07/owl#AnnotationProperty')
+	Step: 2
+		('Accrual Method@en', 'http://www.w3.org/2000/01/rdf-schema#range', 'http://dublincore.org/usage/terms/history/#isReplacedBy-003')
+	Step: 3
+		('UDC@en', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'T3nVifjEWwnqwwFbDx+PGQ==')
+	Step: 4
+		('http://www.w3.org/2000/01/rdf-schema#label', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', '/6J2VXPAchcSG0rjnuHRvw==')
+	Step: 5
+		('http://purl.org/dc/dcam/VocabularyEncodingScheme', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'LCSH@en')
+
+Trial: 5
+	Step: 0
+		('Extent@en', 'http://purl.org/dc/terms/publisher', 'http://www.ietf.org/rfc/rfc1766.txt')
+		('http://www.w3.org/2000/01/rdf-schema#subClassOf', 'http://purl.org/dc/terms/title', 'FacPN8vQ1XWpJ5P1aX60mw==')
+		('Creator@en', 'http://purl.org/dc/terms/relation', 'http://dublincore.org/usage/terms/history/#RFC1766-003')
+		('0fBfeeXJEt30SV67jdA3cQ==', 'http://purl.org/dc/elements/1.1/relation', 'of4mgEOrkMRDj89tf66Ykw==')
+		('http://dublincore.org/usage/terms/history/#subjectT-002', 'http://purl.org/dc/terms/title', 'Instructional Method will typically include ways of presenting instructional materials or conducting instructional activities, patterns of learner-to-learner and learner-to-instructor interactions, and mechanisms by which group and individual levels of learning are measured.  Instructional methods include all aspects of the instruction and learning processes from planning and implementation through evaluation and feedback.@en')
+		('http://purl.org/dc/terms/MediaType', 'http://purl.org/dc/terms/relation', 'An unambiguous reference to the resource within a given context.@en')
+	Step: 1
+		('Spatial characteristics of the resource.@en', 'http://purl.org/dc/terms/description', 'http://dublincore.org/usage/terms/history/#Point-003')
+	Step: 2
+		('http://purl.org/dc/terms/hasVersion', 'http://purl.org/dc/terms/hasVersion', 'Date Issued@en')
+		('http://purl.org/dc/terms/alternative', 'http://purl.org/dc/terms/issued', 'A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation.@en')
+	Step: 3
+		('Examples of a Creator include a person, an organization, or a service.@en', 'http://purl.org/dc/terms/issued', 'http://dublincore.org/usage/terms/history/#contributorT-001')
+		('http://purl.org/dc/terms/date', 'http://purl.org/dc/terms/isReplacedBy', 'A material thing.@en')
+	Step: 4
+		('An entity that mediates access to the resource and for whom the resource is intended or useful.@en', 'http://purl.org/dc/terms/relation', 'http://purl.org/dc/terms/URI')
+		('http://purl.org/dc/terms/abstract', 'http://purl.org/dc/terms/description', 'A rate at which something recurs.@en')
+	Step: 5
+		('http://purl.org/dc/elements/1.1/description', 'http://purl.org/dc/terms/relation', 'http://dublincore.org/usage/terms/history/#creator-006')
+		('http://purl.org/dc/terms/TGN', 'http://www.w3.org/2000/01/rdf-schema#subPropertyOf', 'L/jBRY/2K/A2Gy0lKPh5TA==')
+
+Trial: 6
+	Step: 0
+		('The set of codes listed in ISO 3166-1 for the representation of names of countries.@en', 'http://purl.org/dc/terms/hasVersion', 'The set of conceptual resources specified by the Library of Congress Classification.@en')
+		('http://dublincore.org/usage/terms/history/#LCSH-003', 'http://purl.org/dc/terms/title', 'http://www.w3.org/2000/01/rdf-schema#Container')
+		('P91/eFILLXS4v9Ze49Glqw==', 'http://purl.org/dc/terms/modified', 'http://dublincore.org/usage/terms/history/#spatial-003')
+		('Date (often a range) that the resource became or will become available.@en', 'http://www.w3.org/2000/01/rdf-schema#subPropertyOf', 'A statement about the intellectual property rights (IPR) held in or over a Resource, a legal document giving official permission to do something with a resource, or a statement about access rights.@en')
+		('PCg7djtZzHgfJ+YNhL83QA==', 'http://purl.org/dc/terms/description', 'bIYBtGR8iz1nKbsrd6VdzQ==')
+		('HFnP0eGNXYT71VqH6QRTcg==', 'http://purl.org/dc/elements/1.1/date', 'B9+9+crkR6dnIwqiy0sdvw==')
+	Step: 1
+	Step: 2
+		('Creator@en', 'http://purl.org/dc/terms/relation', 'Xhn6peZ7ZRrex9zbxz0i+w==')
+	Step: 3
+		('http://dublincore.org/usage/terms/history/#DDC-003', 'http://www.w3.org/2004/02/skos/core#note', 'The method by which items are added to a collection.@en')
+		('A material thing.@en', 'http://purl.org/dc/terms/description', 'http://dublincore.org/usage/terms/history/#dateAccepted-002')
+	Step: 4
+		('http://purl.org/dc/terms/issued', 'http://www.w3.org/2000/01/rdf-schema#range', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#Property')
+		('2008-01-14^^http://www.w3.org/2001/XMLSchema#date', 'owBLBcDZxofZEasrW7nisw==', 'http://purl.org/dc/terms/LCSH')
+	Step: 5
+		('http://www.w3.org/2002/07/owl#Ontology', 'http://purl.org/dc/terms/relation', 'http://www.w3.org/2002/07/owl#Class')
+		('http://www.w3.org/2000/01/rdf-schema#isDefinedBy', 'http://purl.org/dc/terms/date', 'http://dublincore.org/usage/terms/history/#MediaTypeOrExtent-001')
+
+Trial: 7
+	Step: 0
+		('http://dublincore.org/usage/terms/history/#BibliographicResource-001', 'http://purl.org/dc/terms/issued', 'http://dublincore.org/usage/terms/history/#medium-003')
+		('8gf61eLW6gmG4HI2hXOizw==', 'http://purl.org/dc/terms/relation', 'Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].@en')
+		('1lWUkUOQL0w5t8vnctS6Ow==', 'http://purl.org/dc/elements/1.1/date', 'http://purl.org/dc/terms/rightsHolder')
+		('http://purl.org/dc/terms/MediaTypeOrExtent', 'http://purl.org/dc/terms/hasVersion', 'http://dublincore.org/usage/terms/history/#identifier-006')
+		('http://purl.org/dc/terms/Jurisdiction', 'http://www.w3.org/2004/02/skos/core#note', 'eEoBB2iNen4YG4yFH90YZw==')
+		('P91/eFILLXS4v9Ze49Glqw==', 'http://www.w3.org/2004/02/skos/core#note', 'Ao23VGEj/D5naEtddsD67g==')
+		('http://dublincore.org/usage/terms/history/#contributorT-001', 'http://purl.org/dc/terms/title', 'http://www.nlm.nih.gov/mesh/meshhome.html')
+		('biWRovPJy3/qX9bMdhCD3A==', 'http://www.w3.org/2000/01/rdf-schema#label', 'http://purl.org/dc/terms/IMT')
+	Step: 1
+		('The set of conceptual resources specified by the Universal Decimal Classification.@en', 'http://purl.org/dc/elements/1.1/relation', 'Source@en')
+	Step: 2
+		('LwgHWVq13eDmDzYuf6uOAA==', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'http://dublincore.org/usage/terms/history/#available-003')
+	Step: 3
+		('kCDfqHgZnZWOcZHI+zAygw==', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'The set of points in space defined by their geographic coordinates according to the DCMI Point Encoding Scheme.@en')
+	Step: 4
+		('8jeU2g8PdPl2YWw1g92uCw==', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://www.sil.org/iso639-3/')
+	Step: 5
+		('A spatial region or named place.@en', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'NLoh3eslsP+DrBUcrWDx5Q==')
+
+Trial: 8
+	Step: 0
+		('A basis for comparison; a reference point against which other things can be evaluated.@en', 'http://purl.org/dc/terms/issued', 'zE1qC3foqiNtTbyM+oX4Uw==')
+		('/JRnq7Z23Y4if2nwUhQsFQ==', 'http://purl.org/dc/terms/issued', 'The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.@en')
+		('The set of three-letter codes listed in ISO 639-3 for the representation of names of languages.@en', 'http://www.w3.org/2000/01/rdf-schema#label', 'http://dublincore.org/usage/terms/history/#identifier-006')
+		('Creator@en', 'http://purl.org/dc/terms/relation', 'http://www.nlm.nih.gov/mesh/meshhome.html')
+		('2001-05-21^^http://www.w3.org/2001/XMLSchema#date', 'http://purl.org/dc/terms/title', 'A related resource that is substantially the same as the described resource, but in another format.@en')
+		('Examples of Agent include person, organization, and software agent.@en', 'http://www.w3.org/2004/02/skos/core#note', 'http://dublincore.org/usage/terms/history/#ISO3166-004')
+	Step: 1
+		('http://purl.org/dc/terms/alternative', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty')
+	Step: 2
+		('LwgHWVq13eDmDzYuf6uOAA==', 'http://www.w3.org/2000/01/rdf-schema#range', 'A summary of the resource.@en')
+	Step: 3
+		('Accrual Method@en', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'Lhe7b79ffo7HcZYh7h4LSg==')
+		('http://www.w3.org/1999/02/22-rdf-syntax-ns#langString', 'http://purl.org/dc/terms/date', 'http://purl.org/dc/terms/UDC')
+	Step: 4
+		('http://purl.org/dc/elements/1.1/description', 'http://www.w3.org/2000/01/rdf-schema#isDefinedBy', 'A list of subunits of the resource.@en')
+	Step: 5
+		('http://purl.org/dc/terms/title', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'pw8jJlYRVqV6/Mz9/+h6XQ==')
+
+Trial: 9
+	Step: 0
+		('http://purl.org/dc/terms/URI', 'http://purl.org/dc/terms/relation', 'Dublin Core Metadata Element Set, Version 1.1@en')
+		('http://purl.org/dc/terms/instructionalMethod', 'http://purl.org/dc/terms/modified', 'Rzi3SOOBot4ICjgSPG1e5Q==')
+		('Creator@en', 'http://purl.org/dc/terms/hasVersion', 'http://www.w3.org/2002/07/owl#ObjectProperty')
+		('A rate at which something recurs.@en', 'http://www.w3.org/2000/01/rdf-schema#comment', '+9faowUV2XN4aaiBSkRcbQ==')
+		('http://dublincore.org/usage/terms/history/#creator-006', 'http://www.w3.org/2004/02/skos/core#note', 'Examples of a Creator include a person, an organization, or a service.@en')
+	Step: 1
+		('http://dublincore.org/usage/terms/history/#educationLevel-002', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'Requires@en')
+	Step: 2
+		('Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.@en', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'Z5Ve9rYwaq/l7NvS8vXu0g==')
+	Step: 3
+		('http://purl.org/dc/terms/issued', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://dublincore.org/usage/terms/history/#rightsT-001')
+		('MvcW9EEaUKDu8ieON9t0Tw==', 'http://purl.org/dc/terms/date', 'http://purl.org/dc/terms/LCSH')
+	Step: 4
+		('http://purl.org/dc/terms/mediator', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'hz+xuqph6zWISFnNO8bzvw==')
+	Step: 5
+		('sPPbQc7atuY0BjB57xbLQA==', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'dwrIZHh8SJxioEwV+gsM7A==')
+
+Trial: 10
+	Step: 0
+		('xy0d25BJkORO8ffT7l5L0g==', 'http://purl.org/dc/terms/hasVersion', 'http://dublincore.org/usage/terms/history/#creatorT-002')
+		('NLM@en', 'http://purl.org/dc/terms/hasVersion', 'http://www.w3.org/2001/XMLSchema#dateTime')
+		('http://purl.org/dc/terms/mediator', 'http://purl.org/dc/terms/issued', 'UDC@en')
+		('Location@en', 'http://purl.org/dc/terms/relation', 'FeJaYD/pNGpnqRtLcNF9EQ==')
+		('http://www.w3.org/2002/07/owl#ObjectProperty', 'http://www.w3.org/2004/02/skos/core#note', 'j8u7xyaOwD7VO80AX5hdGg==')
+		('A legal document giving official permission to do something with the resource.@en', 'http://www.w3.org/2000/01/rdf-schema#range', 'The method by which items are added to a collection.@en')
+		('http://www.w3.org/2002/07/owl#Ontology', 'http://purl.org/dc/terms/title', 'The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.@en')
+		('Changes in version imply substantive changes in content rather than differences in format.@en', 'http://purl.org/dc/terms/issued', 'ISO 3166@en')
+	Step: 1
+		('QlXu01E8PTTxVulHUuc7cA==', 'http://www.w3.org/2000/01/rdf-schema#subPropertyOf', 'I4k8AglEak1+o9FzzpSqgg==')
+	Step: 2
+		('http://purl.org/dc/terms/dateSubmitted', 'http://www.w3.org/2000/01/rdf-schema#range', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#object')
+	Step: 3
+		('H0cWDXKRxnnkb2C+qL7WBg==', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', '38MiClf1t1lXKwS7r7Prog==')
+	Step: 4
+		('http://purl.org/dc/terms/issued', 'http://www.w3.org/2000/01/rdf-schema#isDefinedBy', 'Contributor@en')
+	Step: 5
+		('http://dublincore.org/usage/terms/history/#LCC-003', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://purl.org/dc/terms/accessRights')
+
+Trial: 11
+	Step: 0
+		('A legal document giving official permission to do something with the resource.@en', 'http://www.w3.org/2000/01/rdf-schema#comment', 'cdMf9yF0pyjk5PSdZ59Gxw==')
+		('TGN@en', 'http://purl.org/dc/terms/title', 'An entity that mediates access to the resource and for whom the resource is intended or useful.@en')
+		('A spatial region or named place.@en', 'http://purl.org/dc/terms/title', 'PRguhZgMIb8ZZ2/fpr+hXA==')
+		('http://purl.org/dc/terms/mediator', 'http://www.w3.org/2004/02/skos/core#note', 'The set of regions in space defined by their geographic coordinates according to the DCMI Box Encoding Scheme.@en')
+		('oq28+mtw+btpPwDRGiUjkA==', 'http://www.w3.org/2000/01/rdf-schema#label', 'http://www.oclc.org/dewey/')
+		('http://www.w3.org/1999/02/22-rdf-syntax-ns#Property', 'http://purl.org/dc/terms/publisher', 'http://dublincore.org/usage/terms/history/#subject-007')
+		('This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.@en', 'http://purl.org/dc/terms/publisher', 'http://dublincore.org/usage/terms/history/#created-003')
+		('An entity primarily responsible for making the resource.@en', 'http://dublincore.org/usage/terms/history/#MediaTypeOrExtent-001', 'http://dublincore.org/usage/terms/history/#LicenseDocument-001')
+		('+APBSBUUPr+fz+gpA7KFqg==', 'http://purl.org/dc/terms/date', 'http://purl.org/dc/elements/1.1/type')
+		('UicmmV4QqmNsGhBLE70kNw==', 'http://purl.org/dc/terms/date', 'http://purl.org/dc/terms/modified')
+	Step: 1
+		('http://purl.org/dc/terms/MediaType', 'http://purl.org/dc/terms/hasVersion', 'The set of media types specified by the Internet Assigned Numbers Authority.@en')
+	Step: 2
+		('kCDfqHgZnZWOcZHI+zAygw==', 'http://www.w3.org/2000/01/rdf-schema#range', '6B8GCQnR6k0HHutpuQ/rPg==')
+	Step: 3
+		('http://purl.org/dc/elements/1.1/relation', 'http://www.w3.org/2000/01/rdf-schema#range', 'http://www.w3.org/2000/01/rdf-schema#Container')
+	Step: 4
+		('A related resource that is included either physically or logically in the described resource.@en', 'http://www.w3.org/2000/01/rdf-schema#range', 'http://dublincore.org/documents/dcmi-box/')
+		('http://dublincore.org/usage/terms/history/#temporal-003', 'http://www.w3.org/2000/01/rdf-schema#label', 'QLPyokyBeVqzC4VPHGW08w==')
+		('http://purl.org/dc/terms/publisher', 'A method by which resources are added to a collection.@en', 'YIkERFTTbtAjSF5ixDoD0Q==')
+		('http://dublincore.org/usage/terms/history/#RightsStatement-001', 'http://purl.org/dc/terms/date', 'vcYSkv1u2E0GWMR9Fkq1rQ==')
+		('http://www.w3.org/2000/01/rdf-schema#label', 'http://dublincore.org/usage/terms/history/#MediaTypeOrExtent-001', 'tM0IHfjTXWCcYIr8zRKCkQ==')
+	Step: 5
+		('http://purl.org/dc/terms/date', 'http://www.w3.org/2000/01/rdf-schema#range', 'Temporal Coverage@en')
+		('http://www.w3.org/2000/01/rdf-schema#isDefinedBy', 'http://www.ietf.org/rfc/rfc3986.txt', 'http://purl.org/dc/terms/date')
+		('http://purl.org/dc/terms/date', 'http://dublincore.org/usage/terms/history/#dateAccepted-002', 'YIkERFTTbtAjSF5ixDoD0Q==')
+
+Trial: 12
+	Step: 0
+		('HFnP0eGNXYT71VqH6QRTcg==', 'http://www.w3.org/2004/02/skos/core#note', 'http://purl.org/dc/elements/1.1/description')
+		('http://dublincore.org/usage/terms/history/#creator-006', 'http://purl.org/dc/terms/title', 'A point or period of time associated with an event in the lifecycle of the resource.@en')
+		('http://dublincore.org/documents/dcmi-box/', 'http://www.w3.org/2004/02/skos/core#note', 'http://purl.org/dc/terms/IMT')
+		('Cm/81NigsZgao/mbBtKj3w==', 'http://purl.org/dc/terms/publisher', 'http://purl.org/dc/terms/hasFormat')
+		('http://www.w3.org/2000/01/rdf-schema#subClassOf', 'http://purl.org/dc/elements/1.1/description', 'NqqZ9jiNSLI04lF8Is0eVg==')
+		('http://dublincore.org/usage/terms/history/#Period-003', 'http://www.w3.org/2000/01/rdf-schema#comment', '6ReO6NnmbFNA/nlL+kfqVQ==')
+		('http://www.w3.org/2000/01/rdf-schema#isDefinedBy', 'http://purl.org/dc/terms/publisher', 'http://www.w3.org/2001/XMLSchema#float')
+	Step: 1
+		('Extent@en', 'http://www.w3.org/2000/01/rdf-schema#range', 'Location@en')
+	Step: 2
+		('JQmuOVuJ6ORQV7AmGr7s9g==', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', '2003-02-15^^http://www.w3.org/2001/XMLSchema#date')
+	Step: 3
+		('http://purl.org/dc/terms/publisher', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.@en')
+		('http://purl.org/dc/terms/dateCopyrighted', 'http://purl.org/dc/terms/publisher', 'gSeWeyZ1iuuj2lkG0Q/c5A==')
+		('g0zxoStoSD2XJwrySbW4qA==', 'http://purl.org/dc/terms/description', 'gSeWeyZ1iuuj2lkG0Q/c5A==')
+	Step: 4
+		('Examples of a Creator include a person, an organization, or a service.@en', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'Is Part Of@en')
+	Step: 5
+		('http://www.w3.org/2001/XMLSchema#int', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://dublincore.org/usage/terms/history/#bibliographicCitation-002')
+
+Trial: 13
+	Step: 0
+		('WCsJfm3mWIQNjYqaxDdxkg==', 'http://purl.org/dc/terms/title', 'Xxp3qpTmmgqbuSW5dtrbzA==')
+		('http://purl.org/dc/terms/accrualPolicy', 'http://purl.org/dc/terms/title', 'Rights Statement@en')
+		('http://purl.org/dc/terms/MediaTypeOrExtent', 'http://www.w3.org/2000/01/rdf-schema#label', 'eF5sabaFgY79WEeIklThXQ==')
+		('FacPN8vQ1XWpJ5P1aX60mw==', 'http://www.w3.org/2000/01/rdf-schema#subPropertyOf', 'xZ1BGmVQu/PO2D3fHBQaPw==')
+		('http://dublincore.org/usage/terms/history/#hasPart-003', 'http://www.w3.org/2000/01/rdf-schema#range', '2001-05-21^^http://www.w3.org/2001/XMLSchema#date')
+		('fDdCguEP3sOsY8e9tM56Ug==', 'http://purl.org/dc/terms/title', 'jmuQvxiGGL7dWzMrT1pBTw==')
+		('http://dublincore.org/usage/terms/history/#identifier-006', 'http://www.w3.org/2004/02/skos/core#note', 'http://dublincore.org/usage/terms/history/#relationT-001')
+		('Lj3Ktmx1nnZtRsIIN9pMiQ==', 'http://purl.org/dc/terms/hasVersion', 'The set of three-letter codes listed in ISO 639-3 for the representation of names of languages.@en')
+		('YIkERFTTbtAjSF5ixDoD0Q==', 'http://purl.org/dc/elements/1.1/description', 'mAkWpJRHnGXOyWJTooRuEw==')
+	Step: 1
+		('adX1n4/8Dbs/tAIcAdtYQw==', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type', 'http://dublincore.org/usage/terms/history/#MESH-003')
+	Step: 2
+		('http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'A related resource from which the described resource is derived.@en')
+	Step: 3
+		('FmVKcurdboSpNTe+GDmhSg==', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'ZmUvfu4HURWSJwf1dJGFQA==')
+	Step: 4
+		('http://www.w3.org/2000/01/rdf-schema#comment', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', '8DwfGS79pKdF/k9JtMw6TQ==')
+		('http://purl.org/dc/terms/date', 'wTHn2Gpg2ZXa4FmQ5PuSLg==', 'http://dublincore.org/usage/terms/history/#dateAccepted-002')
+	Step: 5
+		('http://purl.org/dc/terms/SizeOrDuration', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'Method of Accrual@en')
+
+Trial: 14
+	Step: 0
+		('http://purl.org/dc/terms/LinguisticSystem', 'http://purl.org/dc/terms/title', '21zTXfWjgXVxcJv81Pje2Q==')
+		('ZlBdJGVRp8vNQiu+6My3dA==', 'http://purl.org/dc/terms/title', 'A file format or physical medium.@en')
+		('http://www.w3.org/2002/07/owl#Ontology', 'http://purl.org/dc/terms/relation', 'A class of entity for whom the resource is intended or useful.@en')
+		('http://dublincore.org/usage/terms/history/#isPartOf-003', 'http://www.w3.org/2004/02/skos/core#note', 'http://purl.org/dc/terms/format')
+		('8gf61eLW6gmG4HI2hXOizw==', 'http://purl.org/dc/terms/hasVersion', 'DCMI Type Vocabulary@en')
+		('1999-07-02^^http://www.w3.org/2001/XMLSchema#date', 'http://www.w3.org/2004/02/skos/core#note', 'Date of copyright.@en')
+		('LCSH@en', 'http://purl.org/dc/elements/1.1/date', 'Agent@en')
+		('http://www.w3.org/2002/07/owl#Ontology', 'http://purl.org/dc/terms/description', 'A class of entity, defined in terms of progression through an educational or training context, for which the described resource is intended.@en')
+		('bSVxh90GGQQSiMIITPBUPQ==', 'http://purl.org/dc/terms/relation', 'FPBOfrFXkuLt7kYxiQC7jw==')
+		('http://dublincore.org/usage/terms/history/#rightsT-001', 'http://www.w3.org/2000/01/rdf-schema#subPropertyOf', 'Rights Holder@en')
+		('aAMMudT9yjhYx9xTHwB8sA==', 'http://dublincore.org/usage/terms/history/#dateAccepted-002', '2008-01-14^^http://www.w3.org/2001/XMLSchema#date')
+	Step: 1
+		('WG3Poeca6VGJDM4Bj+I/mw==', 'http://www.w3.org/2004/02/skos/core#note', 'PCg7djtZzHgfJ+YNhL83QA==')
+	Step: 2
+		('http://purl.org/dc/terms/bibliographicCitation', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'The set of places specified by the Getty Thesaurus of Geographic Names.@en')
+		('gSeWeyZ1iuuj2lkG0Q/c5A==', 'http://purl.org/dc/terms/LCSH', 'http://dublincore.org/usage/terms/history/#SizeOrDuration-001')
+		('LCC@en', 'Date Submitted@en', 'http://purl.org/dc/terms/date')
+	Step: 3
+		('aHG/otBbpMbELdgz/DUG3g==', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://www.w3.org/2000/01/rdf-schema#subPropertyOf')
+	Step: 4
+		('http://purl.org/dc/terms/date', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'zHwGN8wpShCpmpxI8JAdQg==')
+	Step: 5
+		('http://purl.org/dc/terms/hasVersion', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'A related resource that is referenced, cited, or otherwise pointed to by the described resource.@en')
+		('http://purl.org/dc/terms/publisher', '+0dW8z4NkPYY93jyyuStzg==', 'http://purl.org/dc/terms/date')
+
+Trial: 15
+	Step: 0
+		('g0zxoStoSD2XJwrySbW4qA==', 'http://purl.org/dc/elements/1.1/relation', 'http://purl.org/dc/terms/ProvenanceStatement')
+		('Examples of a Creator include a person, an organization, or a service.@en', 'http://purl.org/dc/elements/1.1/description', 'http://purl.org/dc/terms/ISO639-2')
+		('zlOa06/0AfPxwY8MLD2eHw==', 'http://purl.org/dc/terms/title', 'http://www.w3.org/2002/07/owl#NamedIndividual')
+		('ENwyUKnxlo8yLXNI4hNKsA==', 'http://purl.org/dc/terms/issued', 'http://www.w3.org/2002/07/owl#NamedIndividual')
+		('ISIlvYhJmY/z8F0943GzIQ==', 'http://purl.org/dc/elements/1.1/publisher', 'http://dublincore.org/usage/terms/history/#MediaType-001')
+		('http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty', 'http://www.w3.org/2004/02/skos/core#note', 'http://purl.org/dc/terms/tableOfContents')
+		('A related resource that is included either physically or logically in the described resource.@en', 'http://www.w3.org/2000/01/rdf-schema#label', 'A related resource that is included either physically or logically in the described resource.@en')
+		('http://purl.org/dc/elements/1.1/rights', 'http://purl.org/dc/terms/description', 'http://dublincore.org/usage/terms/history/#dateSubmitted-002')
+	Step: 1
+		('Xcoex0u1HB529JD6xCd4sQ==', 'http://www.w3.org/2000/01/rdf-schema#isDefinedBy', 'The three-letter alphabetic codes listed in ISO639-2 for the representation of names of languages.@en')
+	Step: 2
+		('http://purl.org/dc/terms/isVersionOf', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'http://dublincore.org/usage/terms/history/#isRequiredBy-003')
+		('Format@en', 'A language of the resource.@en', 't+7xq1kuNkvPEHXnYLov6w==')
+	Step: 3
+		('Y8dR1OxasulLNqezJf9RMA==', 'http://www.w3.org/2000/01/rdf-schema#isDefinedBy', 'Bibliographic Citation@en')
+	Step: 4
+		('http://purl.org/dc/terms/modified', 'http://www.w3.org/2000/01/rdf-schema#isDefinedBy', 'http://purl.org/dc/terms/audience')
+		('http://purl.org/dc/terms/publisher', 'tM0IHfjTXWCcYIr8zRKCkQ==', 'http://dublincore.org/usage/terms/history/#MediaTypeOrExtent-001')
+	Step: 5
+		('http://www.getty.edu/research/tools/vocabulary/tgn/index.html', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'sPf0yg3UYW66D+b7slmnfA==')
+
+Trial: 16
+	Step: 0
+		('Dk1fiPsrl9Heewe74zLlqg==', 'http://purl.org/dc/elements/1.1/date', 'A related resource that is supplanted, displaced, or superseded by the described resource.@en')
+		('http://purl.org/dc/terms/RightsStatement', 'http://purl.org/dc/terms/relation', 'Bibliographic Resource@en')
+		('http://dublincore.org/usage/terms/history/#Point-003', 'http://www.w3.org/2004/02/skos/core#note', 'Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].@en')
+	Step: 1
+		('HFnP0eGNXYT71VqH6QRTcg==', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://dublincore.org/usage/terms/history/#isRequiredBy-003')
+	Step: 2
+		('A resource that acts or has the power to act.@en', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'http://purl.org/dc/terms/PhysicalMedium')
+	Step: 3
+		('http://purl.org/dc/elements/1.1/date', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'http://dublincore.org/usage/terms/history/#Box-003')
+		('http://dublincore.org/usage/terms/history/#valid-003', 'http://www.w3.org/2000/01/rdf-schema#comment', 'http://purl.org/dc/terms/UDC')
+	Step: 4
+		('RFC 5646@en', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type', 'QFvWin/oRbmrO00nDPRefA==')
+		('http://dublincore.org/usage/terms/history/#rightsT-001', 'http://purl.org/dc/terms/date', 'Physical Medium@en')
+		('The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource.@en', 'http://purl.org/dc/elements/1.1/publisher', 'The set of labeled concepts specified by the Library of Congress Subject Headings.@en')
+		('http://purl.org/dc/terms/Standard', '2008-01-14^^http://www.w3.org/2001/XMLSchema#date', 'http://www.w3.org/2000/01/rdf-schema#Container')
+	Step: 5
+		('bhYMREYGtKjCAWuOUnyHYA==', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'The set of identifiers constructed according to the generic syntax for Uniform Resource Identifiers as specified by the Internet Engineering Task Force.@en')
+
+Trial: 17
+	Step: 0
+		('http://dublincore.org/usage/terms/history/#TGN-003', 'http://purl.org/dc/terms/relation', 'Bibliographic Resource@en')
+		('http://dublincore.org/usage/terms/history/#formatT-001', 'http://purl.org/dc/terms/relation', 'http://dublincore.org/usage/terms/history/#PhysicalMedium-001')
+		('A related resource that requires the described resource to support its function, delivery, or coherence.@en', 'http://purl.org/dc/terms/modified', 'http://dublincore.org/usage/terms/history/#language-007')
+		('http://www.w3.org/2002/07/owl#DatatypeProperty', 'http://purl.org/dc/terms/relation', 'Ao23VGEj/D5naEtddsD67g==')
+		('t+7xq1kuNkvPEHXnYLov6w==', 'http://purl.org/dc/terms/title', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq')
+		('http://dublincore.org/usage/terms/history/#valid-003', 'http://purl.org/dc/terms/description', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#Property')
+		('Size or Duration@en', 'http://purl.org/dc/terms/title', 'http://purl.org/dc/terms/MediaTypeOrExtent')
+		('http://purl.org/dc/terms/dateCopyrighted', 'http://purl.org/dc/elements/1.1/date', 'YIkERFTTbtAjSF5ixDoD0Q==')
+		('owBLBcDZxofZEasrW7nisw==', 'http://purl.org/dc/terms/date', 'http://dublincore.org/usage/terms/history/#RFC5646-001')
+	Step: 1
+		('6rub0Pi+/bYkzF3P/FPTvQ==', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'The frequency with which items are added to a collection.@en')
+		('http://purl.org/dc/terms/DCMIType', 'http://purl.org/dc/terms/date', 'Date Valid@en')
+		('Rights Statement@en', 'http://purl.org/dc/elements/1.1/relation', 'http://dublincore.org/usage/terms/history/#MethodOfInstruction-001')
+		('http://dublincore.org/usage/terms/history/#bibliographicCitation-002', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type', 'http://purl.org/dc/terms/creator')
+		('wHNP69CIYRgEPZLLNd2ttA==', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'Examples of resources to which a Date Submitted may be relevant are a thesis (submitted to a university department) or an article (submitted to a journal).@en')
+		('http://purl.org/dc/terms/RFC3066', 'http://www.w3.org/2000/01/rdf-schema#isDefinedBy', 'http://dublincore.org/usage/terms/history/#instructionalMethod-002')
+		('http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate', 'http://purl.org/dc/terms/title', 'The set of tags constructed according to RFC 3066 for the identification of languages.@en')
+	Step: 2
+		('xy0d25BJkORO8ffT7l5L0g==', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'Method of Instruction@en')
+	Step: 3
+		('http://purl.org/dc/terms/date', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://www.sil.org/iso639-3/')
+	Step: 4
+		('http://www.w3.org/2001/XMLSchema#date', 'http://www.w3.org/2000/01/rdf-schema#range', 'http://purl.org/dc/terms/mediator')
+	Step: 5
+		('hz+xuqph6zWISFnNO8bzvw==', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'http://dublincore.org/usage/terms/history/#coverageT-001')
+		('owBLBcDZxofZEasrW7nisw==', 'http://www.w3.org/2000/01/rdf-schema#label', 'Examples of Agent Class include groups seen as classes, such as students, women, charities, lecturers.@en')
+
+Trial: 18
+	Step: 0
+		('A file format or physical medium.@en', 'http://purl.org/dc/elements/1.1/relation', 'Ym5ECFqWSQrCZcykXI1KmQ==')
+		('http://www.w3.org/1999/02/22-rdf-syntax-ns#type', 'http://purl.org/dc/terms/relation', 'The set of points in space defined by their geographic coordinates according to the DCMI Point Encoding Scheme.@en')
+		('http://www.nlm.nih.gov/mesh/meshhome.html', 'http://purl.org/dc/terms/hasVersion', 'mc1Ilb4UQdyYT9fcS7nEGg==')
+		('The set of conceptual resources specified by the Library of Congress Classification.@en', 'http://purl.org/dc/terms/hasVersion', 'http://www.w3.org/2000/01/rdf-schema#Datatype')
+	Step: 1
+		('2yR8edp1D4jWV6vcWiG7jA==', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type', 'uW6TmN4OFEQJnuNaCOKJzw==')
+	Step: 2
+		('http://purl.org/dc/terms/creator', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://purl.org/dc/terms/PhysicalMedium')
+	Step: 3
+		('A related resource from which the described resource is derived.@en', 'http://www.w3.org/2004/02/skos/core#note', 'Source@en')
+	Step: 4
+		('http://www.w3.org/2000/01/rdf-schema#comment', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type', 'owBLBcDZxofZEasrW7nisw==')
+		('vcYSkv1u2E0GWMR9Fkq1rQ==', 'http://purl.org/dc/terms/publisher', 'Examples of Agent Class include groups seen as classes, such as students, women, charities, lecturers.@en')
+		('L/jBRY/2K/A2Gy0lKPh5TA==', 'http://purl.org/dc/terms/date', 'LCC@en')
+	Step: 5
+		('FS9Of1zJBMto+JvZEv954g==', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://dublincore.org/documents/dcmi-box/')
+
+Trial: 19
+	Step: 0
+		('Prqc8Ess5LaiEkNJ5jXyuA==', 'http://purl.org/dc/elements/1.1/publisher', 'NLM@en')
+		('http://purl.org/dc/elements/1.1/relation', 'http://www.w3.org/2004/02/skos/core#note', 'oq28+mtw+btpPwDRGiUjkA==')
+		('An interval of time that is named or defined by its start and end dates.@en', 'http://www.w3.org/2000/01/rdf-schema#comment', 'A related resource that is required by the described resource to support its function, delivery, or coherence.@en')
+		('http://purl.org/dc/terms/MediaTypeOrExtent', 'http://www.w3.org/2004/02/skos/core#note', 'A digital resource format.@en')
+		('Title@en', 'http://www.w3.org/2004/02/skos/core#note', 'http://purl.org/dc/elements/1.1/subject')
+		('http://purl.org/dc/terms/spatial', 'http://www.w3.org/2004/02/skos/core#note', 'A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support.@en')
+		('http://purl.org/dc/terms/isPartOf', 'http://purl.org/dc/terms/hasVersion', 'askUAzHGY2t3L62ZgzpWYQ==')
+		('Examples of resources to which a Date Submitted may be relevant are a thesis (submitted to a university department) or an article (submitted to a journal).@en', 'http://www.w3.org/2000/01/rdf-schema#label', 'Ym5ECFqWSQrCZcykXI1KmQ==')
+	Step: 1
+		('Date (often a range) of validity of a resource.@en', 'http://purl.org/dc/terms/issued', 'biWRovPJy3/qX9bMdhCD3A==')
+	Step: 2
+		('http://purl.org/dc/elements/1.1/source', 'http://purl.org/dc/terms/title', 'No/9kMd7ersbUniyL9rEhg==')
+		('Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].@en', '+/8iYbnmBPsvyRIWcYy4bA==', '+9faowUV2XN4aaiBSkRcbQ==')
+	Step: 3
+		('f1ZtLOTetNJxpLAgJlsEXA==', 'http://www.w3.org/2000/01/rdf-schema#range', 'Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.@en')
+	Step: 4
+		('Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].@en', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation.@en')
+	Step: 5
+		('http://dublincore.org/usage/terms/history/#IMT-004', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'RFC 4646 obsoletes RFC 3066.@en')
+
+Trial: 20
+	Step: 0
+		('A related resource that is substantially the same as the described resource, but in another format.@en', 'http://www.w3.org/2000/01/rdf-schema#comment', 'http://www.w3.org/2001/XMLSchema#date')
+		('JxjIwvJvGh0RpLYfYbHJnA==', 'http://purl.org/dc/elements/1.1/relation', 'Examples include paper, canvas, or DVD.@en')
+		('bM4QsIIWX+H6UF1BIJMzSA==', 'http://purl.org/dc/terms/issued', 'usJcBtS8Sr9vh9mjz50wJw==')
+		('http://purl.org/dc/terms/LocationPeriodOrJurisdiction', 'http://www.w3.org/2004/02/skos/core#note', 'http://purl.org/dc/terms/LCC')
+		('WA6wpG5Q6+4d6F/m0MGvaQ==', 'http://www.w3.org/2004/02/skos/core#note', 'http://dublincore.org/usage/terms/history/#ISO639-3-001')
+		('QFvWin/oRbmrO00nDPRefA==', 'http://www.w3.org/2004/02/skos/core#note', 'Dk1fiPsrl9Heewe74zLlqg==')
+		('http://purl.org/dc/terms/FileFormat', 'http://purl.org/dc/elements/1.1/date', 'http://dublincore.org/usage/terms/history/#rightsHolder-002')
+		('Relation@en', 'http://purl.org/dc/elements/1.1/description', 'An established standard to which the described resource conforms.@en')
+	Step: 1
+		('Has Format@en', 'http://purl.org/dc/elements/1.1/date', 'An entity primarily responsible for making the resource.@en')
+	Step: 2
+		('LwgHWVq13eDmDzYuf6uOAA==', 'http://www.w3.org/2000/01/rdf-schema#range', 'http://purl.org/dc/terms/isFormatOf')
+		('W3C-DTF@en', 'The set of tags constructed according to RFC 4646 for the identification of languages.@en', 'xEtsUgaI8WkBO/mjpOok1A==')
+		('http://dublincore.org/usage/terms/history/#hasFormat-003', 'http://purl.org/dc/terms/date', 'tM0IHfjTXWCcYIr8zRKCkQ==')
+		('http://www.w3.org/1999/02/22-rdf-syntax-ns#Property', 'http://purl.org/dc/terms/date', '2008-01-14^^http://www.w3.org/2001/XMLSchema#date')
+		('http://purl.org/dc/terms/medium', 'http://purl.org/dc/terms/publisher', 'xZ1BGmVQu/PO2D3fHBQaPw==')
+	Step: 3
+		('http://purl.org/dc/terms/accessRights', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://www.w3.org/2002/07/owl#AnnotationProperty')
+		('http://purl.org/dc/terms/date', 'Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. @en', 'bSVxh90GGQQSiMIITPBUPQ==')
+	Step: 4
+		('http://purl.org/dc/terms/hasPart', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'BDvsh14qtiyk9TmsnUn16Q==')
+	Step: 5
+		('SGDC70zaVMwcFcoGi0eSYA==', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'tGeAfTUKGooNg1iVRiY5QA==')
+
+Trial: 21
+	Step: 0
+		('sjRo2VIr80JuIyqhK/uueA==', 'http://purl.org/dc/terms/issued', 'http://dublincore.org/usage/terms/history/#coverage-006')
+		('jmuQvxiGGL7dWzMrT1pBTw==', 'http://purl.org/dc/terms/title', 'ij29lEtDIe3xrHhNmUMOjw==')
+		('n+UQ6Iw7hS0zD0MwrWuosA==', 'http://purl.org/dc/terms/title', 'http://dublincore.org/usage/terms/history/#source-006')
+		('http://www.nlm.nih.gov/mesh/meshhome.html', 'http://purl.org/dc/terms/hasVersion', 'bIYBtGR8iz1nKbsrd6VdzQ==')
+		('+APBSBUUPr+fz+gpA7KFqg==', 'http://purl.org/dc/elements/1.1/description', 'http://dublincore.org/usage/terms/history/#modified-003')
+		('http://purl.org/dc/terms/NLM', 'http://purl.org/dc/terms/date', 'gSeWeyZ1iuuj2lkG0Q/c5A==')
+		('Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. @en', 'http://www.w3.org/2000/01/rdf-schema#subPropertyOf', 'Be6SMx+1N/V8dvMyWNbgQg==')
+		('s8ahGmSen2f8CyGCidzO8w==', 'http://purl.org/dc/terms/publisher', 'Contributor@en')
+		('http://purl.org/dc/elements/1.1/description', 'http://purl.org/dc/elements/1.1/description', 'http://purl.org/dc/terms/references')
+	Step: 1
+		('fDdCguEP3sOsY8e9tM56Ug==', 'http://purl.org/dc/elements/1.1/publisher', '5z9yavnL+O9ehppC+ALHDw==')
+	Step: 2
+		('http://purl.org/dc/terms/source', 'http://www.w3.org/2000/01/rdf-schema#range', '2002-07-13^^http://www.w3.org/2001/XMLSchema#date')
+	Step: 3
+		('2000-07-11^^http://www.w3.org/2001/XMLSchema#date', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.@en')
+	Step: 4
+		('GHe//lETZKu0pwkQ1W7iWQ==', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'zlOa06/0AfPxwY8MLD2eHw==')
+	Step: 5
+		('g0zxoStoSD2XJwrySbW4qA==', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'UDC@en')
+
+Trial: 22
+	Step: 0
+		('A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support.@en', 'http://www.w3.org/2000/01/rdf-schema#comment', 'http://www.w3.org/2000/01/rdf-schema#subPropertyOf')
+		('Wnj7tFZtJTR8cObGRIZdBw==', 'http://purl.org/dc/terms/relation', 'RFC 3066@en')
+		('A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters.@en', 'http://purl.org/dc/elements/1.1/publisher', 'The distinction between titles and alternative titles is application-specific.@en')
+		('/02qf2cVYMftWQ/DZ886SQ==', 'http://purl.org/dc/elements/1.1/relation', 'ISO 639-2@en')
+		('http://purl.org/dc/terms/instructionalMethod', 'http://purl.org/dc/terms/relation', 'http://dublincore.org/usage/terms/history/#tableOfContents-003')
+		('http://dublincore.org/usage/terms/history/#contributor-006', 'http://purl.org/dc/terms/title', 'http://www.w3.org/2000/01/rdf-schema#range')
+		('PRguhZgMIb8ZZ2/fpr+hXA==', 'http://purl.org/dc/terms/hasVersion', 'Format@en')
+	Step: 1
+		('http://purl.org/dc/terms/RFC4646', 'http://purl.org/dc/elements/1.1/relation', 'http://dublincore.org/usage/terms/history/#RightsStatement-001')
+	Step: 2
+		('http://purl.org/dc/terms/conformsTo', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'sPf0yg3UYW66D+b7slmnfA==')
+	Step: 3
+		('http://purl.org/dc/terms/issued', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'GUpYSrz9OQnyXjGcAzTfgg==')
+		('http://dublincore.org/usage/terms/history/#Box-003', 'http://purl.org/dc/terms/modified', 'uJhGQcdNXxstESsvCJkZVQ==')
+		('http://purl.org/dc/terms/DCMIType', 'http://purl.org/dc/terms/date', 'http://dublincore.org/usage/terms/history/#MediaTypeOrExtent-001')
+	Step: 4
+		('The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.@en', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://www.w3.org/2001/XMLSchema#string')
+		('http://purl.org/dc/terms/dateCopyrighted', 'http://www.w3.org/2000/01/rdf-schema#label', 'owBLBcDZxofZEasrW7nisw==')
+		('GUpYSrz9OQnyXjGcAzTfgg==', 'http://www.ietf.org/rfc/rfc3986.txt', 'bSVxh90GGQQSiMIITPBUPQ==')
+	Step: 5
+		('8gf61eLW6gmG4HI2hXOizw==', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'UM4UtrvT9kLk7r382yq1tg==')
+
+Trial: 23
+	Step: 0
+		('The set of tags constructed according to RFC 5646 for the identification of languages.@en', 'http://purl.org/dc/elements/1.1/relation', 'http://www.w3.org/2002/07/owl#NamedIndividual')
+		('RFC 4646@en', 'http://purl.org/dc/terms/relation', 'ISO 639-3@en')
+		('Is Required By@en', 'http://purl.org/dc/terms/issued', 'KYdPcxU6k7ffBuB8/F0fYw==')
+		('Examples of a Creator include a person, an organization, or a service.@en', 'http://purl.org/dc/terms/publisher', 'http://dublincore.org/usage/terms/history/#Policy-001')
+		('A legal document giving official permission to do something with the resource.@en', 'http://purl.org/dc/terms/issued', 'http://www.w3.org/2002/07/owl#DatatypeProperty')
+		('http://www.w3.org/2001/XMLSchema#nonNegativeInteger', 'http://purl.org/dc/terms/publisher', 'The distinction between titles and alternative titles is application-specific.@en')
+	Step: 1
+		('bhYMREYGtKjCAWuOUnyHYA==', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'Date Created@en')
+		('A class of entity for whom the resource is intended or useful.@en', 'gSeWeyZ1iuuj2lkG0Q/c5A==', 'HkAd7H8Uf8Mo9xAjhh6nWg==')
+		('vcYSkv1u2E0GWMR9Fkq1rQ==', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'cNdcl30ck1yGeuO3XlwoVw==')
+		('OKKIDv/CxFiggUXhjDmEjw==', 'http://www.w3.org/2000/01/rdf-schema#subPropertyOf', 'http://dublincore.org/usage/terms/history/#valid-003')
+		('http://dublincore.org/usage/terms/history/#replaces-003', 'http://purl.org/dc/elements/1.1/description', 'B9+9+crkR6dnIwqiy0sdvw==')
+		('http://dublincore.org/usage/terms/history/#tableOfContents-003', 'http://www.w3.org/2000/01/rdf-schema#comment', 'http://dublincore.org/usage/terms/history/#Standard-001')
+		('YbLiaLvPfGirbKsj6yYCmg==', 'http://purl.org/dc/terms/issued', '2001-05-21^^http://www.w3.org/2001/XMLSchema#date')
+	Step: 2
+		('8wMvpWLe1pf+4n+JgvqJmQ==', 'http://www.w3.org/2000/01/rdf-schema#range', 'The set of places specified by the Getty Thesaurus of Geographic Names.@en')
+	Step: 3
+		('DCMI Period@en', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'Date Valid@en')
+	Step: 4
+		('http://www.w3.org/2000/01/rdf-schema#Datatype', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'Replaces@en')
+	Step: 5
+		('Bq0vnc/Lqn67tbsDVbUafw==', 'http://www.w3.org/2000/01/rdf-schema#range', 'FS9Of1zJBMto+JvZEv954g==')
+
+Trial: 24
+	Step: 0
+		('A basis for comparison; a reference point against which other things can be evaluated.@en', 'http://www.w3.org/2004/02/skos/core#note', 'http://dublincore.org/usage/terms/history/#IMT-004')
+		('NLoh3eslsP+DrBUcrWDx5Q==', 'http://purl.org/dc/terms/relation', 'ZlBdJGVRp8vNQiu+6My3dA==')
+		('usJcBtS8Sr9vh9mjz50wJw==', 'http://purl.org/dc/elements/1.1/date', 'cdMf9yF0pyjk5PSdZ59Gxw==')
+		('http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag', 'http://www.w3.org/2004/02/skos/core#note', 'Provenance@en')
+		('XYTDO4M6+3GkaBRjs7bD0w==', 'http://www.w3.org/2004/02/skos/core#note', 'A related resource in which the described resource is physically or logically included.@en')
+		('http://dublincore.org/usage/terms/history/#rightsHolder-002', 'http://www.w3.org/2000/01/rdf-schema#range', 'e/AhrqtX95qOT5jsRlyG4Q==')
+	Step: 1
+		('http://purl.org/dc/terms/Standard', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'Title@en')
+		('http://purl.org/dc/elements/1.1/date', 'http://www.w3.org/2000/01/rdf-schema#label', 'Be6SMx+1N/V8dvMyWNbgQg==')
+		('http://purl.org/dc/terms/ISO3166', 'http://www.w3.org/2000/01/rdf-schema#isDefinedBy', 'http://purl.org/dc/terms/subject')
+		('http://dublincore.org/usage/terms/history/#RFC4646-001', 'http://www.w3.org/2000/01/rdf-schema#subClassOf', 'http://dublincore.org/usage/terms/history/#PhysicalResource-001')
+	Step: 2
+		('http://www.iana.org/assignments/media-types/', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://purl.org/dc/terms/hasPart')
+	Step: 3
+		('http://purl.org/dc/dcmitype/', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://dublincore.org/usage/terms/history/#identifier-006')
+	Step: 4
+		('Instructional Method@en', 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'A rate at which something recurs.@en')
+		('Date of creation of the resource.@en', 'http://www.w3.org/2000/01/rdf-schema#label', 'Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].@en')
+	Step: 5
+		('A material thing.@en', 'http://www.w3.org/2000/01/rdf-schema#isDefinedBy', 'A dimension or extent, or a time taken to play or execute.@en')
+
+Trial: 25
+	Step: 0
+	Step: 1
+		('18Iv1PlBbKWBaH8s7mMnDA==', 'http://purl.org/dc/terms/date', 'Date of creation of the resource.@en')
+		('Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. @en', 'http://purl.org/dc/terms/date', 'Date of creation of the resource.@en')
+	Step: 2
+		('http://dublincore.org/usage/terms/history/#relationT-001', 'http://purl.org/dc/terms/publisher', 'RCWlnehht7W/2ZORN5PQcA==')
+	Step: 3
+		('http://dublincore.org/usage/terms/history/#hasFormat-003', 'http://www.w3.org/2000/01/rdf-schema#subPropertyOf', 'http://dublincore.org/usage/terms/history/#abstract-003')
+	Step: 4
+		('http://www.w3.org/2000/01/rdf-schema#subPropertyOf', 'http://purl.org/dc/terms/publisher', 'A related resource that requires the described resource to support its function, delivery, or coherence.@en')
+	Step: 5
+		('http://purl.org/dc/elements/1.1/publisher', 'http://www.w3.org/2000/01/rdf-schema#label', 'wTHn2Gpg2ZXa4FmQ5PuSLg==')
+

@@ -420,6 +420,25 @@ class DataWranglingTests(TestCase):
         self.assertEqual(7, y_tests.shape[0])
         self.assertEqual(7, y_tests.shape[0])
 
+    def test_get_concept_and_role_count(self):
+        from main import get_concept_and_role_count
+        labels1 = {'1': 'label1', '2': 'label2', '3': 'label3', '4': 'label4'}
+        labels2 = {'-1': 'label1', '-2': 'label2', '-3': 'label3', '-4': 'label4'}
+        labels3 = {'-1': 'label1', '2': 'label2', '3': 'label3'}
+
+        con, roles = get_concept_and_role_count(labels1)
+        self.assertEqual(con, 4)
+        self.assertEqual(roles, 0)
+
+        con, roles = get_concept_and_role_count(labels2)
+        self.assertEqual(con, 0)
+        self.assertEqual(roles, 4)
+
+        con, roles = get_concept_and_role_count(labels3)
+        self.assertEqual(con, 2)
+        self.assertEqual(roles, 1)
+
+
     # def test_random_label_creator(self):
     #     from main import create_random_label_predictions as randLabel
     #     shape = (3, 2, 10)

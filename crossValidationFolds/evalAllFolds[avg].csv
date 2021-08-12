@@ -1,89 +1,30 @@
-Piecewise System
-
-String Distance:
-Average Levenshtein Distance From True to Predicted Data,2538.0
-Average Levenshtein Distance From Prediction to True Data,9029.0
-Average Levenshtein Distance From True to Predicted Statement,0.4389484607402283
-Average Levenshtein Distance From Prediction to True Statement,1.5615703908682117
-
-Average Prediction Accuracy For this Distance Measure
-True Positives,830.0
-False Positives,4952.0
-False Negatives,4952.0
-Precision,0.14354894500172952
-Recall,0.14354894500172952
-F1 Score,0.14354894500172952
-
-Custom Label Distance:
-Average Custom Distance From True to Predicted Data,140969.5
-Average Custom Distance From Predicted to True Data,475126.5
-Average Custom Distance From True to Predicted Statement,116.64832436905255
-Average Custom Distance From Prediction to True Statement,95.94638529886915
-
-Average Prediction Accuracy For this Distance Measure
-True Positives,0.0
-False Positives,4952.0
-False Negatives,1208.5
-Precision,0.0
-Recall,0.0
-F1 Score,0.0
-
-Deep System
-
-String Distance:
-Average Levenshtein Distance From True to Predicted Data,2588.5
-Average Levenshtein Distance From Prediction to True Data,4915.0
-Average Levenshtein Distance From True to Predicted Statement,0.44768246281563473
-Average Levenshtein Distance From Prediction to True Statement,0.850051885160844
-
-Average Prediction Accuracy For this Distance Measure
-True Positives,3235.5
-False Positives,2546.5
-False Negatives,2546.5
-Precision,0.559581459702525
-Recall,0.559581459702525
-F1 Score,0.559581459702525
-
-Custom Label Distance:
-Average Custom Distance From True to Predicted Data,92148.0
-Average Custom Distance From Predicted to True Data,232840.0
-Average Custom Distance From True to Predicted Statement,76.2498965659909
-Average Custom Distance From Prediction to True Statement,91.43530335754957
-
-Average Prediction Accuracy For this Distance Measure
-True Positives,0.0
-False Positives,2546.5
-False Negatives,1208.5
-Precision,0.0
-Recall,0.0
-F1 Score,0.0
 
 Flat System
 
 String Distance:
-Average Levenshtein Distance From True to Predicted Data,3618.5
-Average Levenshtein Distance From Prediction to True Data,10684.5
-Average Levenshtein Distance From True to Predicted Statement,0.6258215150466967
-Average Levenshtein Distance From Prediction to True Statement,1.8478900034590107
-
-Average Prediction Accuracy For this Distance Measure
-True Positives,359.0
-False Positives,5423.0
-False Negatives,5423.0
-Precision,0.06208924247665168
-Recall,0.06208924247665168
-F1 Score,0.06208924247665168
-
-Custom Label Distance:
-Average Custom Distance From True to Predicted Data,156175.0
-Average Custom Distance From Predicted to True Data,523043.0
-Average Custom Distance From True to Predicted Statement,129.2304509722797
-Average Custom Distance From Prediction to True Statement,96.44901346118385
+Average Levenshtein Distance From True to Predicted Data,5408.5
+Average Levenshtein Distance From Prediction to True Data,6583.5
+Average Levenshtein Distance From True to Predicted Statement,2.4685075308078503
+Average Levenshtein Distance From Prediction to True Statement,2.582777559827383
 
 Average Prediction Accuracy For this Distance Measure
 True Positives,0.0
-False Positives,5423.0
-False Negatives,1208.5
+False Positives,2549.0
+False Negatives,2191.0
+Precision,0.0
+Recall,0.0
+F1 Score,0.0
+
+Custom Label Distance:
+Average Custom Distance From True to Predicted Data,421149.5
+Average Custom Distance From Predicted to True Data,256625.5
+Average Custom Distance From True to Predicted Statement,192.2179370150616
+Average Custom Distance From Prediction to True Statement,100.67693213024715
+
+Average Prediction Accuracy For this Distance Measure
+True Positives,0.0
+False Positives,2549.0
+False Negatives,2191.0
 Precision,0.0
 Recall,0.0
 F1 Score,0.0
