@@ -1521,47 +1521,47 @@ def nTimesCrossValidate(n, epochs, learningRate, conceptSpace, roleSpace, syn, m
     if not os.path.isdir("crossValidationFolds/{}saves".format("" if syn else "s")): os.mkdir(
         "crossValidationFolds/{}saves".format("" if syn else "s"))
 
-    # if os.path.isfile("{}saves/{}foldData{}{}.npz".format("" if syn else "s", n, "Mixed" if mix else "",
-    #                                                       "Err[{}]".format(str(pert)) if pert >= 0 else "")):
-    #     data = numpy.load("{}saves/{}foldData{}{}.npz".format("" if syn else "s", n, "Mixed" if mix else "",
-    #                                                           "Err[{}]".format(str(pert)) if pert >= 0 else ""),
-    #                       allow_pickle=True)
-    #     allTheData = data['arr_0'], data['arr_1'], data['arr_2'], data['arr_3'], data['arr_4'], data['arr_5'], data[
-    #         'arr_6'], data['arr_7'], data['arr_8'], data['arr_9'], data['arr_10']
-    # elif syn:
-    #     if pert >= 0 and os.path.isfile("saves/messData{}.npz".format(pert)):
-    #         data = numpy.load("saves/messData{}.npz".format(pert), allow_pickle=True)
-    #         KBs, supports, outputs, mKBs, mouts = data['arr_0'], data['arr_1'], data['arr_2'], data['arr_3'], data[
-    #             'arr_4']
-    #     else:
-    #         KBs, supports, outputs = getSynDataFromFile('saves/data.npz')
-    #         mKBs = None;
-    #         mouts = None
-    #     if mix and pert == 0:
-    #         sKBs, ssupports, soutputs, localMaps, stats = getSnoDataFromFile('ssaves/data.npz')
-    #         labels = collapseLabelMap(localMaps, stats[0][2], stats[1][2], stats[4][1])
-    #         allTheData = crossValidationSplitAllData(n, KBs, supports, outputs, sKBs, ssupports, soutputs, labels, mKBs,
-    #                                                  mouts, conceptSpace, roleSpace, syn, mix, pert)
-    #     else:
-    #         allTheData = crossValidationSplitAllData(n, KBs, supports, outputs, None, None, None, None, mKBs, mouts,
-    #                                                  conceptSpace, roleSpace, syn, mix, pert)
-    # else:
-    if pert >= 0 and os.path.isfile("ssaves/messData{}.npz".format(pert)):
-        data = numpy.load("ssaves/messData{}.npz".format(pert), allow_pickle=True)
-        KBs, supports, outputs, localMaps, stats, mKBs, mouts = data['arr_0'], data['arr_1'], data['arr_2'], data[
-            'arr_3'], data['arr_4'], data['arr_5'], data['arr_6']
+    if os.path.isfile("{}saves/{}foldData{}{}.npz".format("" if syn else "s", n, "Mixed" if mix else "",
+                                                          "Err[{}]".format(str(pert)) if pert >= 0 else "")):
+        data = numpy.load("{}saves/{}foldData{}{}.npz".format("" if syn else "s", n, "Mixed" if mix else "",
+                                                              "Err[{}]".format(str(pert)) if pert >= 0 else ""),
+                          allow_pickle=True)
+        allTheData = data['arr_0'], data['arr_1'], data['arr_2'], data['arr_3'], data['arr_4'], data['arr_5'], data[
+            'arr_6'], data['arr_7'], data['arr_8'], data['arr_9'], data['arr_10']
+    elif syn:
+        if pert >= 0 and os.path.isfile("saves/messData{}.npz".format(pert)):
+            data = numpy.load("saves/messData{}.npz".format(pert), allow_pickle=True)
+            KBs, supports, outputs, mKBs, mouts = data['arr_0'], data['arr_1'], data['arr_2'], data['arr_3'], data[
+                'arr_4']
+        else:
+            KBs, supports, outputs = getSynDataFromFile('saves/data.npz')
+            mKBs = None;
+            mouts = None
+        if mix and pert == 0:
+            sKBs, ssupports, soutputs, localMaps, stats = getSnoDataFromFile('ssaves/data.npz')
+            labels = collapseLabelMap(localMaps, stats[0][2], stats[1][2], stats[4][1])
+            allTheData = crossValidationSplitAllData(n, KBs, supports, outputs, sKBs, ssupports, soutputs, labels, mKBs,
+                                                     mouts, conceptSpace, roleSpace, syn, mix, pert)
+        else:
+            allTheData = crossValidationSplitAllData(n, KBs, supports, outputs, None, None, None, None, mKBs, mouts,
+                                                     conceptSpace, roleSpace, syn, mix, pert)
     else:
-        KBs, supports, outputs, localMaps, stats = getSnoDataFromFile('ssaves/data.npz')
-        mKBs = None
-        mouts = None
-    labels = collapseLabelMap(localMaps, stats[0][2], stats[1][2], stats[4][1])
-    if mix and pert == 0:
-        sKBs, ssupports, soutputs = getSynDataFromFile('saves/data.npz')
-        allTheData = crossValidationSplitAllData(n, KBs, supports, outputs, sKBs, ssupports, soutputs, labels, mKBs,
-                                                 mouts, conceptSpace, roleSpace, syn, mix, pert)
-    else:
-        allTheData = crossValidationSplitAllData(n, KBs, supports, outputs, None, None, None, labels, mKBs, mouts,
-                                                 conceptSpace, roleSpace, syn, mix, pert)
+        if pert >= 0 and os.path.isfile("ssaves/messData{}.npz".format(pert)):
+            data = numpy.load("ssaves/messData{}.npz".format(pert), allow_pickle=True)
+            KBs, supports, outputs, localMaps, stats, mKBs, mouts = data['arr_0'], data['arr_1'], data['arr_2'], data[
+                'arr_3'], data['arr_4'], data['arr_5'], data['arr_6']
+        else:
+            KBs, supports, outputs, localMaps, stats = getSnoDataFromFile('ssaves/data.npz')
+            mKbs = None;
+            mouts = None
+        labels = collapseLabelMap(localMaps, stats[0][2], stats[1][2], stats[4][1])
+        if mix and pert == 0:
+            sKBs, ssupports, soutputs = getSynDataFromFile('saves/data.npz')
+            allTheData = crossValidationSplitAllData(n, KBs, supports, outputs, sKBs, ssupports, soutputs, labels, mKBs,
+                                                     mouts, conceptSpace, roleSpace, syn, mix, pert)
+        else:
+            allTheData = crossValidationSplitAllData(n, KBs, supports, outputs, None, None, None, labels, mKBs, mouts,
+                                                     conceptSpace, roleSpace, syn, mix, pert)
 
     KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, truePredss, trueStatementss, labelss, nErrsPreds, nErrStatements = allTheData
 
@@ -1600,7 +1600,7 @@ def nTimesCrossValidate(n, epochs, learningRate, conceptSpace, roleSpace, syn, m
             "Synthetic" if syn else "SNOMED", "Synthetic" if syn else "SNOMED"))
 
         writeFinalAverageData(avgResult[0], log)
-
+        e
         log.write("\nDeep System\n")
 
         writeFinalAverageData(avgResult[1], log)
@@ -1625,15 +1625,15 @@ def nTimesCrossValidate(n, epochs, learningRate, conceptSpace, roleSpace, syn, m
 
         log.write("Piecewise System\n")
 
-        writeFinalAverageData(avgResult[0], log)
+        writeFinalAverageDataMess(avgResult[0], log)
 
         log.write("\nDeep System\n")
 
-        writeFinalAverageData(avgResult[1], log)
+        writeFinalAverageDataMess(avgResult[1], log)
 
         log.write("\nFlat System\n")
 
-        writeFinalAverageData(avgResult[2], log)
+        writeFinalAverageDataMess(avgResult[2], log)
 
     log.close()
 
