@@ -2,37 +2,23 @@
 Deep LSTM
 
 Training Statistics
-Prediction Mean Squared Error,0.024002904072403908
-Learned Reduction MSE,0.051090314984321594
-Increase MSE on Test,-0.000166282057762146
-Training Percent Change MSE,-67.88553595542908
+Prediction Mean Squared Error,0.030977612361311913
+Learned Reduction MSE,0.06982500851154327
+Increase MSE on Test,0.02392219752073288
+Training Percent Change MSE,-90.82286953926086
 
 Test Data Evaluation
 
 Custom Label Distance:
-Custom Distance From True to Predicted Data,84681
-Custom Distance From Predicted to True Data,52282
-Average Custom Distance From True to Predicted Statement,188.18
-Average Custom Distance From Prediction to True Statement,85.70819672131148
+Custom Distance From True to Predicted Data,1097
+Custom Distance From Predicted to True Data,1486
+Average Custom Distance From True to Predicted Statement,2.0390334572490705
+Average Custom Distance From Prediction to True Statement,2.0841514726507713
 
 Prediction Accuracy For this Distance Measure
-True Positives,0
-False Positives,610
-False Negatives,450
-Precision,0.0
-Recall,0.0
-F1 Score,0
-
-String Distance:
-Levenshtein Distance From True to Predicted Data,1062
-Levenshtein Distance From Prediction to True Data,1593
-Average Levenshtein Distance From True to Predicted Statement,2.36
-Average Levenshtein Distance From Predicted to True Statement,2.6114754098360655
-
-Prediction Accuracy For this Distance Measure
-True Positives,0
-False Positives,610
-False Negatives,450
-Precision,0.0
-Recall,0.0
-F1 Score,0
+True Positives,110
+False Positives,603
+False Negatives,428
+Precision,0.15427769985974754
+Recall,0.20446096654275092
+F1 Score,0.17585931254996004

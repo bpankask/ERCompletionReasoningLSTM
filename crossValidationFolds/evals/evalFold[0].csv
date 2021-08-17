@@ -2,23 +2,23 @@
 Deep LSTM
 
 Training Statistics
-Prediction Mean Squared Error,0.04812055826187134
-Learned Reduction MSE,0.07565651834011078
-Increase MSE on Test,0.0464509092271328
-Training Percent Change MSE,-97.84077405929565
+Prediction Mean Squared Error,0.026991158723831177
+Learned Reduction MSE,0.07476074248552322
+Increase MSE on Test,0.019547991454601288
+Training Percent Change MSE,-90.94548225402832
 
 Test Data Evaluation
 
 Custom Label Distance:
-Custom Distance From True to Predicted Data,17419
-Custom Distance From Predicted to True Data,28241
-Average Custom Distance From True to Predicted Statement,47.463215258855584
-Average Custom Distance From Prediction to True Statement,57.98973305954826
+Custom Distance From True to Predicted Data,1028
+Custom Distance From Predicted to True Data,1389
+Average Custom Distance From True to Predicted Statement,1.9179104477611941
+Average Custom Distance From Prediction to True Statement,1.9535864978902953
 
 Prediction Accuracy For this Distance Measure
-True Positives,0
-False Positives,487
-False Negatives,367
-Precision,0.0
-Recall,0.0
-F1 Score,0
+True Positives,100
+False Positives,611
+False Negatives,436
+Precision,0.14064697609001406
+Recall,0.1865671641791045
+F1 Score,0.16038492381716118

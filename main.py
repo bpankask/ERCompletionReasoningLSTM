@@ -258,7 +258,7 @@ def write_evaluation_measures(F, log):
 # Tested barely
 def write_final_average_data(result, log):
     levTN2, levNT2, sizeTrue2, sizeNew2, (TPs1, FPs1, FNs1, pre1, rec1, F1) = result[0]
-    custTN, custNT, countTrue, countNew, (TPs2, FPs2, FNs2, pre2, rec2, F2) = result[1]
+    # custTN, custNT, countTrue, countNew, (TPs2, FPs2, FNs2, pre2, rec2, F2) = result[1]
 
     log.write(
         "\nString Distance:\nAverage Levenshtein Distance From True to Predicted Data,{}\nAverage Levenshtein Distance "
@@ -272,17 +272,17 @@ def write_final_average_data(result, log):
         "\nAverage Prediction Accuracy For this Distance Measure\nTrue Positives,{}\nFalse Positives,{}\nFalse "
         "Negatives,{}\nPrecision,{}\nRecall,{}\nF1 Score,{}\n".format(TPs1, FPs1, FNs1, pre1, rec1, F1))
 
-    log.write(
-        "\nCustom Label Distance:\nAverage Custom Distance From True to Predicted Data,{}\nAverage Custom Distance "
-        "From Predicted to True Data,{}".format(custTN, custNT))
-
-    log.write(
-        "\nAverage Custom Distance From True to Predicted Statement,{}\nAverage Custom Distance From Prediction to "
-        "True Statement,{}\n".format(custTN / countTrue, custNT / countNew))
-
-    log.write(
-        "\nAverage Prediction Accuracy For this Distance Measure\nTrue Positives,{}\nFalse Positives,{}\nFalse "
-        "Negatives,{}\nPrecision,{}\nRecall,{}\nF1 Score,{}\n".format(TPs2, FPs2, FNs2, pre2, rec2, F2))
+    # log.write(
+    #     "\nCustom Label Distance:\nAverage Custom Distance From True to Predicted Data,{}\nAverage Custom Distance "
+    #     "From Predicted to True Data,{}".format(custTN, custNT))
+    #
+    # log.write(
+    #     "\nAverage Custom Distance From True to Predicted Statement,{}\nAverage Custom Distance From Prediction to "
+    #     "True Statement,{}\n".format(custTN / countTrue, custNT / countNew))
+    #
+    # log.write(
+    #     "\nAverage Prediction Accuracy For this Distance Measure\nTrue Positives,{}\nFalse Positives,{}\nFalse "
+    #     "Negatives,{}\nPrecision,{}\nRecall,{}\nF1 Score,{}\n".format(TPs2, FPs2, FNs2, pre2, rec2, F2))
 
 
 # $$
@@ -460,13 +460,13 @@ def get_labels_from_encoding(trueValues, predValues):
                 if item not in uniqueList:
                     uniqueList.append(item)
 
-    numConcept = 0
-    numRole = 0
-    for elem in uniqueList:
-        if elem > 0:
-            numConcept += 1
-        elif elem < 0:
-            numRole += 1
+    numConcept = 10
+    numRole = 4
+    # for elem in uniqueList:
+    #     if elem > 0:
+    #         numConcept += 1
+    #     elif elem < 0:
+    #         numRole += 1
 
     trueArray = np.zeros(shape=(trueValues.shape[0], trueValues.shape[1]), dtype=tuple)
     predArray = np.zeros(shape=(predValues.shape[0], predValues.shape[1]), dtype=tuple)
@@ -917,9 +917,9 @@ def read_inputs():
     """Collects arguments to be passed into the model."""
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-e", "--epochs", help="number of epochs for each system", type=int, default=20000)  # 20000
+    parser.add_argument("-e", "--epochs", help="number of epochs for each system", type=int, default=10000)  # 20000
     parser.add_argument("-l", "--learningRate", help="learning rate of each system", type=float, default=0.0001)
-    parser.add_argument("-c", "--cross", help="cross validation k", type=int, default=10)  # 10
+    parser.add_argument("-c", "--cross", help="cross validation k", type=int, default=5)  # 10
 
     args = parser.parse_args()
 
