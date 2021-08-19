@@ -1,0 +1,989 @@
+Trial: 0
+
+Trial: 1
+
+Trial: 2
+
+Trial: 3
+
+Trial: 4
+
+Trial: 5
+
+Trial: 6
+
+Trial: 7
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+
+Trial: 8
+
+Trial: 9
+
+Trial: 10
+
+Trial: 11
+
+Trial: 12
+	Step: 0
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a subcutaneous tissue
+
+Trial: 13
+
+Trial: 14
+
+Trial: 15
+
+Trial: 16
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a joint of suture of skull then there is a side that it is sPartOf
+
+Trial: 17
+	Step: 0
+		C2 ⊑ C1
+			a back is a side
+
+Trial: 18
+
+Trial: 19
+
+Trial: 20
+
+Trial: 21
+
+Trial: 22
+
+Trial: 23
+
+Trial: 24
+
+Trial: 25
+
+Trial: 26
+
+Trial: 27
+
+Trial: 28
+	Step: 0
+		C2 ⊑ C1
+			a epidermis is a skin
+
+Trial: 29
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue of upper trunk is a subcutaneous tissue
+
+Trial: 30
+
+Trial: 31
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a hair then there is a skin that it is rPartOf
+
+Trial: 32
+
+Trial: 33
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a mastoid branch of occipital artery then there is a subcutaneous tissue that it is sPartOf
+
+Trial: 34
+	Step: 0
+		C1 ⊑ C1
+			a soft tissue of orbit is a soft tissue of orbit
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a lamina episcleralis then there is a soft tissue of orbit that it is rPartOf
+
+Trial: 35
+
+Trial: 36
+
+Trial: 37
+
+Trial: 38
+
+Trial: 39
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a subcutaneous tissue that it is sPartOf
+
+Trial: 40
+	Step: 0
+		C2 ⊑ C1
+			a body as a whole is a respiratory system
+
+Trial: 41
+	Step: 0
+		C1 ⊑ C1
+			a clitoris is a clitoris
+
+Trial: 42
+
+Trial: 43
+
+Trial: 44
+
+Trial: 45
+
+Trial: 46
+
+Trial: 47
+
+Trial: 48
+	Step: 0
+		C2 ⊑ C1
+			a body as a whole is a digestive system
+
+Trial: 49
+
+Trial: 50
+	Step: 0
+		C2 ⊑ C1
+			a CD97+ lymphocyte is a subcutaneous tissue
+
+Trial: 51
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a skin then there is a nail that it is sPartOf
+
+Trial: 52
+
+Trial: 53
+
+Trial: 54
+
+Trial: 55
+
+Trial: 56
+
+Trial: 57
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a middle phalanx of ring finger then there is a ring finger that it is rPartOf
+
+Trial: 58
+
+Trial: 59
+
+Trial: 60
+
+Trial: 61
+
+Trial: 62
+	Step: 0
+		C2 ⊑ C1
+			a mons pubis is a vulva
+
+Trial: 63
+
+Trial: 64
+
+Trial: 65
+
+Trial: 66
+
+Trial: 67
+
+Trial: 68
+
+Trial: 69
+
+Trial: 70
+
+Trial: 71
+	Step: 0
+		C2 ⊑ C1
+			a anal canal is a sphincter ani internus muscle
+
+Trial: 72
+
+Trial: 73
+	Step: 0
+		C2 ⊑ C1
+			a nail is a side
+
+Trial: 74
+
+Trial: 75
+
+Trial: 76
+	Step: 0
+		C2 ⊑ C1
+			a posterior surface of lower extremity is a smooth muscle sphincter
+
+Trial: 77
+
+Trial: 78
+
+Trial: 79
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue is a side
+
+Trial: 80
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of lumbosacral region then there is a subcutaneous tissue that it is sPartOf
+
+Trial: 81
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a skin
+
+Trial: 82
+
+Trial: 83
+
+Trial: 84
+
+Trial: 85
+	Step: 0
+		C1 ⊑ C1
+			a mucous membrane of upper lip is a mucous membrane of upper lip
+
+Trial: 86
+
+Trial: 87
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a skin
+
+Trial: 88
+
+Trial: 89
+
+Trial: 90
+
+Trial: 91
+
+Trial: 92
+
+Trial: 93
+
+Trial: 94
+
+Trial: 95
+	Step: 0
+		C2 ⊑ C1
+			a portion of body tissue is a body as a whole
+
+Trial: 96
+	Step: 0
+		C2 ⊑ C1
+			a sympathetic trunk is a sympathetic nerve
+
+Trial: 97
+
+Trial: 98
+
+Trial: 99
+
+Trial: 100
+
+Trial: 101
+
+Trial: 102
+
+Trial: 103
+
+Trial: 104
+
+Trial: 105
+
+Trial: 106
+
+Trial: 107
+
+Trial: 108
+
+Trial: 109
+
+Trial: 110
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a side that it is rPartOf
+
+Trial: 111
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a dorsal surface of ring finger then there is a labium minus that it is rPartOf
+
+Trial: 112
+
+Trial: 113
+
+Trial: 114
+
+Trial: 115
+
+Trial: 116
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a mucous membrane of anal canal then there is a anal sac that it is rPartOf
+
+Trial: 117
+	Step: 0
+		C1 ⊑ C1
+			a thoracic region of back is a thoracic region of back
+
+Trial: 118
+
+Trial: 119
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue is a side
+
+Trial: 120
+
+Trial: 121
+
+Trial: 122
+	Step: 0
+		C2 ⊑ C1
+			a left temporal lobe is a left
+
+Trial: 123
+
+Trial: 124
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of prepuce of clitoris then there is a subcutaneous tissue that it is sPartOf
+
+Trial: 125
+
+Trial: 126
+
+Trial: 127
+	Step: 0
+		C2 ⊑ C1
+			a jaw region of head is a side
+
+Trial: 128
+
+Trial: 129
+	Step: 0
+		C2 ⊑ C1
+			a fallopian tube is a ovary
+
+Trial: 130
+
+Trial: 131
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a flexor surface of wrist region then there is a plantar surface of third toe that it is sPartOf
+
+Trial: 132
+
+Trial: 133
+	Step: 0
+		C2 ⊑ C1
+			a visual system is a eye proper
+
+Trial: 134
+
+Trial: 135
+	Step: 0
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a body as a whole
+
+Trial: 136
+	Step: 0
+		C2 ⊑ C1
+			a skin is a nail
+
+Trial: 137
+
+Trial: 138
+	Step: 0
+		C2 ⊑ C1
+			a scalp is a subcutaneous tissue
+
+Trial: 139
+
+Trial: 140
+
+Trial: 141
+
+Trial: 142
+	Step: 0
+		C2 ⊑ C1
+			a cardiac valve cusp is a subcutaneous tissue
+
+Trial: 143
+	Step: 0
+		C2 ⊑ C1
+			a subserous tissue of visceral peritoneum is a subcutaneous tissue
+
+Trial: 144
+
+Trial: 145
+
+Trial: 146
+
+Trial: 147
+	Step: 0
+		C2 ⊑ C1
+			a sacrococcygeal region of back is a lower back
+
+Trial: 148
+
+Trial: 149
+
+Trial: 150
+
+Trial: 151
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a central nervous system tract then there is a side that it is sPartOf
+
+Trial: 152
+
+Trial: 153
+
+Trial: 154
+	Step: 0
+		C2 ⊑ C1
+			a fossa navicularis of urethra is a mucous membrane of urethra
+
+Trial: 155
+
+Trial: 156
+
+Trial: 157
+	Step: 0
+		C2 ⊑ C1
+			a thumb is a side
+
+Trial: 158
+	Step: 0
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+
+Trial: 159
+	Step: 0
+		C2 ⊑ C1
+			a skin is a side
+
+Trial: 160
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of perineum then there is a subcutaneous tissue that it is rPartOf
+
+Trial: 161
+
+Trial: 162
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a brain and spinal cord then there is a central nervous system that it is sPartOf
+
+Trial: 163
+
+Trial: 164
+
+Trial: 165
+
+Trial: 166
+
+Trial: 167
+
+Trial: 168
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a orbital region of head then there is a head that it is sPartOf
+
+Trial: 169
+
+Trial: 170
+	Step: 0
+		C2 ⊑ C1
+			a surface of body is a diaphragma sellae
+
+Trial: 171
+
+Trial: 172
+
+Trial: 173
+
+Trial: 174
+
+Trial: 175
+
+Trial: 176
+
+Trial: 177
+
+Trial: 178
+	Step: 0
+		C2 ⊑ C1
+			a preoptic area is a hypothalamus
+
+Trial: 179
+
+Trial: 180
+
+Trial: 181
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a hand joint then there is a side that it is sPartOf
+
+Trial: 182
+
+Trial: 183
+
+Trial: 184
+
+Trial: 185
+	Step: 0
+		C2 ⊑ C1
+			a cerebellum is a side
+
+Trial: 186
+
+Trial: 187
+
+Trial: 188
+
+Trial: 189
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a chest wall that it is rPartOf
+
+Trial: 190
+
+Trial: 191
+
+Trial: 192
+	Step: 0
+		C2 ⊑ C1
+			a intervertebral disc space of thoracic vertebra is a thoracic spine joint
+
+Trial: 193
+	Step: 0
+		C1 ⊑ C1
+			a anterior chest wall is a anterior chest wall
+
+Trial: 194
+
+Trial: 195
+
+Trial: 196
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a skin
+
+Trial: 197
+	Step: 0
+		C2 ⊑ C1
+			a lateral membranous ampulla is a subcutaneous tissue
+
+Trial: 198
+	Step: 0
+		C2 ⊑ C1
+			a palmar surface of little finger is a lateral surface of upper arm
+
+Trial: 199
+
+Trial: 200
+
+Trial: 201
+	Step: 0
+		C2 ⊑ C1
+			a rhinencephalon is a side
+
+Trial: 202
+
+Trial: 203
+
+Trial: 204
+
+Trial: 205
+
+Trial: 206
+
+Trial: 207
+
+Trial: 208
+
+Trial: 209
+
+Trial: 210
+
+Trial: 211
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a laryngeal cavity then there is a glottis that it is rPartOf
+
+Trial: 212
+
+Trial: 213
+
+Trial: 214
+	Step: 0
+		C2 ⊑ C1
+			a taste bud is a neck
+
+Trial: 215
+	Step: 0
+		C2 ⊑ C1
+			a plantaris muscle is a side
+
+Trial: 216
+
+Trial: 217
+	Step: 0
+		C2 ⊑ C1
+			a base of phalanx of hand is a subcutaneous tissue
+
+Trial: 218
+
+Trial: 219
+
+Trial: 220
+
+Trial: 221
+
+Trial: 222
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue of gluteal fold is a lingular branch of left pulmonary artery
+
+Trial: 223
+
+Trial: 224
+
+Trial: 225
+
+Trial: 226
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a dorsiflexor of ankle joint then there is a female urinary outflow tract that it is rPartOf
+
+Trial: 227
+	Step: 0
+		C2 ⊑ C1
+			a simple joint is a skin
+
+Trial: 228
+
+Trial: 229
+
+Trial: 230
+	Step: 0
+		C2 ⊑ R1
+			a arch of fourth lumbar vertebra is a sPartOf
+
+Trial: 231
+
+Trial: 232
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a anal region of perineum then there is a ramus of mandible that it is rPartOf
+
+Trial: 233
+
+Trial: 234
+
+Trial: 235
+
+Trial: 236
+
+Trial: 237
+
+Trial: 238
+
+Trial: 239
+	Step: 0
+		C2 ⊑ C1
+			a zonular fiber is a subcutaneous tissue
+
+Trial: 240
+
+Trial: 241
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a skin then there is a nail that it is sPartOf
+
+Trial: 242
+
+Trial: 243
+
+Trial: 244
+
+Trial: 245
+
+Trial: 246
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a surface of knee then there is a side that it is sPartOf
+
+Trial: 247
+
+Trial: 248
+
+Trial: 249
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is sPartOf
+
+Trial: 250
+	Step: 0
+		C2 ⊑ C1
+			a upper digestive tract is a tongue
+
+Trial: 251
+	Step: 0
+		C2 ⊑ C1
+			a airway is a oropharynx
+
+Trial: 252
+
+Trial: 253
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue of lateral area of thigh is a subcutaneous tissue
+
+Trial: 254
+
+Trial: 255
+
+Trial: 256
+
+Trial: 257
+
+Trial: 258
+
+Trial: 259
+
+Trial: 260
+
+Trial: 261
+
+Trial: 262
+	Step: 0
+		C2 ⊑ C1
+			a anterior abdominal wall is a foot joint
+
+Trial: 263
+	Step: 0
+		C2 ⊑ C1
+			a endocrine system is a pancreas
+
+Trial: 264
+
+Trial: 265
+
+Trial: 266
+
+Trial: 267
+
+Trial: 268
+
+Trial: 269
+	Step: 0
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a gastroepiploic artery then there is a subcutaneous tissue that it is sPartOf
+
+Trial: 270
+
+Trial: 271
+
+Trial: 272
+	Step: 0
+		C2 ⊑ C1
+			a lymphatic vessel of vulva and clitoris is a subcutaneous tissue
+
+Trial: 273
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a skin
+
+Trial: 274
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a skin of glans penis then there is a region of skin that it is rPartOf
+
+Trial: 275
+	Step: 0
+		C2 ⊑ C1
+			a surface of body is a subcutaneous tissue of medial area of ring finger
+
+Trial: 276
+	Step: 0
+		C1 ⊑ C1
+			a female genital system is a female genital system
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a female genital system that it is sPartOf
+
+Trial: 277
+
+Trial: 278
+
+Trial: 279
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue is a body as a whole
+
+Trial: 280
+	Step: 0
+		C1 ⊑ C1
+			a side is a side
+
+Trial: 281
+
+Trial: 282
+
+Trial: 283
+
+Trial: 284
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue is a body cavity
+
+Trial: 285
+
+Trial: 286
+
+Trial: 287
+
+Trial: 288
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a male external genitalia then there is a penis that it is rPartOf
+
+Trial: 289
+
+Trial: 290
+
+Trial: 291
+
+Trial: 292
+
+Trial: 293
+	Step: 0
+		C2 ⊑ C1
+			a middle nasal turbinate is a ethmoid bone
+
+Trial: 294
+
+Trial: 295
+
+Trial: 296
+	Step: 0
+		C2 ⊑ C1
+			a right half of neck is a surface of right side of neck
+
+Trial: 297
+
+Trial: 298
+
+Trial: 299
+	Step: 0
+		C2 ⊑ C1
+			a ileum is a small intestine
+
+Trial: 300
+
+Trial: 301
+
+Trial: 302
+
+Trial: 303
+
+Trial: 304
+
+Trial: 305
+
+Trial: 306
+
+Trial: 307
+
+Trial: 308
+
+Trial: 309
+
+Trial: 310
+
+Trial: 311
+	Step: 0
+		C2 ⊑ C1
+			a deep perineal space is a vocal cord
+
+Trial: 312
+
+Trial: 313
+	Step: 0
+		C2 ⊑ C1
+			a fifth sacral vertebra is a subcutaneous tissue
+
+Trial: 314
+
+Trial: 315
+	Step: 0
+		C2 ⊑ C1
+			a lower body is a pelvic region
+
+Trial: 316
+
+Trial: 317
+	Step: 0
+		C2 ⊑ C1
+			a anterior commissure of labia majora is a subcutaneous tissue
+
+Trial: 318
+
+Trial: 319
+	Step: 0
+		C2 ⊑ C1
+			a radial tuberosity is a forearm
+
+Trial: 320
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a hair then there is a skin that it is sPartOf
+
+Trial: 321
+
+Trial: 322
+
+Trial: 323
+
+Trial: 324
+	Step: 0
+		C2 ⊑ C1
+			a L4/L5 part of supraspinous ligament is a lateral surface of face
+
+Trial: 325
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a skin
+
+Trial: 326
+
+Trial: 327
+
+Trial: 328
+
+Trial: 329
+	Step: 0
+		C2 ⊑ R1
+			a small intestine is a sPartOf
+
+Trial: 330
+
+Trial: 331
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of palmar area of index finger then there is a subcutaneous tissue that it is sPartOf
+
+Trial: 332
+
+Trial: 333
+

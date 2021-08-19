@@ -695,5 +695,3 @@ if __name__ == "__main__":
 
     n_times_cross_validate(n=args.cross, epochs=args.epochs, learningRate=args.learningRate, decodingNonProperty=5,
                            decodingProperty=2, dataFile="rdfData/dublin.json")
-
-

@@ -1,0 +1,1159 @@
+Trial: 0
+
+Trial: 1
+
+Trial: 2
+	Step: 0
+		C2 ⊑ R1
+			a lumbar nerve dorsal primary division is a rPartOf
+
+Trial: 3
+
+Trial: 4
+	Step: 0
+		C2 ⊑ R1
+			a skin is a rPartOf
+
+Trial: 5
+	Step: 0
+		C2 ⊑ R1
+			a dorsal digital nerve to fifth toe is a sPartOf
+
+Trial: 6
+	Step: 0
+		C2 ⊑ R1
+			a bone tissue of third metacarpal is a rPartOf
+
+Trial: 7
+
+Trial: 8
+
+Trial: 9
+
+Trial: 10
+
+Trial: 11
+
+Trial: 12
+	Step: 0
+		C2 ⊑ R1
+			a hematopoietic system is a sPartOf
+
+Trial: 13
+
+Trial: 14
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue of palpebral margin is a rPartOf
+
+Trial: 15
+
+Trial: 16
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a bone tissue of proximal femur then there is a side that it is rPartOf
+
+Trial: 17
+
+Trial: 18
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue of upper extremity is a sPartOf
+
+Trial: 19
+	Step: 0
+		C2 ⊑ R1
+			a abdominal wall is a rPartOf
+
+Trial: 20
+
+Trial: 21
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a bone tissue of T6 that it is rPartOf
+
+Trial: 22
+	Step: 0
+		C2 ⊑ R1
+			a joint of thoracic wall is a sPartOf
+
+Trial: 23
+
+Trial: 24
+	Step: 0
+		C2 ⊑ R1
+			a bone tissue of cranial fossa is a rPartOf
+
+Trial: 25
+
+Trial: 26
+	Step: 0
+		C2 ⊑ R1
+			a bone of upper extremity is a sPartOf
+
+Trial: 27
+	Step: 0
+		C2 ⊑ R1
+			a nasolabial sulcus is a sPartOf
+
+Trial: 28
+
+Trial: 29
+
+Trial: 30
+
+Trial: 31
+
+Trial: 32
+	Step: 0
+		C2 ⊑ R1
+			a valve of Bochdalek is a sPartOf
+
+Trial: 33
+
+Trial: 34
+	Step: 0
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+
+Trial: 35
+
+Trial: 36
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+
+Trial: 37
+
+Trial: 38
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+
+Trial: 39
+
+Trial: 40
+	Step: 0
+		C2 ⊑ R1
+			a mucous membrane of anal canal is a rPartOf
+
+Trial: 41
+
+Trial: 42
+	Step: 0
+		C2 ⊑ R1
+			a posterior surface of lens is a sPartOf
+
+Trial: 43
+	Step: 0
+		C2 ⊑ R1
+			a right kidney is a rPartOf
+
+Trial: 44
+
+Trial: 45
+	Step: 0
+		C2 ⊑ R1
+			a shoulder region is a sPartOf
+
+Trial: 46
+
+Trial: 47
+
+Trial: 48
+	Step: 0
+		C2 ⊑ R1
+			a urinary system is a sPartOf
+
+Trial: 49
+
+Trial: 50
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+
+Trial: 51
+
+Trial: 52
+
+Trial: 53
+	Step: 0
+		C2 ⊑ R1
+			a body organ is a rPartOf
+
+Trial: 54
+
+Trial: 55
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+
+Trial: 56
+	Step: 0
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 57
+
+Trial: 58
+
+Trial: 59
+	Step: 0
+		C2 ⊑ R1
+			a surface of body is a rPartOf
+
+Trial: 60
+	Step: 0
+		C2 ⊑ R1
+			a skin of midline nose is a sPartOf
+
+Trial: 61
+
+Trial: 62
+	Step: 0
+		C2 ⊑ R1
+			a lower respiratory system is a rPartOf
+
+Trial: 63
+
+Trial: 64
+
+Trial: 65
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a zone of integument then there is a tendon of extensor pollicis brevis that it is rPartOf
+
+Trial: 66
+
+Trial: 67
+
+Trial: 68
+
+Trial: 69
+
+Trial: 70
+	Step: 0
+		C2 ⊑ R1
+			a palatine tonsil is a sPartOf
+		C1 ⊑ R1
+			a oropharynx is a sPartOf
+
+Trial: 71
+	Step: 0
+		C2 ⊑ R1
+			a bone tissue of bone of hand is a rPartOf
+
+Trial: 72
+
+Trial: 73
+
+Trial: 74
+
+Trial: 75
+
+Trial: 76
+
+Trial: 77
+	Step: 0
+		C2 ⊑ R1
+			a lower back is a sPartOf
+
+Trial: 78
+
+Trial: 79
+
+Trial: 80
+	Step: 0
+		C2 ⊑ R1
+			a skin is a sPartOf
+
+Trial: 81
+
+Trial: 82
+
+Trial: 83
+
+Trial: 84
+
+Trial: 85
+	Step: 0
+		C2 ⊑ R1
+			a umbilical region of abdomen is a sPartOf
+
+Trial: 86
+
+Trial: 87
+
+Trial: 88
+
+Trial: 89
+	Step: 0
+		C2 ⊑ R1
+			a body as a whole is a rPartOf
+
+Trial: 90
+	Step: 0
+		C2 ⊑ R1
+			a gingiva is a rPartOf
+
+Trial: 91
+
+Trial: 92
+	Step: 0
+		C2 ⊑ R1
+			a plica of iris is a rPartOf
+
+Trial: 93
+
+Trial: 94
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue of shoulder region is a rPartOf
+
+Trial: 95
+	Step: 0
+		C2 ⊑ R1
+			a epidermis is a rPartOf
+
+Trial: 96
+	Step: 0
+		C2 ⊑ R1
+			a arterial system is a sPartOf
+
+Trial: 97
+
+Trial: 98
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+
+Trial: 99
+
+Trial: 100
+	Step: 0
+		C2 ⊑ R1
+			a skin is a sPartOf
+
+Trial: 101
+	Step: 0
+		C2 ⊑ R1
+			a body system is a sPartOf
+
+Trial: 102
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a portion of body tissue then there is a external nose that it is sPartOf
+
+Trial: 103
+
+Trial: 104
+
+Trial: 105
+	Step: 0
+		C2 ⊑ R1
+			a genital system is a sPartOf
+
+Trial: 106
+
+Trial: 107
+
+Trial: 108
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a posterior chest wall then there is a bone tissue of T5 that it is rPartOf
+
+Trial: 109
+	Step: 0
+		C2 ⊑ R1
+			a superficial dorsal vein of clitoris is a rPartOf
+
+Trial: 110
+
+Trial: 111
+
+Trial: 112
+
+Trial: 113
+
+Trial: 114
+
+Trial: 115
+	Step: 0
+		C2 ⊑ R1
+			a third toe is a rPartOf
+
+Trial: 116
+	Step: 0
+		C2 ⊑ R1
+			a skin of scrotum is a rPartOf
+
+Trial: 117
+	Step: 0
+		C2 ⊑ R1
+			a ankle region of lower limb is a rPartOf
+
+Trial: 118
+	Step: 0
+		C2 ⊑ R1
+			a incudomallear articulation is a rPartOf
+		C2 ⊑ R1
+			a incudomallear articulation is a rPartOf
+
+Trial: 119
+
+Trial: 120
+
+Trial: 121
+
+Trial: 122
+	Step: 0
+		C2 ⊑ R1
+			a bone tissue of fourth rib is a sPartOf
+
+Trial: 123
+
+Trial: 124
+	Step: 0
+		C2 ⊑ R1
+			a epidermis is a sPartOf
+
+Trial: 125
+	Step: 0
+		C2 ⊑ R1
+			a thoracic region of back is a rPartOf
+
+Trial: 126
+
+Trial: 127
+	Step: 0
+		C2 ⊑ R1
+			a limbic system is a sPartOf
+		C1 ⊑ R1
+			a amygdala is a sPartOf
+
+Trial: 128
+
+Trial: 129
+
+Trial: 130
+	Step: 0
+		C2 ⊑ R1
+			a body as a whole is a sPartOf
+
+Trial: 131
+	Step: 0
+		C2 ⊑ R1
+			a medial surface of index finger is a sPartOf
+
+Trial: 132
+	Step: 0
+		C2 ⊑ R1
+			a skin of plantar area of toe is a rPartOf
+
+Trial: 133
+
+Trial: 134
+	Step: 0
+		C2 ⊑ R1
+			a cervical esophagus is a rPartOf
+
+Trial: 135
+	Step: 0
+		C2 ⊑ R1
+			a medial tarsal artery is a sPartOf
+
+Trial: 136
+
+Trial: 137
+	Step: 0
+		C2 ⊑ R1
+			a dermis is a rPartOf
+
+Trial: 138
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue of cavity of concha is a rPartOf
+
+Trial: 139
+
+Trial: 140
+	Step: 0
+		C2 ⊑ R1
+			a skin is a rPartOf
+
+Trial: 141
+
+Trial: 142
+
+Trial: 143
+
+Trial: 144
+	Step: 0
+		C2 ⊑ R1
+			a surface of external eye region is a rPartOf
+
+Trial: 145
+
+Trial: 146
+
+Trial: 147
+
+Trial: 148
+	Step: 0
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+
+Trial: 149
+
+Trial: 150
+
+Trial: 151
+	Step: 0
+		C2 ⊑ R1
+			a surface of knee is a sPartOf
+		C2 ⊑ R1
+			a surface of knee is a sPartOf
+
+Trial: 152
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+
+Trial: 153
+
+Trial: 154
+
+Trial: 155
+	Step: 0
+		C2 ⊑ R1
+			a myometrial blood vessel is a rPartOf
+
+Trial: 156
+	Step: 0
+		C2 ⊑ R1
+			a antihelix is a sPartOf
+
+Trial: 157
+	Step: 0
+		C2 ⊑ R1
+			a dorsal spinocerebellar tract is a rPartOf
+
+Trial: 158
+	Step: 0
+		C2 ⊑ R1
+			a radix penis is a rPartOf
+
+Trial: 159
+
+Trial: 160
+
+Trial: 161
+	Step: 0
+		C2 ⊑ R1
+			a rhinencephalon is a sPartOf
+		C2 ⊑ R1
+			a rhinencephalon is a sPartOf
+
+Trial: 162
+
+Trial: 163
+	Step: 0
+		C2 ⊑ R1
+			a skin of neck is a rPartOf
+
+Trial: 164
+	Step: 0
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 165
+	Step: 0
+		C2 ⊑ R1
+			a submucosa of anal canal is a rPartOf
+
+Trial: 166
+	Step: 0
+		C2 ⊑ R1
+			a peripheral nerve is a sPartOf
+
+Trial: 167
+	Step: 0
+		C2 ⊑ R1
+			a testis is a sPartOf
+
+Trial: 168
+
+Trial: 169
+	Step: 0
+		C2 ⊑ R1
+			a frontomaxillary suture of skull is a rPartOf
+
+Trial: 170
+
+Trial: 171
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+
+Trial: 172
+
+Trial: 173
+	Step: 0
+		C2 ⊑ R1
+			a upper trunk is a rPartOf
+		C2 ⊑ R1
+			a upper trunk is a rPartOf
+
+Trial: 174
+	Step: 0
+		C2 ⊑ R1
+			a head of third rib is a sPartOf
+
+Trial: 175
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a hair then there is a skin that it is sPartOf
+		C2 ⊑ R1
+			a hair is a sPartOf
+		C1 ⊑ R1
+			a skin is a sPartOf
+
+Trial: 176
+
+Trial: 177
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+
+Trial: 178
+
+Trial: 179
+
+Trial: 180
+	Step: 0
+		C2 ⊑ R1
+			a group of abdominal viscera is a rPartOf
+
+Trial: 181
+
+Trial: 182
+
+Trial: 183
+
+Trial: 184
+
+Trial: 185
+
+Trial: 186
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a left lateral ventricle then there is a cerebral hemisphere that it is rPartOf
+
+Trial: 187
+
+Trial: 188
+	Step: 0
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+
+Trial: 189
+
+Trial: 190
+
+Trial: 191
+	Step: 0
+		C2 ⊑ R1
+			a lower body is a sPartOf
+
+Trial: 192
+	Step: 0
+		C2 ⊑ R1
+			a anterior cerebellar lobe is a rPartOf
+
+Trial: 193
+
+Trial: 194
+
+Trial: 195
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a left breast then there is a left lobar bronchus that it is rPartOf
+
+Trial: 196
+	Step: 0
+		C2 ⊑ R1
+			a upper trunk is a rPartOf
+
+Trial: 197
+	Step: 0
+		C2 ⊑ R1
+			a skin is a rPartOf
+
+Trial: 198
+	Step: 0
+		C2 ⊑ R1
+			a intervertebral disc of sixth thoracic vertebra is a rPartOf
+
+Trial: 199
+
+Trial: 200
+	Step: 0
+		C2 ⊑ R1
+			a supreme nasal turbinate is a rPartOf
+
+Trial: 201
+	Step: 0
+		C2 ⊑ R1
+			a skin of axilla is a rPartOf
+
+Trial: 202
+
+Trial: 203
+	Step: 0
+		C2 ⊑ R1
+			a jaw region of head is a rPartOf
+
+Trial: 204
+
+Trial: 205
+
+Trial: 206
+	Step: 0
+		C2 ⊑ R1
+			a body as a whole is a rPartOf
+
+Trial: 207
+
+Trial: 208
+	Step: 0
+		C2 ⊑ R1
+			a skin is a rPartOf
+
+Trial: 209
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a pelvic lymph node then there is a pelvic region that it is rPartOf
+
+Trial: 210
+	Step: 0
+		C2 ⊑ R1
+			a adenoid is a rPartOf
+
+Trial: 211
+
+Trial: 212
+	Step: 0
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 213
+
+Trial: 214
+	Step: 0
+		C2 ⊑ R1
+			a penis is a rPartOf
+
+Trial: 215
+
+Trial: 216
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+
+Trial: 217
+
+Trial: 218
+
+Trial: 219
+	Step: 0
+		C2 ⊑ R1
+			a tributary of posterior tibial vein is a rPartOf
+
+Trial: 220
+	Step: 0
+		C2 ⊑ C1
+			a foot is a side
+
+Trial: 221
+	Step: 0
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+
+Trial: 222
+	Step: 0
+		C2 ⊑ R1
+			a fibrous tunic of eye is a rPartOf
+
+Trial: 223
+
+Trial: 224
+	Step: 0
+		C2 ⊑ R1
+			a coccygeal vertebra is a rPartOf
+
+Trial: 225
+	Step: 0
+		C2 ⊑ R1
+			a lower leg is a sPartOf
+
+Trial: 226
+
+Trial: 227
+
+Trial: 228
+
+Trial: 229
+	Step: 0
+		C2 ⊑ R1
+			a plantar surface of second toe is a sPartOf
+
+Trial: 230
+
+Trial: 231
+
+Trial: 232
+	Step: 0
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 233
+
+Trial: 234
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+
+Trial: 235
+
+Trial: 236
+	Step: 0
+		C2 ⊑ R1
+			a palatine process of maxilla is a rPartOf
+
+Trial: 237
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+
+Trial: 238
+
+Trial: 239
+	Step: 0
+		C2 ⊑ R1
+			a lower limb is a sPartOf
+		C1 ⊑ R1
+			a foot is a sPartOf
+
+Trial: 240
+
+Trial: 241
+	Step: 0
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 242
+	Step: 0
+		C2 ⊑ R1
+			a skin is a rPartOf
+
+Trial: 243
+
+Trial: 244
+	Step: 0
+		C2 ⊑ R1
+			a hair is a sPartOf
+
+Trial: 245
+
+Trial: 246
+
+Trial: 247
+
+Trial: 248
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+
+Trial: 249
+	Step: 0
+		C2 ⊑ R1
+			a skin of abdomen is a rPartOf
+
+Trial: 250
+	Step: 0
+		C2 ⊑ R1
+			a body as a whole is a sPartOf
+
+Trial: 251
+	Step: 0
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+
+Trial: 252
+	Step: 0
+		C2 ⊑ R1
+			a calcaneal tubercle is a sPartOf
+
+Trial: 253
+	Step: 0
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+
+Trial: 254
+
+Trial: 255
+
+Trial: 256
+	Step: 0
+		C2 ⊑ R1
+			a thorax is a rPartOf
+
+Trial: 257
+	Step: 0
+		C2 ⊑ R1
+			a epidermis is a rPartOf
+
+Trial: 258
+	Step: 0
+		C2 ⊑ R1
+			a external genitalia is a rPartOf
+
+Trial: 259
+	Step: 0
+		C2 ⊑ R1
+			a small subcutaneous blood vessel is a rPartOf
+
+Trial: 260
+
+Trial: 261
+
+Trial: 262
+	Step: 0
+		C2 ⊑ R1
+			a fallopian tube is a sPartOf
+
+Trial: 263
+
+Trial: 264
+
+Trial: 265
+	Step: 0
+		C2 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 266
+
+Trial: 267
+	Step: 0
+		C2 ⊑ R1
+			a mylohyoid muscle is a rPartOf
+
+Trial: 268
+
+Trial: 269
+	Step: 0
+		C2 ⊑ R1
+			a lower parasternal region is a rPartOf
+
+Trial: 270
+	Step: 0
+		C2 ⊑ R1
+			a pharynx is a sPartOf
+
+Trial: 271
+	Step: 0
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 272
+
+Trial: 273
+
+Trial: 274
+
+Trial: 275
+
+Trial: 276
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a medial malleolus then there is a side that it is rPartOf
+
+Trial: 277
+
+Trial: 278
+
+Trial: 279
+
+Trial: 280
+
+Trial: 281
+
+Trial: 282
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a cervical vertebral column then there is a middle finger that it is rPartOf
+
+Trial: 283
+
+Trial: 284
+
+Trial: 285
+
+Trial: 286
+
+Trial: 287
+
+Trial: 288
+
+Trial: 289
+
+Trial: 290
+
+Trial: 291
+
+Trial: 292
+
+Trial: 293
+
+Trial: 294
+	Step: 0
+		C2 ⊑ R1
+			a glomerulus is a rPartOf
+
+Trial: 295
+	Step: 0
+		C2 ⊑ R1
+			a genital labium is a rPartOf
+
+Trial: 296
+
+Trial: 297
+	Step: 0
+		C2 ⊑ R1
+			a vulva is a sPartOf
+
+Trial: 298
+	Step: 0
+		C2 ⊑ R1
+			a vertebral ganglion is a rPartOf
+
+Trial: 299
+
+Trial: 300
+
+Trial: 301
+	Step: 0
+		C2 ⊑ R1
+			a visual system is a sPartOf
+		C1 ⊑ R1
+			a right is a sPartOf
+
+Trial: 302
+
+Trial: 303
+	Step: 0
+		C2 ⊑ R1
+			a back of neck is a rPartOf
+
+Trial: 304
+	Step: 0
+		C2 ⊑ R1
+			a shoulder region is a rPartOf
+
+Trial: 305
+
+Trial: 306
+
+Trial: 307
+	Step: 0
+		C2 ⊑ R1
+			a pelvic lymph node is a sPartOf
+
+Trial: 308
+	Step: 0
+		C2 ⊑ R1
+			a cervical spine joint is a sPartOf
+
+Trial: 309
+
+Trial: 310
+	Step: 0
+		C2 ⊑ R1
+			a lacrimal canaliculus is a sPartOf
+
+Trial: 311
+	Step: 0
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 312
+	Step: 0
+		C2 ⊑ R1
+			a syndesmosis is a sPartOf
+
+Trial: 313
+	Step: 0
+		C2 ⊑ R1
+			a orbital portion of zygomatic bone is a rPartOf
+
+Trial: 314
+	Step: 0
+		C2 ⊑ R1
+			a male perineum is a sPartOf
+
+Trial: 315
+
+Trial: 316
+
+Trial: 317
+	Step: 0
+		C2 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 318
+
+Trial: 319
+
+Trial: 320
+
+Trial: 321
+
+Trial: 322
+
+Trial: 323
+	Step: 0
+		C2 ⊑ R1
+			a small subcutaneous blood vessel is a rPartOf
+
+Trial: 324
+
+Trial: 325
+
+Trial: 326
+
+Trial: 327
+
+Trial: 328
+	Step: 0
+		C2 ⊑ R1
+			a surface of body is a rPartOf
+
+Trial: 329
+	Step: 0
+		C2 ⊑ R1
+			a anteromedial branch of circle of Willis is a rPartOf
+
+Trial: 330
+	Step: 0
+		C2 ⊑ R1
+			a cervical canal is a rPartOf
+
+Trial: 331
+	Step: 0
+		C2 ⊑ R1
+			a dorsal fascia of hand is a rPartOf
+
+Trial: 332
+
+Trial: 333
+

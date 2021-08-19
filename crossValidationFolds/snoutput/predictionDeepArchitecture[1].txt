@@ -1,0 +1,6042 @@
+Trial: 0
+	Step: 0
+		C2 ⊑ C1
+			a anterior surface of forearm is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a anterior surface of forearm is a cPartOf
+		C3 ⊑ R1
+			a costal groove of third rib is a cPartOf
+		C3 ⊑ R1
+			a costal groove of third rib is a cPartOf
+
+Trial: 1
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a skin that it is rPartOf
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 2
+	Step: 0
+		C2 ⊑ C1
+			a lumbar nerve dorsal primary division is a subcutaneous tissue
+		C2 ⊑ C1
+			a lumbar nerve dorsal primary division is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a lumbar nerve dorsal primary division then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a lobe of liver then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a lobe of liver then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a lobe of liver is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a lobe of liver is a rPartOf
+
+Trial: 3
+	Step: 0
+		C2 ⊑ C1
+			a genital labium is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a genital labium is a sPartOf
+		C3 ⊑ R1
+			a head is a sPartOf
+		C3 ⊑ R1
+			a head is a sPartOf
+		C3 ⊑ R1
+			a head is a sPartOf
+
+Trial: 4
+	Step: 0
+		C2 ⊑ C1
+			a skin is a nail
+		C1 ⊑ C1
+			a nail is a nail
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a dermis is a rPartOf
+		C3 ⊑ R1
+			a dermis is a rPartOf
+		C3 ⊑ R1
+			a dermis is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a dermis is a rPartOf
+
+Trial: 5
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a dorsal digital nerve to fifth toe then there is a lateral surface of middle finger that it is sPartOf
+		C2 ⊑ C1
+			a dorsal digital nerve to fifth toe is a lateral surface of middle finger
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a dorsal digital nerve to fifth toe then there is a lateral surface of middle finger that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a surface of posterior aspect of elbow then there is a lateral surface of middle finger that it is sPartOf
+		C3 ⊑ R1
+			a surface of posterior aspect of elbow is a sPartOf
+		C3 ⊑ R1
+			a surface of posterior aspect of elbow is a sPartOf
+
+Trial: 6
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a bone tissue of third metacarpal then there is a skin that it is rPartOf
+		C2 ⊑ C1
+			a bone tissue of third metacarpal is a skin
+	Step: 1
+		C2 ⊑ R1
+			a bone tissue of third metacarpal is a rPartOf
+		C3 ⊑ R1
+			a coccygeal vertebra is a rPartOf
+		C3 ⊑ R1
+			a coccygeal vertebra is a rPartOf
+		C3 ⊑ R1
+			a coccygeal vertebra is a rPartOf
+
+Trial: 7
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of external ear then there is a subcutaneous tissue that it is rPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue of external ear is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue of external ear is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of third toe then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of third toe is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of third toe is a rPartOf
+
+Trial: 8
+	Step: 0
+		C2 ⊑ C1
+			a epidermis is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a epidermis is a rPartOf
+		C3 ⊑ R1
+			a eccrine gland is a rPartOf
+		C3 ⊑ R1
+			a eccrine gland is a rPartOf
+		C3 ⊑ R1
+			a eccrine gland is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a eccrine gland is a rPartOf
+
+Trial: 9
+	Step: 0
+		C2 ⊑ C1
+			a skin of perioral region of face is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a skin of perioral region of face is a rPartOf
+		C3 ⊑ R1
+			a oral region of face is a rPartOf
+		C3 ⊑ R1
+			a oral region of face is a rPartOf
+
+Trial: 10
+	Step: 0
+		C2 ⊑ C1
+			a back is a side
+		C2 ⊑ C1
+			a back is a side
+	Step: 1
+		C2 ⊑ R1
+			a back is a rPartOf
+		C3 ⊑ R1
+			a concha of ear is a rPartOf
+		C3 ⊑ R1
+			a concha of ear is a rPartOf
+
+Trial: 11
+	Step: 0
+		C2 ⊑ C1
+			a nasolabial sulcus is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a nasolabial sulcus is a rPartOf
+		C3 ⊑ R1
+			a decidua basalis is a rPartOf
+		C3 ⊑ R1
+			a decidua basalis is a rPartOf
+		C3 ⊑ R1
+			a decidua basalis is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a decidua basalis is a rPartOf
+
+Trial: 12
+	Step: 0
+		C2 ⊑ R1
+			a hematopoietic system is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a hematopoietic system then there is a lymphoreticular system that it is sPartOf
+		C2 ⊑ C1
+			a hematopoietic system is a lymphoreticular system
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a hematopoietic system then there is a lymphoreticular system that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a reticuloendothelial system then there is a lymphoreticular system that it is sPartOf
+		C3 ⊑ R1
+			a reticuloendothelial system is a sPartOf
+		C3 ⊑ R1
+			a reticuloendothelial system is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a reticuloendothelial system is a sPartOf
+
+Trial: 13
+	Step: 0
+		C2 ⊑ C1
+			a skin is a nail
+		C1 ⊑ C1
+			a nail is a nail
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a hair shaft is a rPartOf
+		C3 ⊑ R1
+			a hair shaft is a rPartOf
+		C3 ⊑ R1
+			a hair shaft is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a hair shaft is a rPartOf
+
+Trial: 14
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue of palpebral margin is a subcutaneous tissue
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue of palpebral margin is a rPartOf
+		C3 ⊑ R1
+			a small subcutaneous blood vessel is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a small subcutaneous blood vessel then there is a subcutaneous tissue that it is rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a small subcutaneous blood vessel is a rPartOf
+
+Trial: 15
+	Step: 0
+		C2 ⊑ R1
+			a fifth metatarsal is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a fifth metatarsal then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a fifth metatarsal is a side
+	Step: 1
+		C2 ⊑ R1
+			a fifth metatarsal is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 16
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a bone tissue of proximal femur then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a bone tissue of proximal femur is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a bone tissue of proximal femur then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a bone tissue of femur is a rPartOf
+		C3 ⊑ R1
+			a bone tissue of femur is a rPartOf
+		C3 ⊑ R1
+			a bone tissue of femur is a rPartOf
+	Step: 2
+		C3 ⊑ ∃R1.C1
+			if something is a bone tissue of femur then there is a side that it is rPartOf
+
+Trial: 17
+	Step: 0
+		C2 ⊑ C1
+			a primitive heart tube is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a primitive heart tube is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 18
+	Step: 0
+		C3 ⊑ C1
+			a subcutaneous tissue of palmar area of little finger is a subcutaneous tissue
+		C3 ⊑ C1
+			a subcutaneous tissue of palmar area of little finger is a subcutaneous tissue
+		C2 ⊑ R1
+			a subcutaneous tissue of upper extremity is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of upper extremity then there is a subcutaneous tissue that it is sPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue of upper extremity is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue of upper extremity is a sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of palmar area of little finger is a sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of palmar area of little finger is a sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of palmar area of little finger is a sPartOf
+
+Trial: 19
+	Step: 0
+		C2 ⊑ R1
+			a abdominal wall is a rPartOf
+		C2 ⊑ C1
+			a abdominal wall is a vaginal introitus
+		C1 ⊑ C1
+			a vaginal introitus is a vaginal introitus
+	Step: 1
+		C2 ⊑ R1
+			a abdominal wall is a rPartOf
+		C3 ⊑ R1
+			a vulval vestibule is a rPartOf
+		C3 ⊑ R1
+			a vulval vestibule is a rPartOf
+		C3 ⊑ R1
+			a vulval vestibule is a rPartOf
+
+Trial: 20
+	Step: 0
+		C2 ⊑ C1
+			a breast is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a breast is a cPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of eyelid is a cPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of eyelid is a cPartOf
+
+Trial: 21
+	Step: 0
+		C1 ⊑ R1
+			a bone tissue of T6 is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a bone tissue of T6 that it is rPartOf
+		C2 ⊑ C1
+			a region of skin is a bone tissue of T6
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a bone tissue of T6 that it is rPartOf
+		C3 ⊑ R1
+			a arch of sixth thoracic vertebra is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a arch of sixth thoracic vertebra then there is a bone tissue of T6 that it is rPartOf
+		C3 ⊑ R1
+			a arch of sixth thoracic vertebra is a rPartOf
+	Step: 2
+		C3 ⊑ ∃R1.C1
+			if something is a arch of sixth thoracic vertebra then there is a bone tissue of T6 that it is rPartOf
+		C1 ⊑ R1
+			a bone tissue of T6 is a rPartOf
+
+Trial: 22
+	Step: 0
+		C3 ⊑ C1
+			a thoracic spine joint is a body as a whole
+		C2 ⊑ R1
+			a joint of thoracic wall is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a joint of thoracic wall then there is a body as a whole that it is sPartOf
+		C2 ⊑ C1
+			a joint of thoracic wall is a body as a whole
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a joint of thoracic wall then there is a body as a whole that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a thoracic spine joint then there is a body as a whole that it is sPartOf
+		C3 ⊑ R1
+			a thoracic spine joint is a sPartOf
+		C3 ⊑ R1
+			a thoracic spine joint is a sPartOf
+
+Trial: 23
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a inferior transverse scapular ligament then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a inferior transverse scapular ligament is a side
+	Step: 1
+		C2 ⊑ R1
+			a inferior transverse scapular ligament is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a femoral nerve anterior cutaneous branch then there is a side that it is sPartOf
+		C3 ⊑ R1
+			a femoral nerve anterior cutaneous branch is a sPartOf
+
+Trial: 24
+	Step: 0
+		C2 ⊑ R1
+			a bone tissue of cranial fossa is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a bone tissue of cranial fossa then there is a base of skull that it is rPartOf
+		C2 ⊑ C1
+			a bone tissue of cranial fossa is a base of skull
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a bone tissue of cranial fossa then there is a base of skull that it is rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+
+Trial: 25
+	Step: 0
+		C2 ⊑ C1
+			a bone tissue of shaft of fibula is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a bone tissue of shaft of fibula is a rPartOf
+		C3 ⊑ R1
+			a bone tissue of proximal ulna is a rPartOf
+		C3 ⊑ R1
+			a bone tissue of proximal ulna is a rPartOf
+
+Trial: 26
+	Step: 0
+		C2 ⊑ R1
+			a bone of upper extremity is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a bone of upper extremity then there is a joint of shoulder girdle or upper limb that it is sPartOf
+		C2 ⊑ C1
+			a bone of upper extremity is a joint of shoulder girdle or upper limb
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a bone of upper extremity then there is a joint of shoulder girdle or upper limb that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a joint of shoulder girdle or upper limb that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a joint of shoulder girdle or upper limb that it is sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 27
+	Step: 0
+		C3 ⊑ C1
+			a region of skin is a lymph node
+		C2 ⊑ R1
+			a nasolabial sulcus is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a nasolabial sulcus then there is a lymph node that it is sPartOf
+		C2 ⊑ C1
+			a nasolabial sulcus is a lymph node
+	Step: 1
+		C2 ⊑ R1
+			a nasolabial sulcus is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 28
+	Step: 0
+		C2 ⊑ C1
+			a skin of labium pudendum is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin of labium pudendum then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a epidermis then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a epidermis then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a epidermis is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a epidermis is a rPartOf
+
+Trial: 29
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a trunk then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a trunk is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a trunk then there is a side that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a perineum then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a perineum is a rPartOf
+		C3 ⊑ R1
+			a perineum is a rPartOf
+
+Trial: 30
+	Step: 0
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a subcutaneous tissue
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a philtrum is a rPartOf
+		C3 ⊑ R1
+			a philtrum is a rPartOf
+		C3 ⊑ R1
+			a philtrum is a rPartOf
+
+Trial: 31
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a tension lines of skin is a rPartOf
+		C3 ⊑ R1
+			a tension lines of skin is a rPartOf
+		C3 ⊑ R1
+			a tension lines of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a tension lines of skin is a rPartOf
+
+Trial: 32
+	Step: 0
+		C2 ⊑ R1
+			a valve of Bochdalek is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a valve of Bochdalek then there is a body as a whole that it is sPartOf
+		C2 ⊑ C1
+			a valve of Bochdalek is a body as a whole
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a valve of Bochdalek then there is a body as a whole that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a surface of body then there is a body as a whole that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a surface of body then there is a body as a whole that it is sPartOf
+		C3 ⊑ R1
+			a surface of body is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a surface of body is a sPartOf
+
+Trial: 33
+	Step: 0
+		C2 ⊑ C1
+			a left temporal lobe is a side
+		C2 ⊑ C1
+			a left temporal lobe is a side
+	Step: 1
+		C2 ⊑ R1
+			a left temporal lobe is a rPartOf
+		C2 ⊑ R1
+			a left temporal lobe is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+
+Trial: 34
+	Step: 0
+		C1 ⊑ R1
+			a skin is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a skin that it is rPartOf
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a occipital region of head then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a occipital region of head then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a occipital region of head is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a occipital region of head is a rPartOf
+
+Trial: 35
+	Step: 0
+		C2 ⊑ C1
+			a capsule of kidney is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a capsule of kidney is a cPartOf
+		C3 ⊑ R1
+			a surface of renal area is a cPartOf
+		C3 ⊑ R1
+			a surface of renal area is a cPartOf
+
+Trial: 36
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a concha of ear that it is rPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a concha of ear
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a concha of ear that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a flank then there is a concha of ear that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a flank then there is a concha of ear that it is rPartOf
+		C3 ⊑ R1
+			a flank is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a flank is a rPartOf
+
+Trial: 37
+	Step: 0
+		C2 ⊑ C1
+			a rhinencephalon is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a rhinencephalon is a cPartOf
+		C3 ⊑ R1
+			a anterior nuclear group of thalamus is a cPartOf
+
+Trial: 38
+	Step: 0
+		C3 ⊑ C1
+			a subcutaneous tissue of external ear is a uveal tract
+		C3 ⊑ C1
+			a subcutaneous tissue of external ear is a uveal tract
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a uveal tract that it is sPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a uveal tract
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a uveal tract that it is sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of external ear is a sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of external ear is a sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of external ear is a sPartOf
+
+Trial: 39
+	Step: 0
+		C2 ⊑ C1
+			a skin is a side
+		C2 ⊑ C1
+			a skin is a side
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a inferior constrictor pharyngeus muscle is a rPartOf
+		C3 ⊑ R1
+			a inferior constrictor pharyngeus muscle is a rPartOf
+		C3 ⊑ R1
+			a inferior constrictor pharyngeus muscle is a rPartOf
+
+Trial: 40
+	Step: 0
+		C2 ⊑ R1
+			a mucous membrane of anal canal is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a mucous membrane of anal canal then there is a subcutaneous tissue that it is rPartOf
+		C2 ⊑ C1
+			a mucous membrane of anal canal is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a mucous membrane of anal canal then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a muscularis propria of anal canal then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a muscularis propria of anal canal is a rPartOf
+		C3 ⊑ R1
+			a muscularis propria of anal canal is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a muscularis propria of anal canal is a rPartOf
+
+Trial: 41
+	Step: 0
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a apical segment of right upper lobe of lung then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a apical segment of right upper lobe of lung then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a apical segment of right upper lobe of lung is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a apical segment of right upper lobe of lung is a rPartOf
+
+Trial: 42
+	Step: 0
+		C3 ⊑ C1
+			a scalp is a subcutaneous tissue
+		C2 ⊑ R1
+			a posterior surface of lens is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a posterior surface of lens then there is a subcutaneous tissue that it is sPartOf
+		C2 ⊑ C1
+			a posterior surface of lens is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a posterior surface of lens then there is a subcutaneous tissue that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a scalp then there is a subcutaneous tissue that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a scalp then there is a subcutaneous tissue that it is sPartOf
+		C3 ⊑ R1
+			a scalp is a sPartOf
+
+Trial: 43
+	Step: 0
+		C2 ⊑ C1
+			a right kidney is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a right kidney then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a right lower quadrant of abdomen is a rPartOf
+		C3 ⊑ R1
+			a right lower quadrant of abdomen is a rPartOf
+		C3 ⊑ R1
+			a right lower quadrant of abdomen is a rPartOf
+	Step: 2
+		C3 ⊑ ∃R1.C1
+			if something is a right lower quadrant of abdomen then there is a side that it is rPartOf
+
+Trial: 44
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a skin then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a skin is a side
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+
+Trial: 45
+	Step: 0
+		C2 ⊑ R1
+			a shoulder region is a sPartOf
+		C2 ⊑ C1
+			a shoulder region is a acromioclavicular joint
+		C1 ⊑ C1
+			a acromioclavicular joint is a acromioclavicular joint
+	Step: 1
+		C2 ⊑ R1
+			a shoulder region is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a acromioclavicular joint that it is sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+
+Trial: 46
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a dermatoglyphic patterns is a rPartOf
+		C3 ⊑ R1
+			a dermatoglyphic patterns is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a dermatoglyphic patterns is a rPartOf
+
+Trial: 47
+	Step: 0
+		C2 ⊑ C1
+			a hair follicle is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a hair follicle is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 48
+	Step: 0
+		C3 ⊑ C1
+			a peduncular vein is a body as a whole
+		C2 ⊑ R1
+			a urinary system is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a urinary system then there is a body as a whole that it is sPartOf
+		C2 ⊑ C1
+			a urinary system is a body as a whole
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a urinary system then there is a body as a whole that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a peduncular vein then there is a body as a whole that it is sPartOf
+		C3 ⊑ R1
+			a peduncular vein is a sPartOf
+		C3 ⊑ R1
+			a peduncular vein is a sPartOf
+
+Trial: 49
+	Step: 0
+		C2 ⊑ C1
+			a caudate nucleus is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a caudate nucleus is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a corpus striatum then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a corpus striatum is a rPartOf
+
+Trial: 50
+	Step: 0
+		C3 ⊑ C1
+			a skin and subcutaneous tissue is a side
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a side
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+
+Trial: 51
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+
+Trial: 52
+	Step: 0
+		C2 ⊑ C1
+			a antihelix is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a antihelix is a rPartOf
+		C3 ⊑ R1
+			a oral region of face is a rPartOf
+		C3 ⊑ R1
+			a oral region of face is a rPartOf
+
+Trial: 53
+	Step: 0
+		C2 ⊑ R1
+			a body organ is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a body organ then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a body organ is a side
+	Step: 1
+		C2 ⊑ R1
+			a body organ is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+
+Trial: 54
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a ascending aorta then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a ascending aorta is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a ascending aorta then there is a side that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin of neck then there is a side that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin of neck then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a skin of neck is a rPartOf
+	Step: 2
+		C3 ⊑ ∃R1.C1
+			if something is a skin of neck then there is a side that it is rPartOf
+
+Trial: 55
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a liver that it is rPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a liver
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a liver that it is rPartOf
+		C3 ⊑ R1
+			a portal triad is a rPartOf
+		C3 ⊑ R1
+			a portal triad is a rPartOf
+		C3 ⊑ R1
+			a portal triad is a rPartOf
+
+Trial: 56
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a skin of palmar area of middle finger is a rPartOf
+		C3 ⊑ R1
+			a skin of palmar area of middle finger is a rPartOf
+		C3 ⊑ R1
+			a skin of palmar area of middle finger is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin of palmar area of middle finger is a rPartOf
+
+Trial: 57
+	Step: 0
+		C2 ⊑ C1
+			a left crus of diaphragm is a posterior abdominal wall
+		C1 ⊑ C1
+			a posterior abdominal wall is a posterior abdominal wall
+	Step: 1
+		C2 ⊑ R1
+			a left crus of diaphragm is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a pronator quadratus muscle then there is a posterior abdominal wall that it is rPartOf
+		C3 ⊑ R1
+			a pronator quadratus muscle is a rPartOf
+		C3 ⊑ R1
+			a pronator quadratus muscle is a rPartOf
+
+Trial: 58
+	Step: 0
+		C2 ⊑ C1
+			a distal phalanx of great toe is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a distal phalanx of great toe is a rPartOf
+		C3 ⊑ R1
+			a anulus fibrosus of intervertebral disc of fourth cervical vertebra is a rPartOf
+		C3 ⊑ R1
+			a anulus fibrosus of intervertebral disc of fourth cervical vertebra is a rPartOf
+
+Trial: 59
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a surface of body then there is a gastrointestinal muscular layer that it is rPartOf
+		C2 ⊑ C1
+			a surface of body is a gastrointestinal muscular layer
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a surface of body then there is a gastrointestinal muscular layer that it is rPartOf
+		C3 ⊑ R1
+			a pituitary portal vein is a rPartOf
+		C3 ⊑ R1
+			a pituitary portal vein is a rPartOf
+		C3 ⊑ R1
+			a pituitary portal vein is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a pituitary portal vein is a rPartOf
+
+Trial: 60
+	Step: 0
+		C2 ⊑ C1
+			a skin of midline nose is a region of skin
+		C1 ⊑ C1
+			a region of skin is a region of skin
+	Step: 1
+		C2 ⊑ R1
+			a skin of midline nose is a sPartOf
+		C3 ⊑ R1
+			a malleolus of fibula is a sPartOf
+		C3 ⊑ R1
+			a malleolus of fibula is a sPartOf
+		C3 ⊑ R1
+			a malleolus of fibula is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a malleolus of fibula is a sPartOf
+
+Trial: 61
+	Step: 0
+		C2 ⊑ C1
+			a hair is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a hair then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 62
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a lower respiratory system then there is a anus that it is rPartOf
+		C2 ⊑ C1
+			a lower respiratory system is a anus
+	Step: 1
+		C2 ⊑ R1
+			a lower respiratory system is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a colonic part of cloaca then there is a anus that it is rPartOf
+		C3 ⊑ R1
+			a colonic part of cloaca is a rPartOf
+		C3 ⊑ R1
+			a colonic part of cloaca is a rPartOf
+
+Trial: 63
+	Step: 0
+		C2 ⊑ C1
+			a neck is a trunk
+		C1 ⊑ C1
+			a trunk is a trunk
+	Step: 1
+		C2 ⊑ R1
+			a neck is a rPartOf
+		C3 ⊑ R1
+			a transverse process of fourth cervical vertebra is a rPartOf
+		C3 ⊑ R1
+			a transverse process of fourth cervical vertebra is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a transverse process of fourth cervical vertebra is a rPartOf
+
+Trial: 64
+	Step: 0
+		C2 ⊑ C1
+			a ascending aorta is a thoracic aorta
+		C1 ⊑ C1
+			a thoracic aorta is a thoracic aorta
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a ascending aorta then there is a thoracic aorta that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a aortic arch then there is a thoracic aorta that it is rPartOf
+		C3 ⊑ R1
+			a aortic arch is a rPartOf
+		C3 ⊑ R1
+			a aortic arch is a rPartOf
+	Step: 2
+		C2 ⊑ R1
+			a ascending aorta is a rPartOf
+
+Trial: 65
+	Step: 0
+		C2 ⊑ R1
+			a zone of integument is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a zone of integument then there is a tendon of extensor pollicis brevis that it is rPartOf
+		C2 ⊑ C1
+			a zone of integument is a tendon of extensor pollicis brevis
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a zone of integument then there is a tendon of extensor pollicis brevis that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a (S) tendon of extensor pollicis brevis then there is a tendon of extensor pollicis brevis that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a (S) tendon of extensor pollicis brevis then there is a tendon of extensor pollicis brevis that it is rPartOf
+		C3 ⊑ R1
+			a (S) tendon of extensor pollicis brevis is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a (S) tendon of extensor pollicis brevis is a rPartOf
+
+Trial: 66
+	Step: 0
+		C2 ⊑ C1
+			a female mammary gland is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a female mammary gland is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 67
+	Step: 0
+		C2 ⊑ C1
+			a bone tissue of bone of lower limb is a lower limb
+		C1 ⊑ C1
+			a lower limb is a lower limb
+	Step: 1
+		C2 ⊑ R1
+			a bone tissue of bone of lower limb is a rPartOf
+		C3 ⊑ R1
+			a venous system of lower extremity is a rPartOf
+		C3 ⊑ R1
+			a venous system of lower extremity is a rPartOf
+		C3 ⊑ R1
+			a venous system of lower extremity is a rPartOf
+
+Trial: 68
+	Step: 0
+		C2 ⊑ C1
+			a soft tissue of abdomen is a surface of medial border of sole
+		C1 ⊑ C1
+			a surface of medial border of sole is a surface of medial border of sole
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a soft tissue of abdomen then there is a surface of medial border of sole that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a retrocolic tissue then there is a surface of medial border of sole that it is rPartOf
+		C3 ⊑ R1
+			a retrocolic tissue is a rPartOf
+		C3 ⊑ R1
+			a retrocolic tissue is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a retrocolic tissue is a rPartOf
+
+Trial: 69
+	Step: 0
+		C2 ⊑ C1
+			a optic nerve is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a optic nerve is a rPartOf
+		C3 ⊑ R1
+			a optic disc is a rPartOf
+		C3 ⊑ R1
+			a optic disc is a rPartOf
+
+Trial: 70
+	Step: 0
+		C3 ⊑ C1
+			a pharynx is a oropharynx
+		C2 ⊑ R1
+			a palatine tonsil is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a palatine tonsil then there is a oropharynx that it is sPartOf
+		C2 ⊑ C1
+			a palatine tonsil is a oropharynx
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a palatine tonsil then there is a oropharynx that it is sPartOf
+		C3 ⊑ R1
+			a pharynx is a sPartOf
+		C3 ⊑ R1
+			a pharynx is a sPartOf
+		C3 ⊑ R1
+			a pharynx is a sPartOf
+
+Trial: 71
+	Step: 0
+		C2 ⊑ R1
+			a bone tissue of bone of hand is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a bone tissue of bone of hand then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a bone tissue of bone of hand is a side
+	Step: 1
+		C2 ⊑ R1
+			a bone tissue of bone of hand is a rPartOf
+		C3 ⊑ R1
+			a little finger is a rPartOf
+		C3 ⊑ R1
+			a little finger is a rPartOf
+		C3 ⊑ R1
+			a little finger is a rPartOf
+
+Trial: 72
+	Step: 0
+		C3 ⊑ C1
+			a middle phalanx of middle finger is a side
+		C2 ⊑ ∃R1.C1
+			if something is a medial surface of lower extremity then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a medial surface of lower extremity is a side
+	Step: 1
+		C2 ⊑ R1
+			a medial surface of lower extremity is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a middle phalanx of middle finger then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a middle phalanx of middle finger is a rPartOf
+		C3 ⊑ R1
+			a middle phalanx of middle finger is a rPartOf
+
+Trial: 73
+	Step: 0
+		C2 ⊑ C1
+			a upper abdomen is a subcutaneous tissue
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a upper abdomen then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a epigastric region of abdomen then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a epigastric region of abdomen is a rPartOf
+		C3 ⊑ R1
+			a epigastric region of abdomen is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a epigastric region of abdomen is a rPartOf
+
+Trial: 74
+	Step: 0
+		C2 ⊑ C1
+			a nail is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a nail is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a skin is a rPartOf
+
+Trial: 75
+	Step: 0
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a subcutaneous tissue
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of upper back then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of upper back then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of upper back is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a subcutaneous tissue of upper back is a rPartOf
+
+Trial: 76
+	Step: 0
+		C2 ⊑ C1
+			a tendon and tendon sheath of finger is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a tendon and tendon sheath of finger is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a palatine arch then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a palatine arch is a rPartOf
+		C3 ⊑ R1
+			a palatine arch is a rPartOf
+
+Trial: 77
+	Step: 0
+		C2 ⊑ C1
+			a lower back is a lacrimal system
+		C1 ⊑ C1
+			a lacrimal system is a lacrimal system
+	Step: 1
+		C2 ⊑ R1
+			a lower back is a sPartOf
+		C3 ⊑ R1
+			a sacrococcygeal region of back is a sPartOf
+		C3 ⊑ R1
+			a sacrococcygeal region of back is a sPartOf
+		C3 ⊑ R1
+			a sacrococcygeal region of back is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a sacrococcygeal region of back is a sPartOf
+
+Trial: 78
+	Step: 0
+		C3 ⊑ C1
+			a conoid tubercle of clavicle is a bone tissue of clavicle
+		C2 ⊑ R1
+			a clavicular region of thorax is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a clavicular region of thorax then there is a bone tissue of clavicle that it is rPartOf
+		C2 ⊑ C1
+			a clavicular region of thorax is a bone tissue of clavicle
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a clavicular region of thorax then there is a bone tissue of clavicle that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a conoid tubercle of clavicle then there is a bone tissue of clavicle that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a conoid tubercle of clavicle then there is a bone tissue of clavicle that it is rPartOf
+		C3 ⊑ R1
+			a conoid tubercle of clavicle is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a conoid tubercle of clavicle is a rPartOf
+
+Trial: 79
+	Step: 0
+		C2 ⊑ C1
+			a external auditory canal is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a external auditory canal then there is a side that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a temporal region of head then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a temporal region of head is a rPartOf
+
+Trial: 80
+	Step: 0
+		C2 ⊑ C1
+			a skin is a skeletal muscle organ
+		C1 ⊑ C1
+			a skeletal muscle organ is a skeletal muscle organ
+	Step: 1
+		C2 ⊑ R1
+			a skin is a sPartOf
+		C3 ⊑ R1
+			a skeletal muscle system is a sPartOf
+		C3 ⊑ R1
+			a skeletal muscle system is a sPartOf
+		C3 ⊑ R1
+			a skeletal muscle system is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skeletal muscle system is a sPartOf
+
+Trial: 81
+	Step: 0
+		C2 ⊑ C1
+			a lateral surface of toe is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a lateral surface of toe is a rPartOf
+		C2 ⊑ R1
+			a lateral surface of toe is a rPartOf
+		C3 ⊑ R1
+			a intercarpal joint is a rPartOf
+
+Trial: 82
+	Step: 0
+		C2 ⊑ C1
+			a skin is a lentiform nucleus
+		C1 ⊑ C1
+			a lentiform nucleus is a lentiform nucleus
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a epidermis then there is a lentiform nucleus that it is rPartOf
+		C3 ⊑ R1
+			a epidermis is a rPartOf
+		C3 ⊑ R1
+			a epidermis is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a epidermis is a rPartOf
+
+Trial: 83
+	Step: 0
+		C2 ⊑ C1
+			a glenohumeral joint is a side
+	Step: 1
+		C2 ⊑ R1
+			a glenohumeral joint is a cPartOf
+		C3 ⊑ R1
+			a shoulder region is a cPartOf
+		C3 ⊑ R1
+			a shoulder region is a cPartOf
+
+Trial: 84
+	Step: 0
+		C2 ⊑ C1
+			a superior mesenteric artery is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a superior mesenteric artery is a cPartOf
+		C3 ⊑ R1
+			a surface of medial margin of forearm is a cPartOf
+		C3 ⊑ R1
+			a surface of medial margin of forearm is a cPartOf
+
+Trial: 85
+	Step: 0
+		C3 ⊑ C1
+			a fascia of abdomen is a subcutaneous tissue
+		C2 ⊑ R1
+			a umbilical region of abdomen is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a umbilical region of abdomen then there is a subcutaneous tissue that it is sPartOf
+		C2 ⊑ C1
+			a umbilical region of abdomen is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a umbilical region of abdomen then there is a subcutaneous tissue that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a fascia of abdomen then there is a subcutaneous tissue that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a fascia of abdomen then there is a subcutaneous tissue that it is sPartOf
+		C3 ⊑ R1
+			a fascia of abdomen is a sPartOf
+
+Trial: 86
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue is a body as a whole
+		C1 ⊑ C1
+			a body as a whole is a body as a whole
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a body as a whole that it is rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+
+Trial: 87
+	Step: 0
+		C2 ⊑ C1
+			a anterior carpal region is a scrotal wall
+		C2 ⊑ C1
+			a anterior carpal region is a scrotal wall
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a anterior carpal region then there is a scrotal wall that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a scrotal septum then there is a scrotal wall that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a scrotal septum then there is a scrotal wall that it is rPartOf
+		C3 ⊑ R1
+			a scrotal septum is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a scrotal septum is a rPartOf
+
+Trial: 88
+	Step: 0
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin then there is a bone marrow that it is rPartOf
+		C2 ⊑ C1
+			a skin is a bone marrow
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+
+Trial: 89
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a body as a whole then there is a upper limb that it is rPartOf
+		C2 ⊑ C1
+			a body as a whole is a upper limb
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a body as a whole then there is a upper limb that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a palatoethmoidal suture of skull then there is a upper limb that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a palatoethmoidal suture of skull then there is a upper limb that it is rPartOf
+		C3 ⊑ R1
+			a palatoethmoidal suture of skull is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a palatoethmoidal suture of skull is a rPartOf
+
+Trial: 90
+	Step: 0
+		C3 ⊑ C1
+			a posterior surface of thigh is a surface of ankle
+		C2 ⊑ R1
+			a gingiva is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a gingiva then there is a surface of ankle that it is rPartOf
+		C2 ⊑ C1
+			a gingiva is a surface of ankle
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a gingiva then there is a surface of ankle that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a posterior surface of thigh then there is a surface of ankle that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a posterior surface of thigh then there is a surface of ankle that it is rPartOf
+		C3 ⊑ R1
+			a posterior surface of thigh is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a posterior surface of thigh is a rPartOf
+
+Trial: 91
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a middle mediastinum then there is a skin that it is rPartOf
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a middle mediastinum then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+
+Trial: 92
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a plica of iris then there is a subcutaneous tissue that it is rPartOf
+		C2 ⊑ C1
+			a plica of iris is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a plica of iris then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a skin of part of thigh is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin of part of thigh then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a skin of part of thigh is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin of part of thigh is a rPartOf
+
+Trial: 93
+	Step: 0
+		C2 ⊑ C1
+			a skin is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 94
+	Step: 0
+		C3 ⊑ C1
+			a subcutaneous tissue of sacrococcygeal region is a subcutaneous tissue
+		C2 ⊑ R1
+			a subcutaneous tissue of shoulder region is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of shoulder region then there is a subcutaneous tissue that it is rPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue of shoulder region is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of shoulder region then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of sacrococcygeal region then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of sacrococcygeal region then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of sacrococcygeal region is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a subcutaneous tissue of sacrococcygeal region is a rPartOf
+
+Trial: 95
+	Step: 0
+		C2 ⊑ R1
+			a epidermis is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a epidermis then there is a skin that it is rPartOf
+		C2 ⊑ C1
+			a epidermis is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a epidermis then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 96
+	Step: 0
+		C2 ⊑ R1
+			a arterial system is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a arterial system then there is a artery that it is sPartOf
+		C2 ⊑ C1
+			a arterial system is a artery
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a arterial system then there is a artery that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a arteriole then there is a artery that it is sPartOf
+		C3 ⊑ R1
+			a arteriole is a sPartOf
+		C3 ⊑ R1
+			a arteriole is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a arteriole is a sPartOf
+
+Trial: 97
+	Step: 0
+		C2 ⊑ R1
+			a colonic mucous membrane is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a colonic mucous membrane then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a colonic mucous membrane is a side
+	Step: 1
+		C2 ⊑ R1
+			a colonic mucous membrane is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a vein of thorax then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a vein of thorax is a rPartOf
+		C3 ⊑ R1
+			a vein of thorax is a rPartOf
+
+Trial: 98
+	Step: 0
+		C3 ⊑ C1
+			a skin and subcutaneous tissue is a middle phalanx of second toe
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a middle phalanx of second toe that it is sPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a middle phalanx of second toe
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a middle phalanx of second toe that it is sPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+
+Trial: 99
+	Step: 0
+		C3 ⊑ C1
+			a region of skin is a skin
+		C2 ⊑ ∃R1.C1
+			if something is a hair then there is a skin that it is sPartOf
+		C2 ⊑ C1
+			a hair is a skin
+	Step: 1
+		C2 ⊑ R1
+			a hair is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 100
+	Step: 0
+		C3 ⊑ C1
+			a dermis is a side
+		C2 ⊑ R1
+			a skin is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a skin is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin then there is a side that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a dermis then there is a side that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a dermis then there is a side that it is sPartOf
+		C3 ⊑ R1
+			a dermis is a sPartOf
+
+Trial: 101
+	Step: 0
+		C2 ⊑ R1
+			a body system is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a body system then there is a nervous system that it is sPartOf
+		C2 ⊑ C1
+			a body system is a nervous system
+	Step: 1
+		C2 ⊑ R1
+			a body system is a sPartOf
+		C3 ⊑ R1
+			a body as a whole is a sPartOf
+		C3 ⊑ R1
+			a body as a whole is a sPartOf
+		C3 ⊑ R1
+			a body as a whole is a sPartOf
+
+Trial: 102
+	Step: 0
+		C3 ⊑ C1
+			a region of skin is a external nose
+		C3 ⊑ C1
+			a region of skin is a external nose
+		C2 ⊑ R1
+			a portion of body tissue is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a portion of body tissue then there is a external nose that it is sPartOf
+		C2 ⊑ C1
+			a portion of body tissue is a external nose
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a portion of body tissue then there is a external nose that it is sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 103
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a microscopic skin part is a rPartOf
+		C3 ⊑ R1
+			a microscopic skin part is a rPartOf
+		C3 ⊑ R1
+			a microscopic skin part is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a microscopic skin part is a rPartOf
+
+Trial: 104
+	Step: 0
+		C2 ⊑ C1
+			a anterior abdominal wall is a abdominal wall
+		C1 ⊑ C1
+			a abdominal wall is a abdominal wall
+	Step: 1
+		C2 ⊑ R1
+			a anterior abdominal wall is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 105
+	Step: 0
+		C3 ⊑ C1
+			a body as a whole is a side
+		C2 ⊑ R1
+			a genital system is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a genital system then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a genital system is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a genital system then there is a side that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a body as a whole then there is a side that it is sPartOf
+		C3 ⊑ R1
+			a body as a whole is a sPartOf
+		C3 ⊑ R1
+			a body as a whole is a sPartOf
+
+Trial: 106
+	Step: 0
+		C2 ⊑ C1
+			a small subcutaneous blood vessel is a subcutaneous tissue
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a small subcutaneous blood vessel is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of plantar area of second toe is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of plantar area of second toe is a rPartOf
+
+Trial: 107
+	Step: 0
+		C2 ⊑ C1
+			a uterus is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a uterus is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 108
+	Step: 0
+		C1 ⊑ R1
+			a bone tissue of T5 is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a posterior chest wall then there is a bone tissue of T5 that it is rPartOf
+		C1 ⊑ C1
+			a bone tissue of T5 is a bone tissue of T5
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a posterior chest wall then there is a bone tissue of T5 that it is rPartOf
+		C3 ⊑ R1
+			a arch of eighth thoracic vertebra is a rPartOf
+		C3 ⊑ R1
+			a arch of eighth thoracic vertebra is a rPartOf
+		C3 ⊑ R1
+			a arch of eighth thoracic vertebra is a rPartOf
+	Step: 2
+		C3 ⊑ ∃R1.C1
+			if something is a arch of eighth thoracic vertebra then there is a bone tissue of T5 that it is rPartOf
+
+Trial: 109
+	Step: 0
+		C2 ⊑ R1
+			a superficial dorsal vein of clitoris is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a superficial dorsal vein of clitoris then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a superficial dorsal vein of clitoris is a side
+	Step: 1
+		C2 ⊑ R1
+			a superficial dorsal vein of clitoris is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of posterior axillary line is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of posterior axillary line is a rPartOf
+
+Trial: 110
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a region of skin is a side
+	Step: 1
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a capsule of hip joint is a rPartOf
+		C3 ⊑ R1
+			a capsule of hip joint is a rPartOf
+		C3 ⊑ R1
+			a capsule of hip joint is a rPartOf
+
+Trial: 111
+	Step: 0
+		C2 ⊑ C1
+			a cardiac internal structure is a subcutaneous tissue
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a cardiac internal structure is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a external rectal venous plexus then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a external rectal venous plexus then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a external rectal venous plexus is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a external rectal venous plexus is a rPartOf
+
+Trial: 112
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a dermatoglyphic patterns is a rPartOf
+		C3 ⊑ R1
+			a dermatoglyphic patterns is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a dermatoglyphic patterns is a rPartOf
+
+Trial: 113
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue is a body as a whole
+		C1 ⊑ C1
+			a body as a whole is a body as a whole
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+
+Trial: 114
+	Step: 0
+		C2 ⊑ C1
+			a skin is a glans penis
+		C1 ⊑ C1
+			a glans penis is a glans penis
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a urinary bladder is a rPartOf
+		C3 ⊑ R1
+			a urinary bladder is a rPartOf
+		C3 ⊑ R1
+			a urinary bladder is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a urinary bladder is a rPartOf
+
+Trial: 115
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a third toe then there is a subcutaneous tissue that it is rPartOf
+		C2 ⊑ C1
+			a third toe is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a third toe is a rPartOf
+		C3 ⊑ R1
+			a arcuate artery of kidney is a rPartOf
+		C3 ⊑ R1
+			a arcuate artery of kidney is a rPartOf
+
+Trial: 116
+	Step: 0
+		C3 ⊑ C1
+			a region of skin is a side
+		C2 ⊑ R1
+			a skin of scrotum is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin of scrotum then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a skin of scrotum is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin of scrotum then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 117
+	Step: 0
+		C2 ⊑ C1
+			a ankle region of lower limb is a subcutaneous tissue
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a ankle region of lower limb is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a ligament of talocalcaneonavicular joint then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a ligament of talocalcaneonavicular joint is a rPartOf
+		C3 ⊑ R1
+			a ligament of talocalcaneonavicular joint is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a ligament of talocalcaneonavicular joint is a rPartOf
+
+Trial: 118
+	Step: 0
+		C3 ⊑ C1
+			a ischial bursa is a malleus
+		C2 ⊑ R1
+			a incudomallear articulation is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a incudomallear articulation then there is a malleus that it is rPartOf
+		C2 ⊑ C1
+			a incudomallear articulation is a malleus
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a incudomallear articulation then there is a malleus that it is rPartOf
+		C3 ⊑ R1
+			a ischial bursa is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a ischial bursa then there is a malleus that it is rPartOf
+		C3 ⊑ R1
+			a ischial bursa is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a ischial bursa is a rPartOf
+
+Trial: 119
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a epidermis then there is a skin that it is sPartOf
+		C2 ⊑ C1
+			a epidermis is a skin
+	Step: 1
+		C2 ⊑ R1
+			a epidermis is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 120
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a mitral valve
+		C1 ⊑ C1
+			a mitral valve is a mitral valve
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a mitral valve that it is rPartOf
+		C3 ⊑ R1
+			a papillary muscle of left ventricle is a rPartOf
+		C3 ⊑ R1
+			a papillary muscle of left ventricle is a rPartOf
+		C3 ⊑ R1
+			a papillary muscle of left ventricle is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a papillary muscle of left ventricle is a rPartOf
+
+Trial: 121
+	Step: 0
+		C2 ⊑ C1
+			a labium majus is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a labium majus is a cPartOf
+		C3 ⊑ R1
+			a labium minus is a cPartOf
+		C3 ⊑ R1
+			a labium minus is a cPartOf
+	Step: 2
+		C3 ⊑ R1
+			a labium minus is a cPartOf
+
+Trial: 122
+	Step: 0
+		C2 ⊑ R1
+			a bone tissue of fourth rib is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a bone tissue of fourth rib then there is a spinal cord meninges that it is sPartOf
+		C2 ⊑ C1
+			a bone tissue of fourth rib is a spinal cord meninges
+	Step: 1
+		C2 ⊑ R1
+			a bone tissue of fourth rib is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a spinal dura mater then there is a spinal cord meninges that it is sPartOf
+		C3 ⊑ R1
+			a spinal dura mater is a sPartOf
+		C3 ⊑ R1
+			a spinal dura mater is a sPartOf
+
+Trial: 123
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a skin of plantar area of second toe is a rPartOf
+		C3 ⊑ R1
+			a skin of plantar area of second toe is a rPartOf
+		C3 ⊑ R1
+			a skin of plantar area of second toe is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin of plantar area of second toe is a rPartOf
+
+Trial: 124
+	Step: 0
+		C3 ⊑ C1
+			a obturator membrane is a skin
+		C3 ⊑ C1
+			a obturator membrane is a skin
+		C2 ⊑ R1
+			a epidermis is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a epidermis then there is a skin that it is sPartOf
+		C2 ⊑ C1
+			a epidermis is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a epidermis then there is a skin that it is sPartOf
+		C3 ⊑ R1
+			a obturator membrane is a sPartOf
+		C3 ⊑ R1
+			a obturator membrane is a sPartOf
+		C3 ⊑ R1
+			a obturator membrane is a sPartOf
+
+Trial: 125
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a thoracic region of back then there is a sclera that it is rPartOf
+		C2 ⊑ C1
+			a thoracic region of back is a sclera
+	Step: 1
+		C2 ⊑ R1
+			a thoracic region of back is a rPartOf
+		C3 ⊑ R1
+			a interscapular region of back is a rPartOf
+		C3 ⊑ R1
+			a interscapular region of back is a rPartOf
+
+Trial: 126
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a right half of head that it is sPartOf
+		C2 ⊑ C1
+			a region of skin is a right half of head
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a right half of head that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a permanent lower right molar tooth then there is a right half of head that it is sPartOf
+		C3 ⊑ R1
+			a permanent lower right molar tooth is a sPartOf
+		C3 ⊑ R1
+			a permanent lower right molar tooth is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a permanent lower right molar tooth is a sPartOf
+
+Trial: 127
+	Step: 0
+		C3 ⊑ C1
+			a parahippocampal gyrus is a amygdala
+		C2 ⊑ R1
+			a limbic system is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a limbic system then there is a amygdala that it is sPartOf
+		C2 ⊑ C1
+			a limbic system is a amygdala
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a limbic system then there is a amygdala that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a parahippocampal gyrus then there is a amygdala that it is sPartOf
+		C3 ⊑ R1
+			a parahippocampal gyrus is a sPartOf
+		C3 ⊑ R1
+			a parahippocampal gyrus is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a parahippocampal gyrus is a sPartOf
+
+Trial: 128
+	Step: 0
+		C2 ⊑ C1
+			a infratemporal region of head is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a infratemporal region of head is a rPartOf
+		C3 ⊑ R1
+			a preauricular region of head is a rPartOf
+		C3 ⊑ R1
+			a preauricular region of head is a rPartOf
+
+Trial: 129
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a subcutaneous tissue that it is rPartOf
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of lateral area of upper arm is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of lateral area of upper arm is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of lateral area of upper arm is a rPartOf
+
+Trial: 130
+	Step: 0
+		C3 ⊑ C1
+			a gland organ component is a endocrine system
+		C2 ⊑ R1
+			a body as a whole is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a body as a whole then there is a endocrine system that it is sPartOf
+		C2 ⊑ C1
+			a body as a whole is a endocrine system
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a body as a whole then there is a endocrine system that it is sPartOf
+		C3 ⊑ R1
+			a gland organ component is a sPartOf
+		C3 ⊑ R1
+			a gland organ component is a sPartOf
+		C3 ⊑ R1
+			a gland organ component is a sPartOf
+
+Trial: 131
+	Step: 0
+		C3 ⊑ C1
+			a inferior surface of scrotum is a inguinal region
+		C3 ⊑ C1
+			a inferior surface of scrotum is a inguinal region
+		C2 ⊑ R1
+			a medial surface of index finger is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a medial surface of index finger then there is a inguinal region that it is sPartOf
+		C2 ⊑ C1
+			a medial surface of index finger is a inguinal region
+		C1 ⊑ C1
+			a inguinal region is a inguinal region
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a medial surface of index finger then there is a inguinal region that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a inferior surface of scrotum then there is a inguinal region that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a inferior surface of scrotum then there is a inguinal region that it is sPartOf
+		C3 ⊑ R1
+			a inferior surface of scrotum is a sPartOf
+
+Trial: 132
+	Step: 0
+		C3 ⊑ C1
+			a tendon of lateral crural muscle is a dorsal surface of fourth toe
+		C2 ⊑ R1
+			a skin of plantar area of toe is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin of plantar area of toe then there is a dorsal surface of fourth toe that it is rPartOf
+		C2 ⊑ C1
+			a skin of plantar area of toe is a dorsal surface of fourth toe
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin of plantar area of toe then there is a dorsal surface of fourth toe that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a tendon of lateral crural muscle then there is a dorsal surface of fourth toe that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a tendon of lateral crural muscle then there is a dorsal surface of fourth toe that it is rPartOf
+		C3 ⊑ R1
+			a tendon of lateral crural muscle is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a tendon of lateral crural muscle is a rPartOf
+
+Trial: 133
+	Step: 0
+		C2 ⊑ C1
+			a lacrimal sac is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a lacrimal sac then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 134
+	Step: 0
+		C3 ⊑ C1
+			a subcutaneous tissue is a jaw region of head
+		C2 ⊑ R1
+			a cervical esophagus is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a cervical esophagus then there is a jaw region of head that it is rPartOf
+		C2 ⊑ C1
+			a cervical esophagus is a jaw region of head
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a cervical esophagus then there is a jaw region of head that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a jaw region of head that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a jaw region of head that it is rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+
+Trial: 135
+	Step: 0
+		C2 ⊑ R1
+			a medial tarsal artery is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a medial tarsal artery then there is a neural tube that it is sPartOf
+		C2 ⊑ C1
+			a medial tarsal artery is a neural tube
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a medial tarsal artery then there is a neural tube that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a notochord then there is a neural tube that it is sPartOf
+		C3 ⊑ R1
+			a notochord is a sPartOf
+		C3 ⊑ R1
+			a notochord is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a notochord is a sPartOf
+
+Trial: 136
+	Step: 0
+		C1 ⊑ R1
+			a lower gastrointestinal tract is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a jejunum then there is a lower gastrointestinal tract that it is rPartOf
+		C2 ⊑ C1
+			a jejunum is a lower gastrointestinal tract
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a jejunum then there is a lower gastrointestinal tract that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin then there is a lower gastrointestinal tract that it is rPartOf
+		C3 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin is a rPartOf
+
+Trial: 137
+	Step: 0
+		C2 ⊑ R1
+			a dermis is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a dermis then there is a skin that it is rPartOf
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a dermis is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a cleavage lines of skin then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a cleavage lines of skin is a rPartOf
+		C3 ⊑ R1
+			a cleavage lines of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a cleavage lines of skin is a rPartOf
+
+Trial: 138
+	Step: 0
+		C3 ⊑ C1
+			a skin and subcutaneous tissue of palmar area of hand is a serous layer of peritoneum
+		C2 ⊑ R1
+			a subcutaneous tissue of cavity of concha is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of cavity of concha then there is a serous layer of peritoneum that it is rPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue of cavity of concha is a serous layer of peritoneum
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of cavity of concha then there is a serous layer of peritoneum that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue of palmar area of hand then there is a serous layer of peritoneum that it is rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue of palmar area of hand is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue of palmar area of hand is a rPartOf
+
+Trial: 139
+	Step: 0
+		C2 ⊑ C1
+			a distal phalanx of little finger is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a distal phalanx of little finger is a rPartOf
+		C2 ⊑ R1
+			a distal phalanx of little finger is a rPartOf
+		C3 ⊑ R1
+			a medial cubital region of upper extremity is a rPartOf
+
+Trial: 140
+	Step: 0
+		C2 ⊑ C1
+			a skin is a nail
+		C2 ⊑ C1
+			a skin is a nail
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a nail that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 141
+	Step: 0
+		C2 ⊑ C1
+			a pelvic region is a abdominal segment of trunk
+		C1 ⊑ C1
+			a abdominal segment of trunk is a abdominal segment of trunk
+	Step: 1
+		C2 ⊑ R1
+			a pelvic region is a rPartOf
+		C3 ⊑ R1
+			a head of tenth rib is a rPartOf
+		C3 ⊑ R1
+			a head of tenth rib is a rPartOf
+		C3 ⊑ R1
+			a head of tenth rib is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a head of tenth rib is a rPartOf
+
+Trial: 142
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a side
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a flexor tendon and tendon sheath of fifth toe is a rPartOf
+		C3 ⊑ R1
+			a flexor tendon and tendon sheath of fifth toe is a rPartOf
+
+Trial: 143
+	Step: 0
+		C2 ⊑ C1
+			a liver is a jaw region of head
+		C1 ⊑ C1
+			a jaw region of head is a jaw region of head
+	Step: 1
+		C2 ⊑ R1
+			a liver is a rPartOf
+		C3 ⊑ R1
+			a hepatic capsule is a rPartOf
+		C3 ⊑ R1
+			a hepatic capsule is a rPartOf
+		C3 ⊑ R1
+			a hepatic capsule is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a hepatic capsule is a rPartOf
+
+Trial: 144
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a surface of external eye region then there is a thoracic region of back that it is rPartOf
+		C2 ⊑ C1
+			a surface of external eye region is a thoracic region of back
+	Step: 1
+		C2 ⊑ R1
+			a surface of external eye region is a rPartOf
+		C3 ⊑ R1
+			a posterior surface of upper arm is a rPartOf
+		C3 ⊑ R1
+			a posterior surface of upper arm is a rPartOf
+
+Trial: 145
+	Step: 0
+		C2 ⊑ C1
+			a perineum is a pelvic region
+		C1 ⊑ C1
+			a pelvic region is a pelvic region
+	Step: 1
+		C2 ⊑ R1
+			a perineum is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a soft tissue of pelvis then there is a pelvic region that it is rPartOf
+		C3 ⊑ R1
+			a soft tissue of pelvis is a rPartOf
+
+Trial: 146
+	Step: 0
+		C3 ⊑ C1
+			a dorsal surface of great toe is a endometrium
+		C2 ⊑ R1
+			a endometrial gland is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a endometrial gland then there is a endometrium that it is sPartOf
+		C2 ⊑ C1
+			a endometrial gland is a endometrium
+	Step: 1
+		C2 ⊑ R1
+			a endometrial gland is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a dorsal surface of great toe then there is a endometrium that it is sPartOf
+		C3 ⊑ R1
+			a dorsal surface of great toe is a sPartOf
+		C3 ⊑ R1
+			a dorsal surface of great toe is a sPartOf
+
+Trial: 147
+	Step: 0
+		C2 ⊑ C1
+			a scrotum is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a scrotum then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a epidermis is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a epidermis then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a epidermis is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a epidermis is a rPartOf
+
+Trial: 148
+	Step: 0
+		C3 ⊑ C1
+			a subcutaneous tissue of infrapalpebral fold is a subcutaneous tissue
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a subcutaneous tissue that it is sPartOf
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of infrapalpebral fold is a sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of infrapalpebral fold is a sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of infrapalpebral fold is a sPartOf
+
+Trial: 149
+	Step: 0
+		C2 ⊑ C1
+			a skin is a vitreous body
+		C1 ⊑ C1
+			a vitreous body is a vitreous body
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+
+Trial: 150
+	Step: 0
+		C3 ⊑ C1
+			a parotid plexus of facial nerve is a side
+		C2 ⊑ R1
+			a facial nerve is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a facial nerve then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a facial nerve is a side
+	Step: 1
+		C2 ⊑ R1
+			a facial nerve is a sPartOf
+		C3 ⊑ R1
+			a parotid plexus of facial nerve is a sPartOf
+		C3 ⊑ R1
+			a parotid plexus of facial nerve is a sPartOf
+		C3 ⊑ R1
+			a parotid plexus of facial nerve is a sPartOf
+
+Trial: 151
+	Step: 0
+		C2 ⊑ R1
+			a surface of knee is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a surface of knee then there is a testis that it is sPartOf
+		C1 ⊑ C1
+			a testis is a testis
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a surface of knee then there is a testis that it is sPartOf
+		C3 ⊑ R1
+			a endocrine system is a sPartOf
+		C3 ⊑ R1
+			a endocrine system is a sPartOf
+		C3 ⊑ R1
+			a endocrine system is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a endocrine system is a sPartOf
+
+Trial: 152
+	Step: 0
+		C3 ⊑ C1
+			a subcutaneous tissue of lower eyelid is a subscapularis muscle
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a subscapularis muscle that it is sPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a subscapularis muscle
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a subscapularis muscle that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of lower eyelid then there is a subscapularis muscle that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of lower eyelid then there is a subscapularis muscle that it is sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of lower eyelid is a sPartOf
+
+Trial: 153
+	Step: 0
+		C3 ⊑ C1
+			a suboccipital region of neck is a side
+		C2 ⊑ C1
+			a subcutaneous tissue is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a suboccipital region of neck is a rPartOf
+		C3 ⊑ R1
+			a suboccipital region of neck is a rPartOf
+		C3 ⊑ R1
+			a suboccipital region of neck is a rPartOf
+
+Trial: 154
+	Step: 0
+		C2 ⊑ C1
+			a metacarpophalangeal joint of little finger is a phalanx of little finger
+		C1 ⊑ C1
+			a phalanx of little finger is a phalanx of little finger
+	Step: 1
+		C2 ⊑ R1
+			a metacarpophalangeal joint of little finger is a rPartOf
+		C3 ⊑ R1
+			a little finger is a rPartOf
+		C3 ⊑ R1
+			a little finger is a rPartOf
+
+Trial: 155
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a myometrial blood vessel then there is a subcutaneous tissue that it is rPartOf
+		C2 ⊑ C1
+			a myometrial blood vessel is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a myometrial blood vessel then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of dorsal area of toe then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of dorsal area of toe then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of dorsal area of toe is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a subcutaneous tissue of dorsal area of toe is a rPartOf
+
+Trial: 156
+	Step: 0
+		C2 ⊑ R1
+			a antihelix is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a antihelix then there is a skin that it is sPartOf
+		C2 ⊑ C1
+			a antihelix is a skin
+	Step: 1
+		C2 ⊑ R1
+			a antihelix is a sPartOf
+		C3 ⊑ R1
+			a epidermis is a sPartOf
+		C3 ⊑ R1
+			a epidermis is a sPartOf
+		C3 ⊑ R1
+			a epidermis is a sPartOf
+
+Trial: 157
+	Step: 0
+		C2 ⊑ C1
+			a dorsal spinocerebellar tract is a body as a whole
+		C2 ⊑ C1
+			a dorsal spinocerebellar tract is a body as a whole
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a dorsal spinocerebellar tract then there is a body as a whole that it is rPartOf
+		C3 ⊑ R1
+			a fetal Rathke's pouch is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a fetal Rathke's pouch then there is a body as a whole that it is rPartOf
+		C3 ⊑ R1
+			a fetal Rathke's pouch is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a fetal Rathke's pouch is a rPartOf
+
+Trial: 158
+	Step: 0
+		C3 ⊑ C1
+			a region of skin is a side
+		C2 ⊑ R1
+			a radix penis is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a radix penis then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a radix penis is a side
+	Step: 1
+		C2 ⊑ R1
+			a radix penis is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 159
+	Step: 0
+		C2 ⊑ C1
+			a knee joint is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a knee joint is a cPartOf
+		C3 ⊑ R1
+			a posterior cerebellar lobe is a cPartOf
+		C3 ⊑ R1
+			a posterior cerebellar lobe is a cPartOf
+
+Trial: 160
+	Step: 0
+		C2 ⊑ R1
+			a abdominal esophagus is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a abdominal esophagus then there is a esophagus that it is rPartOf
+		C2 ⊑ C1
+			a abdominal esophagus is a esophagus
+	Step: 1
+		C2 ⊑ R1
+			a abdominal esophagus is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a lower third of esophagus then there is a esophagus that it is rPartOf
+		C3 ⊑ R1
+			a lower third of esophagus is a rPartOf
+		C3 ⊑ R1
+			a lower third of esophagus is a rPartOf
+
+Trial: 161
+	Step: 0
+		C3 ⊑ C1
+			a skin of axilla is a limbic system
+		C2 ⊑ R1
+			a rhinencephalon is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a rhinencephalon then there is a limbic system that it is sPartOf
+		C2 ⊑ C1
+			a rhinencephalon is a limbic system
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a rhinencephalon then there is a limbic system that it is sPartOf
+		C3 ⊑ R1
+			a skin of axilla is a sPartOf
+		C3 ⊑ R1
+			a skin of axilla is a sPartOf
+		C3 ⊑ R1
+			a skin of axilla is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin of axilla is a sPartOf
+
+Trial: 162
+	Step: 0
+		C3 ⊑ C1
+			a peritoneal cavity is a abdominal segment of trunk
+		C2 ⊑ R1
+			a pelvic region is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a pelvic region then there is a abdominal segment of trunk that it is sPartOf
+		C2 ⊑ C1
+			a pelvic region is a abdominal segment of trunk
+	Step: 1
+		C2 ⊑ R1
+			a pelvic region is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a peritoneal cavity then there is a abdominal segment of trunk that it is sPartOf
+		C3 ⊑ R1
+			a peritoneal cavity is a sPartOf
+		C3 ⊑ R1
+			a peritoneal cavity is a sPartOf
+
+Trial: 163
+	Step: 0
+		C2 ⊑ R1
+			a skin of neck is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin of neck then there is a skin that it is rPartOf
+		C2 ⊑ C1
+			a skin of neck is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin of neck then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 164
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C2 ⊑ C1
+			a region of skin is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a skin of zygomatic region is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin of zygomatic region then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a skin of zygomatic region is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin of zygomatic region is a rPartOf
+
+Trial: 165
+	Step: 0
+		C2 ⊑ R1
+			a submucosa of anal canal is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a submucosa of anal canal then there is a anal canal that it is rPartOf
+		C2 ⊑ C1
+			a submucosa of anal canal is a anal canal
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a submucosa of anal canal then there is a anal canal that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a posterior wall of anal canal then there is a anal canal that it is rPartOf
+		C3 ⊑ R1
+			a posterior wall of anal canal is a rPartOf
+		C3 ⊑ R1
+			a posterior wall of anal canal is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a posterior wall of anal canal is a rPartOf
+
+Trial: 166
+	Step: 0
+		C3 ⊑ C1
+			a peripheral nervous system is a side
+		C2 ⊑ R1
+			a peripheral nerve is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a peripheral nerve then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a peripheral nerve is a side
+	Step: 1
+		C2 ⊑ R1
+			a peripheral nerve is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a peripheral nervous system then there is a side that it is sPartOf
+		C3 ⊑ R1
+			a peripheral nervous system is a sPartOf
+		C3 ⊑ R1
+			a peripheral nervous system is a sPartOf
+
+Trial: 167
+	Step: 0
+		C3 ⊑ C1
+			a male internal genitalia is a male genital system
+		C3 ⊑ C1
+			a male internal genitalia is a male genital system
+		C2 ⊑ R1
+			a testis is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a testis then there is a male genital system that it is sPartOf
+		C2 ⊑ C1
+			a testis is a male genital system
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a testis then there is a male genital system that it is sPartOf
+		C3 ⊑ R1
+			a male internal genitalia is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a male internal genitalia then there is a male genital system that it is sPartOf
+		C3 ⊑ R1
+			a male internal genitalia is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a male internal genitalia is a sPartOf
+
+Trial: 168
+	Step: 0
+		C3 ⊑ C1
+			a ear lobule is a side
+		C2 ⊑ ∃R1.C1
+			if something is a duodenal ampulla then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a duodenal ampulla is a side
+	Step: 1
+		C2 ⊑ R1
+			a duodenal ampulla is a rPartOf
+		C3 ⊑ R1
+			a ear lobule is a rPartOf
+		C3 ⊑ R1
+			a ear lobule is a rPartOf
+		C3 ⊑ R1
+			a ear lobule is a rPartOf
+
+Trial: 169
+	Step: 0
+		C3 ⊑ C1
+			a caudate lobe branch of portal vein is a body as a whole
+		C2 ⊑ R1
+			a frontomaxillary suture of skull is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a frontomaxillary suture of skull then there is a body as a whole that it is rPartOf
+		C2 ⊑ C1
+			a frontomaxillary suture of skull is a body as a whole
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a frontomaxillary suture of skull then there is a body as a whole that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a caudate lobe branch of portal vein then there is a body as a whole that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a caudate lobe branch of portal vein then there is a body as a whole that it is rPartOf
+		C3 ⊑ R1
+			a caudate lobe branch of portal vein is a rPartOf
+
+Trial: 170
+	Step: 0
+		C2 ⊑ C1
+			a jaw region of head is a side
+	Step: 1
+		C3 ⊑ R1
+			a interosseous cuneometatarsal ligament is a cPartOf
+		C3 ⊑ R1
+			a interosseous cuneometatarsal ligament is a cPartOf
+
+Trial: 171
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a skin that it is sPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a skin
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+
+Trial: 172
+	Step: 0
+		C2 ⊑ C1
+			a biceps femoris muscle is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a biceps femoris muscle is a rPartOf
+		C3 ⊑ R1
+			a medial surface of fourth toe is a rPartOf
+		C3 ⊑ R1
+			a medial surface of fourth toe is a rPartOf
+
+Trial: 173
+	Step: 0
+		C2 ⊑ R1
+			a upper trunk is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a upper trunk then there is a myocardium of left ventricle that it is rPartOf
+		C2 ⊑ C1
+			a upper trunk is a myocardium of left ventricle
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a upper trunk then there is a myocardium of left ventricle that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a myocardium of posteroseptal region then there is a myocardium of left ventricle that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a myocardium of posteroseptal region then there is a myocardium of left ventricle that it is rPartOf
+		C3 ⊑ R1
+			a myocardium of posteroseptal region is a rPartOf
+	Step: 2
+		C3 ⊑ ∃R1.C1
+			if something is a myocardium of posteroseptal region then there is a myocardium of left ventricle that it is rPartOf
+
+Trial: 174
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a head of third rib then there is a skin that it is sPartOf
+		C2 ⊑ C1
+			a head of third rib is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a head of third rib then there is a skin that it is sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+	Step: 2
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is sPartOf
+
+Trial: 175
+	Step: 0
+		C3 ⊑ C1
+			a lymphatic system of abdomen is a skin
+		C3 ⊑ C1
+			a lymphatic system of abdomen is a skin
+		C2 ⊑ R1
+			a hair is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a hair then there is a skin that it is sPartOf
+		C2 ⊑ C1
+			a hair is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a hair then there is a skin that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a lymphatic system of abdomen then there is a skin that it is sPartOf
+		C3 ⊑ R1
+			a lymphatic system of abdomen is a sPartOf
+		C3 ⊑ R1
+			a lymphatic system of abdomen is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a lymphatic system of abdomen is a sPartOf
+
+Trial: 176
+	Step: 0
+		C2 ⊑ C1
+			a surface of left side of neck is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a surface of left side of neck is a cPartOf
+		C3 ⊑ R1
+			a lateral surface of second toe is a cPartOf
+		C3 ⊑ R1
+			a lateral surface of second toe is a cPartOf
+
+Trial: 177
+	Step: 0
+		C3 ⊑ C1
+			a skin and subcutaneous tissue is a skin
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a skin that it is sPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a skin
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+
+Trial: 178
+	Step: 0
+		C2 ⊑ C1
+			a right atrium is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a right atrium then there is a side that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin is a rPartOf
+
+Trial: 179
+	Step: 0
+		C2 ⊑ C1
+			a dorsum sellae is a sphenoid bone
+		C2 ⊑ C1
+			a dorsum sellae is a sphenoid bone
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a dorsum sellae then there is a sphenoid bone that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a clivus ossis sphenoidalis then there is a sphenoid bone that it is sPartOf
+		C3 ⊑ R1
+			a clivus ossis sphenoidalis is a sPartOf
+		C3 ⊑ R1
+			a clivus ossis sphenoidalis is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a clivus ossis sphenoidalis is a sPartOf
+
+Trial: 180
+	Step: 0
+		C2 ⊑ C1
+			a group of abdominal viscera is a subcutaneous tissue
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a group of abdominal viscera is a rPartOf
+		C3 ⊑ R1
+			a small subcutaneous blood vessel is a rPartOf
+		C3 ⊑ R1
+			a small subcutaneous blood vessel is a rPartOf
+		C3 ⊑ R1
+			a small subcutaneous blood vessel is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a small subcutaneous blood vessel is a rPartOf
+
+Trial: 181
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a dermatoglyphic patterns is a rPartOf
+		C3 ⊑ R1
+			a dermatoglyphic patterns is a rPartOf
+		C3 ⊑ R1
+			a dermatoglyphic patterns is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a dermatoglyphic patterns is a rPartOf
+
+Trial: 182
+	Step: 0
+		C3 ⊑ C1
+			a tendon sheath of toe is a toe
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a toe that it is sPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a toe
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a tendon sheath of toe is a sPartOf
+		C3 ⊑ R1
+			a tendon sheath of toe is a sPartOf
+		C3 ⊑ R1
+			a tendon sheath of toe is a sPartOf
+
+Trial: 183
+	Step: 0
+		C2 ⊑ C1
+			a external ear is a pinna
+		C1 ⊑ C1
+			a pinna is a pinna
+	Step: 1
+		C2 ⊑ R1
+			a external ear is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a pinna that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 184
+	Step: 0
+		C2 ⊑ C1
+			a retroperitoneum is a abdominal segment of trunk
+		C1 ⊑ C1
+			a abdominal segment of trunk is a abdominal segment of trunk
+	Step: 1
+		C2 ⊑ R1
+			a retroperitoneum is a sPartOf
+		C3 ⊑ R1
+			a lymphatic system of abdomen is a sPartOf
+		C3 ⊑ R1
+			a lymphatic system of abdomen is a sPartOf
+
+Trial: 185
+	Step: 0
+		C2 ⊑ C1
+			a skin is a arytenoid cartilage
+		C1 ⊑ C1
+			a arytenoid cartilage is a arytenoid cartilage
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a arch of fifth cervical vertebra then there is a arytenoid cartilage that it is rPartOf
+		C3 ⊑ R1
+			a arch of fifth cervical vertebra is a rPartOf
+		C3 ⊑ R1
+			a arch of fifth cervical vertebra is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a arch of fifth cervical vertebra is a rPartOf
+
+Trial: 186
+	Step: 0
+		C2 ⊑ R1
+			a left lateral ventricle is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a left lateral ventricle then there is a cerebral hemisphere that it is rPartOf
+		C2 ⊑ C1
+			a left lateral ventricle is a cerebral hemisphere
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a left lateral ventricle then there is a cerebral hemisphere that it is rPartOf
+		C3 ⊑ R1
+			a left frontal lobe is a rPartOf
+		C3 ⊑ R1
+			a left frontal lobe is a rPartOf
+		C3 ⊑ R1
+			a left frontal lobe is a rPartOf
+	Step: 2
+		C3 ⊑ ∃R1.C1
+			if something is a left frontal lobe then there is a cerebral hemisphere that it is rPartOf
+
+Trial: 187
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+
+Trial: 188
+	Step: 0
+		C3 ⊑ C1
+			a integumentary system is a skin
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a skin that it is sPartOf
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a skin that it is sPartOf
+		C3 ⊑ R1
+			a integumentary system is a sPartOf
+		C3 ⊑ R1
+			a integumentary system is a sPartOf
+		C3 ⊑ R1
+			a integumentary system is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a integumentary system is a sPartOf
+
+Trial: 189
+	Step: 0
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin of neck then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a skin of neck is a rPartOf
+		C3 ⊑ R1
+			a skin of neck is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin of neck is a rPartOf
+
+Trial: 190
+	Step: 0
+		C2 ⊑ C1
+			a tongue is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a tongue is a rPartOf
+		C2 ⊑ R1
+			a tongue is a rPartOf
+		C3 ⊑ R1
+			a forearm is a rPartOf
+
+Trial: 191
+	Step: 0
+		C3 ⊑ C1
+			a urinary system is a body as a whole
+		C2 ⊑ R1
+			a lower body is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a lower body then there is a body as a whole that it is sPartOf
+		C2 ⊑ C1
+			a lower body is a body as a whole
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a lower body then there is a body as a whole that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a urinary system then there is a body as a whole that it is sPartOf
+		C3 ⊑ R1
+			a urinary system is a sPartOf
+		C3 ⊑ R1
+			a urinary system is a sPartOf
+
+Trial: 192
+	Step: 0
+		C2 ⊑ C1
+			a anterior cerebellar lobe is a cerebellum
+		C1 ⊑ C1
+			a cerebellum is a cerebellum
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a anterior cerebellar lobe then there is a cerebellum that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a posterior cerebellar lobe then there is a cerebellum that it is rPartOf
+		C3 ⊑ R1
+			a posterior cerebellar lobe is a rPartOf
+		C3 ⊑ R1
+			a posterior cerebellar lobe is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a posterior cerebellar lobe is a rPartOf
+
+Trial: 193
+	Step: 0
+		C2 ⊑ C1
+			a cervical portion of sympathetic nervous system is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a cervical portion of sympathetic nervous system is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a middle temporal artery then there is a side that it is sPartOf
+		C3 ⊑ R1
+			a middle temporal artery is a sPartOf
+		C3 ⊑ R1
+			a middle temporal artery is a sPartOf
+
+Trial: 194
+	Step: 0
+		C2 ⊑ C1
+			a small subcutaneous blood vessel is a subcutaneous tissue
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a small subcutaneous blood vessel is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a T12 spinal ganglion then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a T12 spinal ganglion is a rPartOf
+		C3 ⊑ R1
+			a T12 spinal ganglion is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a T12 spinal ganglion is a rPartOf
+
+Trial: 195
+	Step: 0
+		C2 ⊑ C1
+			a left breast is a left lobar bronchus
+		C1 ⊑ C1
+			a left lobar bronchus is a left lobar bronchus
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a left breast then there is a left lobar bronchus that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a left hemithorax then there is a left lobar bronchus that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a left hemithorax then there is a left lobar bronchus that it is rPartOf
+		C3 ⊑ R1
+			a left hemithorax is a rPartOf
+	Step: 2
+		C3 ⊑ ∃R1.C1
+			if something is a left hemithorax then there is a left lobar bronchus that it is rPartOf
+
+Trial: 196
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a upper trunk then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a upper trunk is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a upper trunk then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 197
+	Step: 0
+		C2 ⊑ C1
+			a skin is a female genital system
+		C1 ⊑ C1
+			a female genital system is a female genital system
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+
+Trial: 198
+	Step: 0
+		C2 ⊑ R1
+			a intervertebral disc of sixth thoracic vertebra is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a intervertebral disc of sixth thoracic vertebra then there is a skin that it is rPartOf
+		C2 ⊑ C1
+			a intervertebral disc of sixth thoracic vertebra is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a intervertebral disc of sixth thoracic vertebra then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 199
+	Step: 0
+		C2 ⊑ C1
+			a abdominal segment of trunk is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a abdominal segment of trunk is a rPartOf
+		C3 ⊑ R1
+			a pelvic region is a rPartOf
+		C3 ⊑ R1
+			a pelvic region is a rPartOf
+		C3 ⊑ R1
+			a pelvic region is a rPartOf
+
+Trial: 200
+	Step: 0
+		C3 ⊑ C1
+			a region of skin is a skin of neck
+		C3 ⊑ C1
+			a region of skin is a skin of neck
+		C2 ⊑ ∃R1.C1
+			if something is a supreme nasal turbinate then there is a skin of neck that it is rPartOf
+		C2 ⊑ C1
+			a supreme nasal turbinate is a skin of neck
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a supreme nasal turbinate then there is a skin of neck that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin of neck that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin of neck that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 201
+	Step: 0
+		C2 ⊑ R1
+			a skin of axilla is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin of axilla then there is a inferior radioulnar joint that it is rPartOf
+		C2 ⊑ C1
+			a skin of axilla is a inferior radioulnar joint
+	Step: 1
+		C2 ⊑ R1
+			a skin of axilla is a rPartOf
+		C3 ⊑ R1
+			a common interosseous artery is a rPartOf
+		C3 ⊑ R1
+			a common interosseous artery is a rPartOf
+		C3 ⊑ R1
+			a common interosseous artery is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a common interosseous artery is a rPartOf
+
+Trial: 202
+	Step: 0
+		C2 ⊑ C1
+			a head is a nose
+		C1 ⊑ C1
+			a nose is a nose
+	Step: 1
+		C2 ⊑ R1
+			a head is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a face then there is a nose that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a face then there is a nose that it is rPartOf
+		C3 ⊑ R1
+			a face is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a face is a rPartOf
+
+Trial: 203
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a jaw region of head then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a jaw region of head is a side
+	Step: 1
+		C2 ⊑ R1
+			a jaw region of head is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of anterior area of forearm then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of anterior area of forearm is a rPartOf
+
+Trial: 204
+	Step: 0
+		C2 ⊑ C1
+			a inferior articular process of fourth lumbar vertebra is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a inferior articular process of fourth lumbar vertebra is a rPartOf
+		C3 ⊑ R1
+			a acromion is a rPartOf
+		C3 ⊑ R1
+			a acromion is a rPartOf
+
+Trial: 205
+	Step: 0
+		C2 ⊑ C1
+			a temporal lobe is a hippocampus
+		C1 ⊑ C1
+			a hippocampus is a hippocampus
+	Step: 1
+		C2 ⊑ R1
+			a temporal lobe is a sPartOf
+		C3 ⊑ R1
+			a white matter of cerebral hemisphere is a sPartOf
+		C3 ⊑ R1
+			a white matter of cerebral hemisphere is a sPartOf
+		C3 ⊑ R1
+			a white matter of cerebral hemisphere is a sPartOf
+
+Trial: 206
+	Step: 0
+		C3 ⊑ C1
+			a plantar digital artery is a body region
+		C2 ⊑ R1
+			a body as a whole is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a body as a whole then there is a body region that it is rPartOf
+		C2 ⊑ C1
+			a body as a whole is a body region
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a body as a whole then there is a body region that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a plantar digital artery then there is a body region that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a plantar digital artery then there is a body region that it is rPartOf
+		C3 ⊑ R1
+			a plantar digital artery is a rPartOf
+	Step: 2
+		C3 ⊑ ∃R1.C1
+			if something is a plantar digital artery then there is a body region that it is rPartOf
+
+Trial: 207
+	Step: 0
+		C2 ⊑ C1
+			a skin is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 208
+	Step: 0
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin then there is a colon that it is rPartOf
+		C2 ⊑ C1
+			a skin is a colon
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin then there is a colon that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a colon that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a colon that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 209
+	Step: 0
+		C2 ⊑ R1
+			a pelvic lymph node is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a pelvic lymph node then there is a pelvic region that it is rPartOf
+		C2 ⊑ C1
+			a pelvic lymph node is a pelvic region
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a pelvic lymph node then there is a pelvic region that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a anogenital region then there is a pelvic region that it is rPartOf
+		C3 ⊑ R1
+			a anogenital region is a rPartOf
+		C3 ⊑ R1
+			a anogenital region is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a anogenital region is a rPartOf
+
+Trial: 210
+	Step: 0
+		C2 ⊑ R1
+			a adenoid is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a adenoid then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a adenoid is a side
+	Step: 1
+		C2 ⊑ R1
+			a adenoid is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+
+Trial: 211
+	Step: 0
+		C2 ⊑ C1
+			a second metatarsal is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a second metatarsal is a cPartOf
+		C3 ⊑ R1
+			a tooth is a cPartOf
+		C3 ⊑ R1
+			a tooth is a cPartOf
+
+Trial: 212
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a coronet is a rPartOf
+		C3 ⊑ R1
+			a coronet is a rPartOf
+		C3 ⊑ R1
+			a coronet is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a coronet is a rPartOf
+
+Trial: 213
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a central nervous system then there is a foot joint that it is sPartOf
+		C2 ⊑ C1
+			a central nervous system is a foot joint
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a central nervous system then there is a foot joint that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a foot joint that it is sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 214
+	Step: 0
+		C3 ⊑ C1
+			a lower male genitourinary tract is a glans penis
+		C2 ⊑ R1
+			a penis is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a penis then there is a glans penis that it is rPartOf
+		C2 ⊑ C1
+			a penis is a glans penis
+	Step: 1
+		C2 ⊑ R1
+			a penis is a rPartOf
+		C3 ⊑ R1
+			a lower male genitourinary tract is a rPartOf
+		C3 ⊑ R1
+			a lower male genitourinary tract is a rPartOf
+		C3 ⊑ R1
+			a lower male genitourinary tract is a rPartOf
+
+Trial: 215
+	Step: 0
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin then there is a trachea that it is rPartOf
+		C2 ⊑ C1
+			a skin is a trachea
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a hair is a rPartOf
+		C3 ⊑ R1
+			a hair is a rPartOf
+		C3 ⊑ R1
+			a hair is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a hair is a rPartOf
+
+Trial: 216
+	Step: 0
+		C3 ⊑ C1
+			a subcutaneous tissue of sacral region is a side
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a side
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of sacral region then there is a side that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of sacral region then there is a side that it is sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of sacral region is a sPartOf
+
+Trial: 217
+	Step: 0
+		C2 ⊑ C1
+			a cervical portion of sympathetic nervous system is a neck
+		C1 ⊑ C1
+			a neck is a neck
+	Step: 1
+		C2 ⊑ R1
+			a cervical portion of sympathetic nervous system is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a common carotid plexus then there is a neck that it is sPartOf
+		C3 ⊑ R1
+			a common carotid plexus is a sPartOf
+
+Trial: 218
+	Step: 0
+		C2 ⊑ C1
+			a scrotum is a scrotal wall
+		C1 ⊑ C1
+			a scrotal wall is a scrotal wall
+	Step: 1
+		C2 ⊑ R1
+			a scrotum is a rPartOf
+		C3 ⊑ R1
+			a chin is a rPartOf
+		C3 ⊑ R1
+			a chin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a chin is a rPartOf
+
+Trial: 219
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a tributary of posterior tibial vein then there is a region of skin that it is rPartOf
+		C2 ⊑ C1
+			a tributary of posterior tibial vein is a region of skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a tributary of posterior tibial vein then there is a region of skin that it is rPartOf
+		C3 ⊑ R1
+			a medial part of middle finger is a rPartOf
+		C3 ⊑ R1
+			a medial part of middle finger is a rPartOf
+		C3 ⊑ R1
+			a medial part of middle finger is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a medial part of middle finger is a rPartOf
+
+Trial: 220
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a foot then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a foot is a side
+	Step: 1
+		C2 ⊑ R1
+			a foot is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a metatarsophalangeal joint of third toe then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a metatarsophalangeal joint of third toe is a rPartOf
+		C3 ⊑ R1
+			a metatarsophalangeal joint of third toe is a rPartOf
+
+Trial: 221
+	Step: 0
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 222
+	Step: 0
+		C2 ⊑ R1
+			a fibrous tunic of eye is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a fibrous tunic of eye then there is a genital labium that it is rPartOf
+		C2 ⊑ C1
+			a fibrous tunic of eye is a genital labium
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a fibrous tunic of eye then there is a genital labium that it is rPartOf
+		C3 ⊑ R1
+			a sclera is a rPartOf
+		C3 ⊑ R1
+			a sclera is a rPartOf
+
+Trial: 223
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue is a peritoneal cavity
+		C1 ⊑ C1
+			a peritoneal cavity is a peritoneal cavity
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of temporal region is a sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of temporal region is a sPartOf
+
+Trial: 224
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a coccygeal vertebra then there is a right middle ear that it is rPartOf
+		C2 ⊑ C1
+			a coccygeal vertebra is a right middle ear
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a coccygeal vertebra then there is a right middle ear that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a right middle ear that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 225
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a lower leg then there is a skin that it is sPartOf
+		C2 ⊑ C1
+			a lower leg is a skin
+	Step: 1
+		C2 ⊑ R1
+			a lower leg is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 226
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a skin that it is rPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+
+Trial: 227
+	Step: 0
+		C2 ⊑ C1
+			a head of ulna is a bone tissue of proximal ulna
+		C1 ⊑ C1
+			a bone tissue of proximal ulna is a bone tissue of proximal ulna
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a head of ulna then there is a bone tissue of proximal ulna that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a elbow region of upper limb then there is a bone tissue of proximal ulna that it is rPartOf
+		C3 ⊑ R1
+			a elbow region of upper limb is a rPartOf
+		C3 ⊑ R1
+			a elbow region of upper limb is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a elbow region of upper limb is a rPartOf
+
+Trial: 228
+	Step: 0
+		C2 ⊑ C1
+			a middle cerebral vein is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a middle cerebral vein is a rPartOf
+		C3 ⊑ R1
+			a inner surface of fifth rib is a rPartOf
+		C3 ⊑ R1
+			a inner surface of fifth rib is a rPartOf
+
+Trial: 229
+	Step: 0
+		C3 ⊑ C1
+			a extensor tendon of finger is a body as a whole
+		C2 ⊑ R1
+			a plantar surface of second toe is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a plantar surface of second toe then there is a body as a whole that it is sPartOf
+		C2 ⊑ C1
+			a plantar surface of second toe is a body as a whole
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a plantar surface of second toe then there is a body as a whole that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a extensor tendon of finger then there is a body as a whole that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a extensor tendon of finger then there is a body as a whole that it is sPartOf
+		C3 ⊑ R1
+			a extensor tendon of finger is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a extensor tendon of finger is a sPartOf
+
+Trial: 230
+	Step: 0
+		C2 ⊑ C1
+			a philtrum is a upper lip
+		C1 ⊑ C1
+			a upper lip is a upper lip
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a philtrum then there is a upper lip that it is rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of upper lip is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of upper lip is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a subcutaneous tissue of upper lip is a rPartOf
+
+Trial: 231
+	Step: 0
+		C2 ⊑ C1
+			a cervical spinal cord gray matter is a cervical spinal cord
+		C1 ⊑ C1
+			a cervical spinal cord is a cervical spinal cord
+	Step: 1
+		C2 ⊑ R1
+			a cervical spinal cord gray matter is a cPartOf
+		C3 ⊑ R1
+			a cervical spinal cord posterior horn is a cPartOf
+		C3 ⊑ R1
+			a cervical spinal cord posterior horn is a cPartOf
+		C3 ⊑ R1
+			a cervical spinal cord posterior horn is a cPartOf
+	Step: 2
+		C3 ⊑ R1
+			a cervical spinal cord posterior horn is a cPartOf
+
+Trial: 232
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a lower trunk
+		C1 ⊑ C1
+			a lower trunk is a lower trunk
+	Step: 1
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin of dorsal area of ring finger then there is a lower trunk that it is rPartOf
+		C3 ⊑ R1
+			a skin of dorsal area of ring finger is a rPartOf
+		C3 ⊑ R1
+			a skin of dorsal area of ring finger is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin of dorsal area of ring finger is a rPartOf
+
+Trial: 233
+	Step: 0
+		C2 ⊑ R1
+			a blood vessel is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a blood vessel then there is a cardiovascular system that it is sPartOf
+		C2 ⊑ C1
+			a blood vessel is a cardiovascular system
+	Step: 1
+		C2 ⊑ R1
+			a blood vessel is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a artery of upper extremity then there is a cardiovascular system that it is sPartOf
+		C3 ⊑ R1
+			a artery of upper extremity is a sPartOf
+		C3 ⊑ R1
+			a artery of upper extremity is a sPartOf
+
+Trial: 234
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a skin that it is rPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+
+Trial: 235
+	Step: 0
+		C2 ⊑ C1
+			a iliac fossa is a side
+	Step: 1
+		C2 ⊑ R1
+			a iliac fossa is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 236
+	Step: 0
+		C3 ⊑ C1
+			a surface of body is a medial surface of little finger
+		C2 ⊑ R1
+			a palatine process of maxilla is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a palatine process of maxilla then there is a medial surface of little finger that it is rPartOf
+		C2 ⊑ C1
+			a palatine process of maxilla is a medial surface of little finger
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a palatine process of maxilla then there is a medial surface of little finger that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a surface of body then there is a medial surface of little finger that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a surface of body then there is a medial surface of little finger that it is rPartOf
+		C3 ⊑ R1
+			a surface of body is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a surface of body is a rPartOf
+
+Trial: 237
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a kidney that it is sPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a kidney
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a renal sinus is a sPartOf
+		C3 ⊑ R1
+			a renal sinus is a sPartOf
+		C3 ⊑ R1
+			a renal sinus is a sPartOf
+
+Trial: 238
+	Step: 0
+		C2 ⊑ C1
+			a spermatic cord is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a spermatic cord is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 239
+	Step: 0
+		C3 ⊑ C1
+			a venous system of lower extremity is a foot
+		C2 ⊑ R1
+			a lower limb is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a lower limb then there is a foot that it is sPartOf
+		C2 ⊑ C1
+			a lower limb is a foot
+	Step: 1
+		C2 ⊑ R1
+			a lower limb is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a venous system of lower extremity then there is a foot that it is sPartOf
+		C3 ⊑ R1
+			a venous system of lower extremity is a sPartOf
+		C3 ⊑ R1
+			a venous system of lower extremity is a sPartOf
+
+Trial: 240
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a bone marrow that it is rPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a bone marrow
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+
+Trial: 241
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C2 ⊑ C1
+			a region of skin is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a skin of medial area of finger is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin of medial area of finger then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a skin of medial area of finger is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin of medial area of finger is a rPartOf
+
+Trial: 242
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a skin then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a skin is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 243
+	Step: 0
+		C2 ⊑ C1
+			a periorbital region of head is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a periorbital region of head then there is a side that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a periorbital tissue then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a periorbital tissue is a rPartOf
+
+Trial: 244
+	Step: 0
+		C3 ⊑ C1
+			a region of skin is a skin
+		C2 ⊑ R1
+			a hair is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a hair then there is a skin that it is sPartOf
+		C2 ⊑ C1
+			a hair is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a hair then there is a skin that it is sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 245
+	Step: 0
+		C2 ⊑ C1
+			a right atrium is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a right atrium is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+
+Trial: 246
+	Step: 0
+		C2 ⊑ R1
+			a peripheral nervous system is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a peripheral nervous system then there is a autonomic nerve that it is sPartOf
+		C2 ⊑ C1
+			a peripheral nervous system is a autonomic nerve
+	Step: 1
+		C2 ⊑ R1
+			a peripheral nervous system is a sPartOf
+		C3 ⊑ R1
+			a autonomic nervous system is a sPartOf
+		C3 ⊑ R1
+			a autonomic nervous system is a sPartOf
+		C3 ⊑ R1
+			a autonomic nervous system is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a autonomic nervous system is a sPartOf
+
+Trial: 247
+	Step: 0
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a skin is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+
+Trial: 248
+	Step: 0
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a labyrinth that it is sPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a labyrinth
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a small subcutaneous blood vessel is a sPartOf
+		C3 ⊑ R1
+			a small subcutaneous blood vessel is a sPartOf
+		C3 ⊑ R1
+			a small subcutaneous blood vessel is a sPartOf
+
+Trial: 249
+	Step: 0
+		C2 ⊑ R1
+			a skin of abdomen is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin of abdomen then there is a abdominal segment of trunk that it is rPartOf
+		C2 ⊑ C1
+			a skin of abdomen is a abdominal segment of trunk
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin of abdomen then there is a abdominal segment of trunk that it is rPartOf
+		C3 ⊑ R1
+			a lower trunk is a rPartOf
+		C3 ⊑ R1
+			a lower trunk is a rPartOf
+		C3 ⊑ R1
+			a lower trunk is a rPartOf
+
+Trial: 250
+	Step: 0
+		C2 ⊑ R1
+			a body as a whole is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a body as a whole then there is a upper limb that it is sPartOf
+		C2 ⊑ C1
+			a body as a whole is a upper limb
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a body as a whole then there is a upper limb that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a intervertebral foramen of cervical vertebra then there is a upper limb that it is sPartOf
+		C3 ⊑ R1
+			a intervertebral foramen of cervical vertebra is a sPartOf
+		C3 ⊑ R1
+			a intervertebral foramen of cervical vertebra is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a intervertebral foramen of cervical vertebra is a sPartOf
+
+Trial: 251
+	Step: 0
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a skin that it is rPartOf
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 252
+	Step: 0
+		C3 ⊑ C1
+			a heel is a foot
+		C2 ⊑ R1
+			a calcaneal tubercle is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a calcaneal tubercle then there is a foot that it is sPartOf
+		C2 ⊑ C1
+			a calcaneal tubercle is a foot
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a calcaneal tubercle then there is a foot that it is sPartOf
+		C3 ⊑ R1
+			a heel is a sPartOf
+		C3 ⊑ R1
+			a heel is a sPartOf
+		C3 ⊑ R1
+			a heel is a sPartOf
+
+Trial: 253
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a skin that it is rPartOf
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a skin of medial area of fifth toe is a rPartOf
+		C3 ⊑ R1
+			a skin of medial area of fifth toe is a rPartOf
+		C3 ⊑ R1
+			a skin of medial area of fifth toe is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin of medial area of fifth toe is a rPartOf
+
+Trial: 254
+	Step: 0
+		C2 ⊑ R1
+			a pectoral girdle is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a pectoral girdle then there is a side that it is sPartOf
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a pectoral girdle is a sPartOf
+		C2 ⊑ R1
+			a pectoral girdle is a sPartOf
+		C3 ⊑ R1
+			a pectoralis major muscle is a sPartOf
+		C3 ⊑ R1
+			a pectoralis major muscle is a sPartOf
+
+Trial: 255
+	Step: 0
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a renal pelvis is a rPartOf
+		C3 ⊑ R1
+			a renal pelvis is a rPartOf
+		C3 ⊑ R1
+			a renal pelvis is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a renal pelvis is a rPartOf
+
+Trial: 256
+	Step: 0
+		C2 ⊑ R1
+			a thorax is a rPartOf
+		C2 ⊑ C1
+			a thorax is a diaphragm
+		C2 ⊑ C1
+			a thorax is a diaphragm
+	Step: 1
+		C2 ⊑ R1
+			a thorax is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a surface of external eye region then there is a diaphragm that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a surface of external eye region then there is a diaphragm that it is rPartOf
+		C3 ⊑ R1
+			a surface of external eye region is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a surface of external eye region is a rPartOf
+
+Trial: 257
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a epidermis then there is a skin that it is rPartOf
+		C2 ⊑ C1
+			a epidermis is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a epidermis then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a lumbosacral region of back then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a lumbosacral region of back then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a lumbosacral region of back is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a lumbosacral region of back is a rPartOf
+
+Trial: 258
+	Step: 0
+		C2 ⊑ R1
+			a external genitalia is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a external genitalia then there is a lower alveolar ridge that it is rPartOf
+		C2 ⊑ C1
+			a external genitalia is a lower alveolar ridge
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a external genitalia then there is a lower alveolar ridge that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a scapular region of back then there is a lower alveolar ridge that it is rPartOf
+		C3 ⊑ R1
+			a scapular region of back is a rPartOf
+		C3 ⊑ R1
+			a scapular region of back is a rPartOf
+
+Trial: 259
+	Step: 0
+		C2 ⊑ C1
+			a small subcutaneous blood vessel is a subcutaneous tissue
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a small subcutaneous blood vessel then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a gastroepiploic artery then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a gastroepiploic artery then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a gastroepiploic artery is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a gastroepiploic artery is a rPartOf
+
+Trial: 260
+	Step: 0
+		C2 ⊑ C1
+			a skin is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a basal ganglia and capsules then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a basal ganglia and capsules is a rPartOf
+		C3 ⊑ R1
+			a basal ganglia and capsules is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a basal ganglia and capsules is a rPartOf
+
+Trial: 261
+	Step: 0
+		C2 ⊑ C1
+			a lower leg is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a lower leg is a rPartOf
+		C2 ⊑ R1
+			a lower leg is a rPartOf
+		C3 ⊑ R1
+			a third cuneiform facet of cuboid bone is a rPartOf
+
+Trial: 262
+	Step: 0
+		C3 ⊑ C1
+			a region of skin is a side
+		C2 ⊑ R1
+			a fallopian tube is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a fallopian tube then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a fallopian tube is a side
+	Step: 1
+		C2 ⊑ R1
+			a fallopian tube is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 263
+	Step: 0
+		C2 ⊑ C1
+			a skin of finger is a ileum
+		C1 ⊑ C1
+			a ileum is a ileum
+	Step: 1
+		C2 ⊑ R1
+			a skin of finger is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a ileal mucous membrane then there is a ileum that it is rPartOf
+		C3 ⊑ R1
+			a ileal mucous membrane is a rPartOf
+		C3 ⊑ R1
+			a ileal mucous membrane is a rPartOf
+
+Trial: 264
+	Step: 0
+		C2 ⊑ C1
+			a bone tissue of phalanx of foot is a side
+		C2 ⊑ C1
+			a bone tissue of phalanx of foot is a side
+	Step: 1
+		C2 ⊑ R1
+			a bone tissue of phalanx of foot is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a proximal phalanx of second toe then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a proximal phalanx of second toe is a rPartOf
+		C3 ⊑ R1
+			a proximal phalanx of second toe is a rPartOf
+
+Trial: 265
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is sPartOf
+		C2 ⊑ C1
+			a region of skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a second cuneiform facet of medial cuneiform bone is a sPartOf
+		C3 ⊑ R1
+			a second cuneiform facet of medial cuneiform bone is a sPartOf
+		C3 ⊑ R1
+			a second cuneiform facet of medial cuneiform bone is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a second cuneiform facet of medial cuneiform bone is a sPartOf
+
+Trial: 266
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a sympathetic trunk then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a sympathetic trunk is a side
+	Step: 1
+		C2 ⊑ R1
+			a sympathetic trunk is a sPartOf
+		C3 ⊑ R1
+			a medial surface of upper arm is a sPartOf
+		C3 ⊑ R1
+			a medial surface of upper arm is a sPartOf
+
+Trial: 267
+	Step: 0
+		C2 ⊑ C1
+			a mylohyoid muscle is a esophagus
+		C2 ⊑ C1
+			a mylohyoid muscle is a esophagus
+	Step: 1
+		C2 ⊑ R1
+			a mylohyoid muscle is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a submental triangle then there is a esophagus that it is rPartOf
+		C3 ⊑ R1
+			a submental triangle is a rPartOf
+		C3 ⊑ R1
+			a submental triangle is a rPartOf
+
+Trial: 268
+	Step: 0
+		C2 ⊑ C1
+			a large blood vessel is a lumbar region of back
+		C2 ⊑ C1
+			a large blood vessel is a lumbar region of back
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a large blood vessel then there is a lumbar region of back that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a lower back then there is a lumbar region of back that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a lower back then there is a lumbar region of back that it is rPartOf
+		C3 ⊑ R1
+			a lower back is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a lower back is a rPartOf
+
+Trial: 269
+	Step: 0
+		C2 ⊑ C1
+			a lower parasternal region is a parasternal region of thorax
+		C1 ⊑ C1
+			a parasternal region of thorax is a parasternal region of thorax
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a lower parasternal region then there is a parasternal region of thorax that it is rPartOf
+		C3 ⊑ R1
+			a surface of body is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a surface of body then there is a parasternal region of thorax that it is rPartOf
+		C3 ⊑ R1
+			a surface of body is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a surface of body is a rPartOf
+
+Trial: 270
+	Step: 0
+		C3 ⊑ C1
+			a joint of head is a head
+		C2 ⊑ R1
+			a pharynx is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a pharynx then there is a head that it is sPartOf
+		C2 ⊑ C1
+			a pharynx is a head
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a pharynx then there is a head that it is sPartOf
+		C3 ⊑ R1
+			a joint of head is a sPartOf
+		C3 ⊑ R1
+			a joint of head is a sPartOf
+		C3 ⊑ R1
+			a joint of head is a sPartOf
+
+Trial: 271
+	Step: 0
+		C2 ⊑ C1
+			a region of skin is a side
+		C2 ⊑ C1
+			a region of skin is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a skin of cymba conchae is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin of cymba conchae then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a skin of cymba conchae is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin of cymba conchae is a rPartOf
+
+Trial: 272
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a corona of penis then there is a skin that it is sPartOf
+		C2 ⊑ C1
+			a corona of penis is a skin
+	Step: 1
+		C2 ⊑ R1
+			a corona of penis is a sPartOf
+		C2 ⊑ R1
+			a corona of penis is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 273
+	Step: 0
+		C3 ⊑ C1
+			a lower leg is a central cord canal
+		C2 ⊑ R1
+			a lateral surface of finger is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a lateral surface of finger then there is a central cord canal that it is rPartOf
+		C2 ⊑ C1
+			a lateral surface of finger is a central cord canal
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a lateral surface of finger then there is a central cord canal that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a lower leg then there is a central cord canal that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a lower leg then there is a central cord canal that it is rPartOf
+		C3 ⊑ R1
+			a lower leg is a rPartOf
+	Step: 2
+		C3 ⊑ ∃R1.C1
+			if something is a lower leg then there is a central cord canal that it is rPartOf
+
+Trial: 274
+	Step: 0
+		C2 ⊑ C1
+			a left atrium is a heart
+		C1 ⊑ C1
+			a heart is a heart
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a left atrium then there is a heart that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a interatrial septum then there is a heart that it is rPartOf
+		C3 ⊑ R1
+			a interatrial septum is a rPartOf
+		C3 ⊑ R1
+			a interatrial septum is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a interatrial septum is a rPartOf
+
+Trial: 275
+	Step: 0
+		C2 ⊑ C1
+			a hair is a skin
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a hair is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 276
+	Step: 0
+		C2 ⊑ C1
+			a medial malleolus is a side
+		C2 ⊑ C1
+			a medial malleolus is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a medial malleolus then there is a side that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a medial malleolar arterial network then there is a side that it is rPartOf
+		C3 ⊑ R1
+			a medial malleolar arterial network is a rPartOf
+		C3 ⊑ R1
+			a medial malleolar arterial network is a rPartOf
+
+Trial: 277
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a region of skin is a side
+	Step: 1
+		C2 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a skin of shoulder is a rPartOf
+		C3 ⊑ R1
+			a skin of shoulder is a rPartOf
+
+Trial: 278
+	Step: 0
+		C3 ⊑ C1
+			a dorsal surface of second toe is a side
+		C2 ⊑ R1
+			a surface of lateral border of sole is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a surface of lateral border of sole then there is a side that it is rPartOf
+		C2 ⊑ C1
+			a surface of lateral border of sole is a side
+	Step: 1
+		C2 ⊑ R1
+			a surface of lateral border of sole is a rPartOf
+		C3 ⊑ R1
+			a dorsal surface of second toe is a rPartOf
+		C3 ⊑ R1
+			a dorsal surface of second toe is a rPartOf
+		C3 ⊑ R1
+			a dorsal surface of second toe is a rPartOf
+
+Trial: 279
+	Step: 0
+		C2 ⊑ C1
+			a surface of dorsum of hand is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a surface of dorsum of hand is a rPartOf
+		C3 ⊑ R1
+			a medial branch of posterior choroidal artery is a rPartOf
+		C3 ⊑ R1
+			a medial branch of posterior choroidal artery is a rPartOf
+
+Trial: 280
+	Step: 0
+		C2 ⊑ C1
+			a brain is a cerebral fornix
+		C1 ⊑ C1
+			a cerebral fornix is a cerebral fornix
+	Step: 1
+		C2 ⊑ R1
+			a brain is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a diencephalon then there is a cerebral fornix that it is rPartOf
+		C3 ⊑ R1
+			a diencephalon is a rPartOf
+		C3 ⊑ R1
+			a diencephalon is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a diencephalon is a rPartOf
+
+Trial: 281
+	Step: 0
+		C2 ⊑ C1
+			a skin is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a skin is a sPartOf
+		C3 ⊑ R1
+			a phalanx of great toe is a sPartOf
+		C3 ⊑ R1
+			a phalanx of great toe is a sPartOf
+		C3 ⊑ R1
+			a phalanx of great toe is a sPartOf
+
+Trial: 282
+	Step: 0
+		C2 ⊑ C1
+			a cervical vertebral column is a middle finger
+		C1 ⊑ C1
+			a middle finger is a middle finger
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a cervical vertebral column then there is a middle finger that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a lamina of fourth cervical vertebra then there is a middle finger that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a lamina of fourth cervical vertebra then there is a middle finger that it is rPartOf
+		C3 ⊑ R1
+			a lamina of fourth cervical vertebra is a rPartOf
+	Step: 2
+		C3 ⊑ ∃R1.C1
+			if something is a lamina of fourth cervical vertebra then there is a middle finger that it is rPartOf
+
+Trial: 283
+	Step: 0
+		C3 ⊑ C1
+			a cloacogenic area of rectum is a anus
+		C3 ⊑ C1
+			a cloacogenic area of rectum is a anus
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a anus that it is sPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a anus
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a cloacogenic area of rectum then there is a anus that it is sPartOf
+		C3 ⊑ R1
+			a cloacogenic area of rectum is a sPartOf
+		C3 ⊑ R1
+			a cloacogenic area of rectum is a sPartOf
+
+Trial: 284
+	Step: 0
+		C2 ⊑ C1
+			a choroid is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a choroid is a rPartOf
+		C3 ⊑ R1
+			a shaft of phalanx of foot is a rPartOf
+		C3 ⊑ R1
+			a shaft of phalanx of foot is a rPartOf
+		C3 ⊑ R1
+			a shaft of phalanx of foot is a rPartOf
+
+Trial: 285
+	Step: 0
+		C2 ⊑ C1
+			a skin is a umbilicus
+		C1 ⊑ C1
+			a umbilicus is a umbilicus
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a arcuate artery is a rPartOf
+		C3 ⊑ R1
+			a arcuate artery is a rPartOf
+		C3 ⊑ R1
+			a arcuate artery is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a arcuate artery is a rPartOf
+
+Trial: 286
+	Step: 0
+		C3 ⊑ C1
+			a pericardial pleura is a subcutaneous tissue
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a subcutaneous tissue that it is rPartOf
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a pericardial pleura then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a pericardial pleura is a rPartOf
+		C3 ⊑ R1
+			a pericardial pleura is a rPartOf
+
+Trial: 287
+	Step: 0
+		C2 ⊑ C1
+			a facet joint of thoracic spine is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a facet joint of thoracic spine is a rPartOf
+		C3 ⊑ R1
+			a skin of plantar area of fifth toe is a rPartOf
+		C3 ⊑ R1
+			a skin of plantar area of fifth toe is a rPartOf
+
+Trial: 288
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a arterial tufts of cochlea is a rPartOf
+		C3 ⊑ R1
+			a arterial tufts of cochlea is a rPartOf
+
+Trial: 289
+	Step: 0
+		C2 ⊑ C1
+			a penis is a corpus cavernosum
+		C1 ⊑ C1
+			a corpus cavernosum is a corpus cavernosum
+	Step: 1
+		C2 ⊑ R1
+			a penis is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a radix penis then there is a corpus cavernosum that it is rPartOf
+		C3 ⊑ R1
+			a radix penis is a rPartOf
+		C3 ⊑ R1
+			a radix penis is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a radix penis is a rPartOf
+
+Trial: 290
+	Step: 0
+		C2 ⊑ C1
+			a first metatarsophalangeal joint is a great toe
+		C1 ⊑ C1
+			a great toe is a great toe
+	Step: 1
+		C2 ⊑ R1
+			a first metatarsophalangeal joint is a rPartOf
+		C3 ⊑ R1
+			a proximal phalanx of great toe is a rPartOf
+		C3 ⊑ R1
+			a proximal phalanx of great toe is a rPartOf
+		C3 ⊑ R1
+			a proximal phalanx of great toe is a rPartOf
+
+Trial: 291
+	Step: 0
+		C2 ⊑ C1
+			a skin is a nail
+		C1 ⊑ C1
+			a nail is a nail
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a rPartOf
+
+Trial: 292
+	Step: 0
+		C2 ⊑ C1
+			a skin is a spinal cord meninges
+		C1 ⊑ C1
+			a spinal cord meninges is a spinal cord meninges
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ R1
+			a spinal cord is a rPartOf
+		C3 ⊑ R1
+			a spinal cord is a rPartOf
+		C3 ⊑ R1
+			a spinal cord is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a spinal cord is a rPartOf
+
+Trial: 293
+	Step: 0
+		C2 ⊑ C1
+			a pleura is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a pleura is a rPartOf
+		C3 ⊑ R1
+			a pleural sac is a rPartOf
+		C3 ⊑ R1
+			a pleural sac is a rPartOf
+
+Trial: 294
+	Step: 0
+		C2 ⊑ R1
+			a glomerulus is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a glomerulus then there is a glomerular capsule that it is rPartOf
+		C2 ⊑ C1
+			a glomerulus is a glomerular capsule
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a glomerulus then there is a glomerular capsule that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a parietal layer of Bowman's capsule then there is a glomerular capsule that it is rPartOf
+		C3 ⊑ R1
+			a parietal layer of Bowman's capsule is a rPartOf
+		C3 ⊑ R1
+			a parietal layer of Bowman's capsule is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a parietal layer of Bowman's capsule is a rPartOf
+
+Trial: 295
+	Step: 0
+		C2 ⊑ C1
+			a genital labium is a side
+		C2 ⊑ C1
+			a genital labium is a side
+	Step: 1
+		C2 ⊑ R1
+			a genital labium is a rPartOf
+		C3 ⊑ R1
+			a oral region of face is a rPartOf
+		C3 ⊑ R1
+			a oral region of face is a rPartOf
+
+Trial: 296
+	Step: 0
+		C2 ⊑ C1
+			a trunk is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a trunk is a sPartOf
+		C3 ⊑ R1
+			a perineum is a sPartOf
+		C3 ⊑ R1
+			a perineum is a sPartOf
+
+Trial: 297
+	Step: 0
+		C2 ⊑ R1
+			a vulva is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a vulva then there is a female perineum that it is sPartOf
+		C2 ⊑ C1
+			a vulva is a female perineum
+	Step: 1
+		C2 ⊑ R1
+			a vulva is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a region of skin is a sPartOf
+
+Trial: 298
+	Step: 0
+		C2 ⊑ C1
+			a vertebral ganglion is a plantar surface of second toe
+		C1 ⊑ C1
+			a plantar surface of second toe is a plantar surface of second toe
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a vertebral ganglion then there is a plantar surface of second toe that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a cervical sympathetic ganglion then there is a plantar surface of second toe that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a cervical sympathetic ganglion then there is a plantar surface of second toe that it is rPartOf
+		C3 ⊑ R1
+			a cervical sympathetic ganglion is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a cervical sympathetic ganglion is a rPartOf
+
+Trial: 299
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a lower leg then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a lower leg is a side
+	Step: 1
+		C2 ⊑ R1
+			a lower leg is a sPartOf
+		C2 ⊑ R1
+			a lower leg is a sPartOf
+		C3 ⊑ R1
+			a ligament of hip joint is a sPartOf
+
+Trial: 300
+	Step: 0
+		C2 ⊑ C1
+			a male genital system is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a male genital system then there is a side that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a prostate then there is a side that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a prostate then there is a side that it is sPartOf
+		C3 ⊑ R1
+			a prostate is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a prostate is a sPartOf
+
+Trial: 301
+	Step: 0
+		C3 ⊑ C1
+			a abducens nerve is a right
+		C2 ⊑ R1
+			a visual system is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a visual system then there is a right that it is sPartOf
+		C2 ⊑ C1
+			a visual system is a right
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a visual system then there is a right that it is sPartOf
+		C3 ⊑ R1
+			a abducens nerve is a sPartOf
+		C3 ⊑ R1
+			a abducens nerve is a sPartOf
+		C3 ⊑ R1
+			a abducens nerve is a sPartOf
+
+Trial: 302
+	Step: 0
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a subcutaneous tissue
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a skin and subcutaneous tissue then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of lateral area of ring finger then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of lateral area of ring finger then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of lateral area of ring finger is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a subcutaneous tissue of lateral area of ring finger is a rPartOf
+
+Trial: 303
+	Step: 0
+		C2 ⊑ C1
+			a back of neck is a back
+		C1 ⊑ C1
+			a back is a back
+	Step: 1
+		C2 ⊑ R1
+			a back of neck is a rPartOf
+		C3 ⊑ R1
+			a cervical spine is a rPartOf
+		C3 ⊑ R1
+			a cervical spine is a rPartOf
+		C3 ⊑ R1
+			a cervical spine is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a cervical spine is a rPartOf
+
+Trial: 304
+	Step: 0
+		C2 ⊑ C1
+			a shoulder region is a bone tissue of scapula
+		C1 ⊑ C1
+			a bone tissue of scapula is a bone tissue of scapula
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a shoulder region then there is a bone tissue of scapula that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a soft tissue of shoulder then there is a bone tissue of scapula that it is rPartOf
+		C3 ⊑ R1
+			a soft tissue of shoulder is a rPartOf
+		C3 ⊑ R1
+			a soft tissue of shoulder is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a soft tissue of shoulder is a rPartOf
+
+Trial: 305
+	Step: 0
+		C2 ⊑ C1
+			a visceral surface of spleen is a region of skin
+		C1 ⊑ C1
+			a region of skin is a region of skin
+	Step: 1
+		C2 ⊑ R1
+			a visceral surface of spleen is a rPartOf
+		C3 ⊑ R1
+			a skin of labiofemoral groove is a rPartOf
+		C3 ⊑ R1
+			a skin of labiofemoral groove is a rPartOf
+		C3 ⊑ R1
+			a skin of labiofemoral groove is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin of labiofemoral groove is a rPartOf
+
+Trial: 306
+	Step: 0
+		C2 ⊑ C1
+			a skin and subcutaneous tissue is a subcutaneous tissue
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a skin and subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of plantar area of foot is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of plantar area of foot is a rPartOf
+
+Trial: 307
+	Step: 0
+		C3 ⊑ C1
+			a joint of pelvis is a pelvic region
+		C2 ⊑ R1
+			a pelvic lymph node is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a pelvic lymph node then there is a pelvic region that it is sPartOf
+		C2 ⊑ C1
+			a pelvic lymph node is a pelvic region
+	Step: 1
+		C2 ⊑ R1
+			a pelvic lymph node is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a joint of pelvis then there is a pelvic region that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a joint of pelvis then there is a pelvic region that it is sPartOf
+		C3 ⊑ R1
+			a joint of pelvis is a sPartOf
+
+Trial: 308
+	Step: 0
+		C2 ⊑ R1
+			a cervical spine joint is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a cervical spine joint then there is a cervical spine that it is sPartOf
+		C2 ⊑ C1
+			a cervical spine joint is a cervical spine
+	Step: 1
+		C2 ⊑ R1
+			a cervical spine joint is a sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+
+Trial: 309
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a inferior duodenal fold that it is sPartOf
+		C2 ⊑ C1
+			a region of skin is a inferior duodenal fold
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a inferior duodenal fold that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin of mons pubis then there is a inferior duodenal fold that it is sPartOf
+		C3 ⊑ R1
+			a skin of mons pubis is a sPartOf
+		C3 ⊑ R1
+			a skin of mons pubis is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin of mons pubis is a sPartOf
+
+Trial: 310
+	Step: 0
+		C3 ⊑ C1
+			a skin is a side
+		C2 ⊑ R1
+			a lacrimal canaliculus is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a lacrimal canaliculus then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a lacrimal canaliculus is a side
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a lacrimal canaliculus then there is a side that it is sPartOf
+		C3 ⊑ R1
+			a skin is a sPartOf
+		C3 ⊑ R1
+			a skin is a sPartOf
+		C3 ⊑ R1
+			a skin is a sPartOf
+
+Trial: 311
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C2 ⊑ C1
+			a region of skin is a skin
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin of scalp then there is a skin that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin of scalp then there is a skin that it is rPartOf
+		C3 ⊑ R1
+			a skin of scalp is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin of scalp is a rPartOf
+
+Trial: 312
+	Step: 0
+		C2 ⊑ R1
+			a syndesmosis is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a syndesmosis then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a syndesmosis is a side
+	Step: 1
+		C2 ⊑ R1
+			a syndesmosis is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a epiphysis of medial scapular border then there is a side that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a epiphysis of medial scapular border then there is a side that it is sPartOf
+		C3 ⊑ R1
+			a epiphysis of medial scapular border is a sPartOf
+
+Trial: 313
+	Step: 0
+		C2 ⊑ C1
+			a orbital portion of zygomatic bone is a zygomatic bone
+		C1 ⊑ C1
+			a zygomatic bone is a zygomatic bone
+	Step: 1
+		C2 ⊑ R1
+			a orbital portion of zygomatic bone is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a frontal process of zygomatic bone then there is a zygomatic bone that it is rPartOf
+		C3 ⊑ R1
+			a frontal process of zygomatic bone is a rPartOf
+		C3 ⊑ R1
+			a frontal process of zygomatic bone is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a frontal process of zygomatic bone is a rPartOf
+
+Trial: 314
+	Step: 0
+		C3 ⊑ C1
+			a lateral wall of nasopharynx is a nasopharynx
+		C2 ⊑ R1
+			a male perineum is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a male perineum then there is a nasopharynx that it is sPartOf
+		C2 ⊑ C1
+			a male perineum is a nasopharynx
+	Step: 1
+		C2 ⊑ R1
+			a male perineum is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a male perineum then there is a nasopharynx that it is sPartOf
+		C3 ⊑ R1
+			a lateral wall of nasopharynx is a sPartOf
+		C3 ⊑ R1
+			a lateral wall of nasopharynx is a sPartOf
+
+Trial: 315
+	Step: 0
+		C2 ⊑ C1
+			a skin of plantar area of fourth toe is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a skin of plantar area of fourth toe is a rPartOf
+		C3 ⊑ R1
+			a inferior articular process of third thoracic vertebra is a rPartOf
+		C3 ⊑ R1
+			a inferior articular process of third thoracic vertebra is a rPartOf
+
+Trial: 316
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a nail then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a nail is a side
+	Step: 1
+		C2 ⊑ R1
+			a nail is a sPartOf
+		C3 ⊑ R1
+			a skin is a sPartOf
+		C3 ⊑ R1
+			a skin is a sPartOf
+
+Trial: 317
+	Step: 0
+		C3 ⊑ C1
+			a skin of shoulder is a skin
+		C2 ⊑ R1
+			a region of skin is a sPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a region of skin then there is a skin that it is sPartOf
+		C2 ⊑ C1
+			a region of skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a region of skin is a sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin of shoulder then there is a skin that it is sPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a skin of shoulder then there is a skin that it is sPartOf
+		C3 ⊑ R1
+			a skin of shoulder is a sPartOf
+	Step: 2
+		C3 ⊑ R1
+			a skin of shoulder is a sPartOf
+
+Trial: 318
+	Step: 0
+		C2 ⊑ C1
+			a white matter of cerebral hemisphere is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a white matter of cerebral hemisphere is a sPartOf
+		C3 ⊑ R1
+			a sacrotuberal ligament is a sPartOf
+		C3 ⊑ R1
+			a sacrotuberal ligament is a sPartOf
+
+Trial: 319
+	Step: 0
+		C2 ⊑ C1
+			a thoracic cavity is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a thoracic cavity is a rPartOf
+		C3 ⊑ R1
+			a pleura is a rPartOf
+		C3 ⊑ R1
+			a pleura is a rPartOf
+		C3 ⊑ R1
+			a pleura is a rPartOf
+
+Trial: 320
+	Step: 0
+		C2 ⊑ C1
+			a lumbar region of back is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a lumbar region of back is a sPartOf
+		C3 ⊑ R1
+			a sympathetic trunk is a sPartOf
+		C3 ⊑ R1
+			a sympathetic trunk is a sPartOf
+		C3 ⊑ R1
+			a sympathetic trunk is a sPartOf
+
+Trial: 321
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a hair follicle then there is a skin that it is sPartOf
+		C1 ⊑ C1
+			a skin is a skin
+	Step: 1
+		C2 ⊑ R1
+			a hair follicle is a sPartOf
+		C3 ⊑ R1
+			a epidermis is a sPartOf
+		C3 ⊑ R1
+			a epidermis is a sPartOf
+		C3 ⊑ R1
+			a epidermis is a sPartOf
+
+Trial: 322
+	Step: 0
+		C2 ⊑ C1
+			a bone tissue of distal humerus is a elbow joint
+		C1 ⊑ C1
+			a elbow joint is a elbow joint
+	Step: 1
+		C2 ⊑ R1
+			a bone tissue of distal humerus is a rPartOf
+		C3 ⊑ R1
+			a elbow region of upper limb is a rPartOf
+		C3 ⊑ R1
+			a elbow region of upper limb is a rPartOf
+		C3 ⊑ R1
+			a elbow region of upper limb is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a elbow region of upper limb is a rPartOf
+
+Trial: 323
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a small subcutaneous blood vessel then there is a subcutaneous tissue that it is rPartOf
+		C2 ⊑ C1
+			a small subcutaneous blood vessel is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a small subcutaneous blood vessel then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a carotid plexus branch of cervical sympathetic nervous system then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a carotid plexus branch of cervical sympathetic nervous system then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a carotid plexus branch of cervical sympathetic nervous system is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a carotid plexus branch of cervical sympathetic nervous system is a rPartOf
+
+Trial: 324
+	Step: 0
+		C3 ⊑ C1
+			a antitragus is a side
+		C2 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a side that it is sPartOf
+		C2 ⊑ C1
+			a subcutaneous tissue is a side
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C2 ⊑ R1
+			a subcutaneous tissue is a sPartOf
+		C3 ⊑ R1
+			a antitragus is a sPartOf
+
+Trial: 325
+	Step: 0
+		C2 ⊑ C1
+			a scapular region of back is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a scapular region of back is a rPartOf
+		C2 ⊑ R1
+			a scapular region of back is a rPartOf
+		C3 ⊑ R1
+			a pelvic foramen of sacrum is a rPartOf
+
+Trial: 326
+	Step: 0
+		C2 ⊑ C1
+			a skin is a foot
+		C1 ⊑ C1
+			a foot is a foot
+	Step: 1
+		C2 ⊑ R1
+			a skin is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a cuneiform bone then there is a foot that it is rPartOf
+		C3 ⊑ R1
+			a cuneiform bone is a rPartOf
+		C3 ⊑ R1
+			a cuneiform bone is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a cuneiform bone is a rPartOf
+
+Trial: 327
+	Step: 0
+		C2 ⊑ C1
+			a subcutaneous tissue is a side
+		C1 ⊑ C1
+			a side is a side
+	Step: 1
+		C2 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a tubal end of ovary is a rPartOf
+		C3 ⊑ R1
+			a tubal end of ovary is a rPartOf
+
+Trial: 328
+	Step: 0
+		C2 ⊑ C1
+			a surface of body is a Healey and Schroy posterior inferior right liver segment
+		C1 ⊑ C1
+			a Healey and Schroy posterior inferior right liver segment is a Healey and Schroy posterior inferior right liver segment
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a surface of body then there is a Healey and Schroy posterior inferior right liver segment that it is rPartOf
+		C3 ⊑ R1
+			a subdivision of surface of body is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subdivision of surface of body then there is a Healey and Schroy posterior inferior right liver segment that it is rPartOf
+		C3 ⊑ R1
+			a subdivision of surface of body is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a subdivision of surface of body is a rPartOf
+
+Trial: 329
+	Step: 0
+		C2 ⊑ C1
+			a anteromedial branch of circle of Willis is a subcutaneous tissue
+		C1 ⊑ C1
+			a subcutaneous tissue is a subcutaneous tissue
+	Step: 1
+		C2 ⊑ R1
+			a anteromedial branch of circle of Willis is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue of suboccipital region then there is a subcutaneous tissue that it is rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of suboccipital region is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue of suboccipital region is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a subcutaneous tissue of suboccipital region is a rPartOf
+
+Trial: 330
+	Step: 0
+		C2 ⊑ ∃R1.C1
+			if something is a cervical canal then there is a endocervix that it is rPartOf
+		C2 ⊑ C1
+			a cervical canal is a endocervix
+	Step: 1
+		C2 ⊑ R1
+			a cervical canal is a rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a subcutaneous tissue then there is a endocervix that it is rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+		C3 ⊑ R1
+			a subcutaneous tissue is a rPartOf
+
+Trial: 331
+	Step: 0
+		C3 ⊑ C1
+			a non-human body is a surface of dorsum of hand
+		C2 ⊑ R1
+			a dorsal fascia of hand is a rPartOf
+		C2 ⊑ ∃R1.C1
+			if something is a dorsal fascia of hand then there is a surface of dorsum of hand that it is rPartOf
+		C2 ⊑ C1
+			a dorsal fascia of hand is a surface of dorsum of hand
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a dorsal fascia of hand then there is a surface of dorsum of hand that it is rPartOf
+		C3 ⊑ R1
+			a non-human body is a rPartOf
+		C3 ⊑ R1
+			a non-human body is a rPartOf
+		C3 ⊑ R1
+			a non-human body is a rPartOf
+
+Trial: 332
+	Step: 0
+		C2 ⊑ C1
+			a neck of urinary bladder is a lumbar region of back
+		C1 ⊑ C1
+			a lumbar region of back is a lumbar region of back
+	Step: 1
+		C2 ⊑ ∃R1.C1
+			if something is a neck of urinary bladder then there is a lumbar region of back that it is rPartOf
+		C3 ⊑ ∃R1.C1
+			if something is a lumbar portion of sympathetic nervous system then there is a lumbar region of back that it is rPartOf
+		C3 ⊑ R1
+			a lumbar portion of sympathetic nervous system is a rPartOf
+		C3 ⊑ R1
+			a lumbar portion of sympathetic nervous system is a rPartOf
+	Step: 2
+		C3 ⊑ R1
+			a lumbar portion of sympathetic nervous system is a rPartOf
+
+Trial: 333
+
