@@ -11,7 +11,7 @@ class DistanceEvalTests(TestCase):
         true = [("C2", "R1", "C1"), ("C1", "C15", "C1"), ("C100", "R1", "C9"), ("R20", "R1", "C84")]
         distExpect = [1, 17, 208, 220]
         for i in range(len(guess)):
-            self.assertEqual(distExpect[i], cust(None, None, guess[i], true[i]))
+            self.assertEqual(distExpect[i], cust(guess[i], true[i]))
 
     # def test_custom_distance(self):
     #     from main import custom_distance
@@ -78,6 +78,72 @@ class LoggingFunctionTests(TestCase):
 
 class DataWranglingTests(TestCase):
 
+    def test_get_labels_from_encoding_handles_true_and_pred_values_the_same(self):
+        from main import get_labels_from_encoding, convert_data_to_arrays, get_rdf_data, cross_validation_split_all_data
+
+        KB, supports, outputs, encodingMap = convert_data_to_arrays(get_rdf_data('rdfData/Descriptions_and_Situations.json'))
+
+        allTheData = cross_validation_split_all_data(5, KB, supports, outputs, encodingMap)
+
+        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss = allTheData
+
+        trueArr, predArr = get_labels_from_encoding(y_tests[0], y_tests[0], 28, 14)
+
+        self.assertEqual(trueArr.all(), predArr.all())
+
+    def test_get_labels_from_encoding_each_sample_has_correct_size(self):
+        from main import get_labels_from_encoding, convert_data_to_arrays, get_rdf_data, cross_validation_split_all_data
+
+        KB, supports, outputs, encodingMap = convert_data_to_arrays(get_rdf_data('rdfData/Descriptions_and_Situations.json'))
+
+        allTheData = cross_validation_split_all_data(5, KB, supports, outputs, encodingMap)
+
+        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss = allTheData
+
+        trueArr, predArr = get_labels_from_encoding(y_tests[0], y_tests[0], 28, 14)
+
+        outs = y_tests[0].tolist()
+
+        for sample in range(len(trueArr)):
+            for ts in range(len(trueArr[sample])):
+                li = outs[sample][ts]
+                if li.count(0.0) > 0:
+                    outs[sample][ts] = li[:li.index(0.0)]
+                if len(outs[sample][ts])/3 != len(trueArr[sample][ts]):
+                    print("")
+
+    def test_convert_encoded_item_to_label(self):
+        from main import convert_encoded_float_to_label
+        decodeNonProperty = 14
+        decodeProperty = 7
+        floats = [-0.142857143, -0.714285714, -1, 0.071428571, 0.428571429, 1, 0.000001, -0.0001, 1.0234, -2.856]
+        labels = ['R1', 'R5', 'R7', 'C1', 'C6', 'C14', '0', '0', 'C14', 'R7']
+
+        for i in range(len(floats)):
+            self.assertEqual(labels[i], convert_encoded_float_to_label(floats[i], decodeNonProperty, decodeProperty))
+
+    def test_pad_kb_everyone_same_size(self):
+        from main import get_rdf_data, pad_kb
+        data = get_rdf_data('rdfData/Descriptions_and_Situations.json')
+        kb = data['kB']
+        kb = pad_kb(kb)
+
+        for sample in kb:
+            self.assertEqual(len(kb[0]), len(sample))
+
+    def test_pad_kb_removing_padding_reveals_original(self):
+        from main import get_rdf_data, pad_kb
+        data = get_rdf_data('rdfData/Descriptions_and_Situations.json')
+        kb = data['kB']
+        KB = pad_kb(kb)
+
+        for sample in KB:
+            for index in range(len(sample)):
+                if sample[index] == 0.0:
+                    del sample[index:]
+                    break
+        self.assertEqual(kb, KB)
+
     def test_pad_list_of_lists_same_size(self):
         from main import get_rdf_data as getData
         from main import pad_list_of_lists as testMethod
@@ -90,43 +156,14 @@ class DataWranglingTests(TestCase):
             for j in range(len(element)-1):
                 self.assertEqual(len(element[j]), len(element[j+1]))
 
-    def test_get_label_and_iri_from_encoding(self):
-        from main import get_label_and_iri_from_encoding
-        d = {'-2': 'neg-two', '-1': 'neg-one', '1': 'one', '2': 'two', '3': 'three', '4': 'four',
-             '5': 'five', '6': 'six', '7': 'seven', '8': 'eight'}
-
-        encoded = np.zeros((1, 7, 9), dtype=float)
-        numConcepts = 8
-        numRoles = 2
-        lists = [.5, -.5, .25, .375, -1, .75, 1, -.5, .125]
-
-        for j in range(7):
-            encoded[0][j] = np.array(lists)
-
-        labels, strings = get_label_and_iri_from_encoding(encoded, d, numConcepts, numRoles)
-
-        trueStrings = [('four', 'neg-one', 'two'), ('three', 'neg-two', 'six'), ('eight', 'neg-one', 'one')]
-        trueLabels = [('C4', 'R1', 'C2'), ('C3', 'R2', 'C6'), ('C8', 'R1', 'C1')]
-
-        self.assertEqual(strings[0][0], trueStrings)
-        self.assertEqual(labels[0][0], trueLabels)
-
     def test_cross_validation_split_all_data_correct_KB_repetition(self):
-        from main import convert_data_to_arrays, get_rdf_data, get_concept_and_role_count, cross_validation_split_all_data
+        from main import convert_data_to_arrays, get_rdf_data, cross_validation_split_all_data
 
-        # if not os.path.isdir("crossValidationFolds"): os.mkdir("crossValidationFolds")
-        # if not os.path.isdir("crossValidationFolds/training"): os.mkdir("crossValidationFolds/training")
-        # if not os.path.isdir("crossValidationFolds/evals"): os.mkdir("crossValidationFolds/evals")
-        # if not os.path.isdir("crossValidationFolds/saves"): os.mkdir("crossValidationFolds/saves")
-        # if not os.path.isdir("crossValidationFolds/output"): os.mkdir("crossValidationFolds/output")
-
-        KB, supports, outputs, encodingMap, labels = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
-
-        numConcepts, numRoles = get_concept_and_role_count(labels)
+        KB, supports, outputs, encodingMap = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
 
         # Processes data.
-        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, trueLabels, trueIRIs, labelss = \
-            cross_validation_split_all_data(8, KB, supports, outputs, encodingMap, labels, numConcepts,numRoles)
+        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss = \
+            cross_validation_split_all_data(8, KB, supports, outputs, encodingMap)
 
         tests = KBs_tests.tolist()
         for cross in tests:
@@ -143,15 +180,15 @@ class DataWranglingTests(TestCase):
                     self.assertTrue(standard == ts)
 
     def test_cross_validation_split_all_data_no_kb_data_lost(self):
-        from main import convert_data_to_arrays, get_rdf_data, get_concept_and_role_count, cross_validation_split_all_data
+        from main import convert_data_to_arrays, get_rdf_data, cross_validation_split_all_data
 
-        KB, supports, outputs, encodingMap, labels = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
+        KB, supports, outputs, encodingMap = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
 
-        numConcepts, numRoles = get_concept_and_role_count(labels)
+        numConcepts, numRoles = 28, 14
 
         # Processes data.
-        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, trueLabels, trueIRIs, labelss = \
-            cross_validation_split_all_data(5, KB, supports, outputs, encodingMap, labels, numConcepts, numRoles)
+        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss = \
+            cross_validation_split_all_data(5, KB, supports, outputs, encodingMap)
 
         expected = KB.tolist()
         trains = KBs_trains[0].tolist()
@@ -171,15 +208,15 @@ class DataWranglingTests(TestCase):
         self.assertEqual(actual, expected)
 
     def test_cross_validation_split_all_data_no_support_data_lost(self):
-        from main import convert_data_to_arrays, get_rdf_data, get_concept_and_role_count, cross_validation_split_all_data
+        from main import convert_data_to_arrays, get_rdf_data, cross_validation_split_all_data
 
-        KB, supports, outputs, encodingMap, labels = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
+        KB, supports, outputs, encodingMap = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
 
-        numConcepts, numRoles = get_concept_and_role_count(labels)
+        numConcepts, numRoles = 28, 14
 
         # Processes data.
-        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, trueLabels, trueIRIs, labelss = \
-            cross_validation_split_all_data(7, KB, supports, outputs, encodingMap, labels, numConcepts, numRoles)
+        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss = \
+            cross_validation_split_all_data(7, KB, supports, outputs, encodingMap)
 
         expected = []
         for sample in supports:
@@ -209,15 +246,13 @@ class DataWranglingTests(TestCase):
         self.assertEqual(actual, expected)
 
     def test_cross_validation_split_all_data_no_output_data_lost(self):
-        from main import convert_data_to_arrays, get_rdf_data, get_concept_and_role_count, cross_validation_split_all_data
+        from main import convert_data_to_arrays, get_rdf_data, cross_validation_split_all_data
 
-        KB, supports, outputs, encodingMap, labels = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
-
-        numConcepts, numRoles = get_concept_and_role_count(labels)
+        KB, supports, outputs, encodingMap = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
 
         # Processes data.
-        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, trueLabels, trueIRIs, labelss = \
-            cross_validation_split_all_data(7, KB, supports, outputs, encodingMap, labels, numConcepts, numRoles)
+        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss = \
+            cross_validation_split_all_data(7, KB, supports, outputs, encodingMap)
 
         expected = []
         for sample in outputs:
@@ -247,16 +282,14 @@ class DataWranglingTests(TestCase):
         self.assertEqual(actual, expected)
 
     def test_cross_validation_split_all_data_correct_mapping_fromKBToSuppToOuts_of_training(self):
-        from main import convert_data_to_arrays, get_rdf_data, get_concept_and_role_count, \
+        from main import convert_data_to_arrays, get_rdf_data, \
             cross_validation_split_all_data
 
-        KB, supports, outputs, encodingMap, labels = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
-
-        numConcepts, numRoles = get_concept_and_role_count(labels)
+        KB, supports, outputs, encodingMap = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
 
         # Processes data.
-        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, trueLabels, trueIRIs, labelss = \
-            cross_validation_split_all_data(3, KB, supports, outputs, encodingMap, labels, numConcepts, numRoles)
+        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss = \
+            cross_validation_split_all_data(3, KB, supports, outputs, encodingMap)
 
         trueKB = KB.tolist()
         crossKB = KBs_trains[0].tolist()
@@ -302,16 +335,14 @@ class DataWranglingTests(TestCase):
                     self.assertTrue(actualSupp[sample] == trueSupp[t_sample])
 
     def test_cross_validation_split_all_data_correct_mapping_fromKBToSuppToOuts_of_test(self):
-        from main import convert_data_to_arrays, get_rdf_data, get_concept_and_role_count, \
+        from main import convert_data_to_arrays, get_rdf_data, \
             cross_validation_split_all_data
 
-        KB, supports, outputs, encodingMap, labels = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
-
-        numConcepts, numRoles = get_concept_and_role_count(labels)
+        KB, supports, outputs, encodingMap = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
 
         # Processes data.
-        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, trueLabels, trueIRIs, labelss = \
-            cross_validation_split_all_data(3, KB, supports, outputs, encodingMap, labels, numConcepts, numRoles)
+        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss = \
+            cross_validation_split_all_data(3, KB, supports, outputs, encodingMap)
 
         trueKB = KB.tolist()
         crossKB = KBs_tests[0].tolist()
@@ -357,16 +388,13 @@ class DataWranglingTests(TestCase):
                     self.assertTrue(actualSupp[sample] == trueSupp[t_sample])
 
     def test_cross_validation_split_all_data_correct_numOf_folds_returned(self):
-        from main import convert_data_to_arrays, get_rdf_data, get_concept_and_role_count, \
-            cross_validation_split_all_data
+        from main import convert_data_to_arrays, get_rdf_data, cross_validation_split_all_data
 
-        KB, supports, outputs, encodingMap, labels = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
-
-        numConcepts, numRoles = get_concept_and_role_count(labels)
+        KB, supports, outputs, encodingMap = convert_data_to_arrays(get_rdf_data("rdfData/gfo.json"))
 
         # Processes data.
-        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, trueLabels, trueIRIs, labelss = \
-            cross_validation_split_all_data(7, KB, supports, outputs, encodingMap, labels, numConcepts, numRoles)
+        KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss = \
+            cross_validation_split_all_data(7, KB, supports, outputs, encodingMap)
 
         self.assertEqual(7, KBs_tests.shape[0])
         self.assertEqual(7, KBs_trains.shape[0])

@@ -76,7 +76,7 @@ def custom_distance(shape, newPred, trueLabels):
 
                 if len(newPred) > sampleNum and len(newPred[sampleNum]) > timestepNum and len(newPred[sampleNum][timestepNum]) > tripleNum:  # Out of bounds check
                     countNew = countNew + 1
-                    if len(trueLabels) > sampleNum and len(trueLabels[sampleNum]) > 0:
+                    if len(trueLabels) > sampleNum and len(trueLabels[sampleNum]) > 0 and len(flatTrue[sampleNum]) != 0:
                         best = find_best_prediction_custom(newPred[sampleNum][timestepNum][tripleNum], flatTrue[sampleNum])
                         if best == 0:
                             evalInfoNew[0] = evalInfoNew[0] + 1
@@ -188,6 +188,22 @@ def get_rdf_data(file):
         return data
 
 
+def pad_kb(_list):
+    """Pads a list of lists so that each list within the main list is equal sizes."""
+    targetPadNum = 0
+    for i in range(len(_list)):
+        # Gets the max padding length
+        if(len(_list[i]) > targetPadNum):
+            targetPadNum = len(_list[i])
+
+    # Pads each list within the main list
+    for j in range(len(_list)):
+        while len(_list[j]) < targetPadNum:
+            _list[j].append(0.0)
+
+    return _list
+
+
 # Tested
 def pad_list_of_lists(_list):
     """Pads a list of lists so that each list within the main list is equal sizes."""
@@ -211,13 +227,13 @@ def pad_list_of_lists(_list):
 
 def convert_data_to_arrays(data):
     """Takes data and makes sure they are arrays."""
-    kb, supp, outs, numToStmMap, labelMap = data['kB'], data['supports'], data['outputs'], data['vectorMap'],\
-                                            data['labelMap']
-    Kb = numpy.array(kb)
+    kb, supp, outs, numToStmMap = data['kB'], data['supports'], data['outputs'], data['vectorMap']
 
     supp = pad_list_of_lists(supp)
     outs = pad_list_of_lists(outs)
+    kb = pad_kb(kb)
 
+    KB = numpy.array(kb)
     Supp = numpy.zeros((len(supp)), dtype=numpy.ndarray)
     Outs = numpy.zeros((len(outs)), dtype=numpy.ndarray)
 
@@ -229,11 +245,11 @@ def convert_data_to_arrays(data):
 
     numToStmMap = numpy.array(numToStmMap)
 
-    return Kb, Supp, Outs, numToStmMap, labelMap
+    return KB, Supp, Outs, numToStmMap, data['concepts'], data['roles']
 
 
 # Tested
-def cross_validation_split_all_data(n, KBs, supports, outputs, encodedMap, labels, decodeNonProperty, decodeProperty):
+def cross_validation_split_all_data(n, KBs, supports, outputs, encodedMap):
     # Potentially calculates size of the 3D tensor which will be padded and passed to the LSTM.
     fileShapes1 = [len(supports[0]), len(max(supports, key=lambda coll: len(coll[0]))[0]),
                    len(max(outputs, key=lambda coll: len(coll[0]))[0])]
@@ -316,12 +332,7 @@ def cross_validation_split_all_data(n, KBs, supports, outputs, encodedMap, label
 
 
 def get_labels_from_encoding(trueValues, predValues, decodeNonProperty, decodeProperty):
-    uniqueList = []
-    for sampleNum in range(len(trueValues)):
-        for timeStepNum in range(len(trueValues[sampleNum])):
-            for item in trueValues[sampleNum][timeStepNum]:
-                if item not in uniqueList:
-                    uniqueList.append(item)
+    """Creates and returns the label representation of a models true and predicted encoded array."""
 
     trueArray = np.zeros(shape=(trueValues.shape[0], trueValues.shape[1]), dtype=tuple)
     predArray = np.zeros(shape=(predValues.shape[0], predValues.shape[1]), dtype=tuple)
@@ -336,18 +347,18 @@ def get_labels_from_encoding(trueValues, predValues, decodeNonProperty, decodePr
                 trueTriple.append(trueValues[sampleNum][timeStepNum][item])
                 predTriple.append(predValues[sampleNum][timeStepNum][item])
                 if len(trueTriple) == 3:
-                    label1 = convert_encoded_item_to_label(trueTriple[0], decodeNonProperty, decodeProperty)
-                    label2 = convert_encoded_item_to_label(trueTriple[1], decodeNonProperty, decodeProperty)
-                    label3 = convert_encoded_item_to_label(trueTriple[2], decodeNonProperty, decodeProperty)
+                    label1 = convert_encoded_float_to_label(trueTriple[0], decodeNonProperty, decodeProperty)
+                    label2 = convert_encoded_float_to_label(trueTriple[1], decodeNonProperty, decodeProperty)
+                    label3 = convert_encoded_float_to_label(trueTriple[2], decodeNonProperty, decodeProperty)
                     if label1 == '0' or label2 == '0' or label3 == '0':
                         pass
                     else:
                         timeStepListTripleTrue.append(tuple((label1, label2, label3)))
                     trueTriple = []
                 if len(predTriple) == 3:
-                    label1 = convert_encoded_item_to_label(predTriple[0], decodeNonProperty, decodeProperty)
-                    label2 = convert_encoded_item_to_label(predTriple[1], decodeNonProperty, decodeProperty)
-                    label3 = convert_encoded_item_to_label(predTriple[2], decodeNonProperty, decodeProperty)
+                    label1 = convert_encoded_float_to_label(predTriple[0], decodeNonProperty, decodeProperty)
+                    label2 = convert_encoded_float_to_label(predTriple[1], decodeNonProperty, decodeProperty)
+                    label3 = convert_encoded_float_to_label(predTriple[2], decodeNonProperty, decodeProperty)
                     if label1 == '0' or label2 == '0' or label3 == '0':
                         pass
                     else:
@@ -359,16 +370,21 @@ def get_labels_from_encoding(trueValues, predValues, decodeNonProperty, decodePr
     return trueArray, predArray
 
 
-def convert_encoded_item_to_label(item, decodeNonProperty, decodeProperty):
-    if item > 0:
-        labelNum = int(item * decodeNonProperty)
+def convert_encoded_float_to_label(float, decodeNonProperty, decodeProperty):
+    """Converts one floating encoded number to its appropriet label based on the decoding numbers."""
+    if float > 0:
+        labelNum = round(float * decodeNonProperty)
         if labelNum == 0:
             return '0'
+        if labelNum > decodeNonProperty:
+            labelNum = decodeNonProperty
         return 'C' + str(labelNum)
-    elif item < 0:
-        labelNum = int(item * decodeProperty) * -1
+    elif float < 0:
+        labelNum = round(float * decodeProperty) * -1
         if labelNum == 0:
             return '0'
+        if labelNum > decodeProperty:
+            labelNum = decodeProperty
         return 'R' + str(labelNum)
     else:
         return '0'
@@ -378,8 +394,7 @@ def convert_encoded_item_to_label(item, decodeNonProperty, decodeProperty):
 
 def flat_system(n_epochs2, learning_rate2, trainlog, evallog, allTheData, n):
     """"The base line recurrent model for comparison with other rnn models."""
-    KBs_test, KBs_train, X_train, X_test, y_train, y_test, iriMap, labels, decodeNonProperty, \
-    decodeProperty = allTheData
+    KBs_test, KBs_train, X_train, X_test, y_train, y_test, iriMap, decodeNonProperty, decodeProperty = allTheData
 
     trainlog.write("Flat LSTM\nEpoch,Mean Squared Error,Root Mean Squared Error\n")
     evallog.write("\nFlat LSTM\n\n")
@@ -430,8 +445,7 @@ def flat_system(n_epochs2, learning_rate2, trainlog, evallog, allTheData, n):
 
 
 def deep_system(n_epochs2, learning_rate2, trainlog, evallog, allTheData, n):
-    KBs_test, KBs_train, X_train, X_test, y_train, y_test, iriMap, labels, decodeNonProperty, \
-    decodeProperty = allTheData
+    KBs_test, KBs_train, X_train, X_test, y_train, y_test, iriMap, decodeNonProperty, decodeProperty = allTheData
 
     trainlog.write("Deep LSTM\nEpoch,Mean Squared Error,Root Mean Squared Error\n")
     evallog.write("\nDeep LSTM\n\n")
@@ -482,7 +496,7 @@ def deep_system(n_epochs2, learning_rate2, trainlog, evallog, allTheData, n):
 
 
 def piecewise_system(n_epochs0, learning_rate0, trainlog, evallog, allTheData, n):
-    KBs_test, KBs_train, X_train, X_test, y_train, y_test, iriMap, labels, decodeNonProperty, decodeProperty = allTheData
+    KBs_test, KBs_train, X_train, X_test, y_train, y_test, iriMap, decodeNonProperty, decodeProperty = allTheData
 
     trainlog.write("Piecewise LSTM Part One\nEpoch,Mean Squared Error,Root Mean Squared Error\n")
     evallog.write("Piecewise LSTM Part One\n")
@@ -618,10 +632,11 @@ def n_times_cross_validate(n, epochs, learningRate, decodingNonProperty, decodin
     if not os.path.isdir("crossValidationFolds/output"): os.mkdir("crossValidationFolds/output")
 
     # Gets raw data.
-    KB, supports, outputs, encodingMap, labels = convert_data_to_arrays(get_rdf_data(dataFile))
+    KB, supports, outputs, encodingMap, numConcepts, numRoles = convert_data_to_arrays(get_rdf_data(dataFile))
 
     # Processes data.
-    allTheData = cross_validation_split_all_data(n, KB, supports, outputs, encodingMap, labels, decodingNonProperty, decodingProperty)
+
+    allTheData = cross_validation_split_all_data(n, KB, supports, outputs, encodingMap)
 
     KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss = allTheData
 
@@ -635,8 +650,8 @@ def n_times_cross_validate(n, epochs, learningRate, decodingNonProperty, decodin
         x = run_nth_time(open("crossValidationFolds/training/trainFold[{}].csv".format(i), "w"),
                          open("crossValidationFolds/evals/evalFold[{}].csv".format(i), "w"), epochs, learningRate,
                          (KBs_tests[i], KBs_trains[i], X_trains[i], X_tests[i], y_trains[i], y_tests[i],
-                          (labelss[i] if isinstance(labelss, numpy.ndarray) else None), labels,
-                          decodingNonProperty, decodingProperty), i)
+                          (labelss[i] if isinstance(labelss, numpy.ndarray) else None), decodingNonProperty,
+                          decodingProperty), i)
         evals = evals + x
 
     evals = evals / n
@@ -670,7 +685,7 @@ def read_inputs():
     """Collects arguments to be passed into the model."""
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-e", "--epochs", help="number of epochs for each system", type=int, default=10000)  # 20000
+    parser.add_argument("-e", "--epochs", help="number of epochs for each system", type=int, default=20000)  # 20000
     parser.add_argument("-l", "--learningRate", help="learning rate of each system", type=float, default=0.0001)
     parser.add_argument("-c", "--cross", help="cross validation k", type=int, default=5)  # 10
 
@@ -693,5 +708,5 @@ if __name__ == "__main__":
 
     args = read_inputs()
 
-    n_times_cross_validate(n=args.cross, epochs=args.epochs, learningRate=args.learningRate, decodingNonProperty=5,
-                           decodingProperty=2, dataFile="rdfData/dublin.json")
+    n_times_cross_validate(n=args.cross, epochs=args.epochs, learningRate=args.learningRate, decodingNonProperty=28,
+                           decodingProperty=14, dataFile="rdfData/schemaorg.json")
