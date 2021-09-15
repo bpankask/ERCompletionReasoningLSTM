@@ -62,28 +62,26 @@ def custom_distance(shape, newPred, trueLabels):
     countTrue = 0
     countNew = 0
 
-    # Loops through the output tensor of a model.
+    # Loops through the max size of an output tensor of the model.
     for sampleNum in range(shape[0]):
         for timestepNum in range(shape[1]):
             for tripleNum in range(shape[2]):
 
+                # There is another true label to cal. dist.
                 if len(trueLabels) > sampleNum and len(trueLabels[sampleNum]) > timestepNum and len(trueLabels[sampleNum][timestepNum]) > tripleNum:
                     countTrue = countTrue + 1
-                    if len(newPred) > sampleNum and len(newPred[sampleNum]) > 0:
-                        custTN = custTN + find_best_prediction_custom(trueLabels[sampleNum][timestepNum][tripleNum], flatNew[sampleNum])
-                    else:
-                        custTN = custTN + custom(trueLabels[sampleNum][timestepNum][tripleNum], [])
 
-                if len(newPred) > sampleNum and len(newPred[sampleNum]) > timestepNum and len(newPred[sampleNum][timestepNum]) > tripleNum:  # Out of bounds check
+                    if len(flatNew) > sampleNum:
+                        custTN = custTN + find_best_prediction_custom(trueLabels[sampleNum][timestepNum][tripleNum], flatNew[sampleNum])
+
+                # There is another new prediction to cal. dist.
+                if len(newPred) > sampleNum and len(newPred[sampleNum]) > timestepNum and len(newPred[sampleNum][timestepNum]) > tripleNum:
                     countNew = countNew + 1
-                    if len(trueLabels) > sampleNum and len(trueLabels[sampleNum]) > 0 and len(flatTrue[sampleNum]) != 0:
+                    if len(flatTrue) > sampleNum:
                         best = find_best_prediction_custom(newPred[sampleNum][timestepNum][tripleNum], flatTrue[sampleNum])
                         if best == 0:
                             evalInfoNew[0] = evalInfoNew[0] + 1
                         custNT = custNT + best
-                    else:
-                        custNT = custNT + custom(newPred[sampleNum][timestepNum][tripleNum], [])
-
 
     # Calculating False positives.
     evalInfoNew[1] = countNew - evalInfoNew[0]
@@ -92,7 +90,10 @@ def custom_distance(shape, newPred, trueLabels):
 
 
 def find_best_prediction_custom(statement, otherKB):
-    return min(map(partial(custom, statement), otherKB))
+    if otherKB != []:
+        return min(map(partial(custom, statement), otherKB))
+    else:
+        return custom(statement, [])
 
 
 # Tested
@@ -227,7 +228,7 @@ def pad_list_of_lists(_list):
 
 def convert_data_to_arrays(data):
     """Takes data and makes sure they are arrays."""
-    kb, supp, outs, numToStmMap = data['kB'], data['supports'], data['outputs'], data['vectorMap']
+    kb, supp, outs, numConcepts, numRoles = data['kB'], data['supports'], data['outputs'], data['concepts'], data['roles']
 
     supp = pad_list_of_lists(supp)
     outs = pad_list_of_lists(outs)
@@ -243,13 +244,11 @@ def convert_data_to_arrays(data):
     for i in range(len(outs)):
         Outs[i] = numpy.array(outs[i])
 
-    numToStmMap = numpy.array(numToStmMap)
-
-    return KB, Supp, Outs, numToStmMap, data['concepts'], data['roles']
+    return KB, Supp, Outs, numConcepts, numRoles
 
 
 # Tested
-def cross_validation_split_all_data(n, KBs, supports, outputs, encodedMap):
+def cross_validation_split_all_data(n, KBs, supports, outputs):
     # Potentially calculates size of the 3D tensor which will be padded and passed to the LSTM.
     fileShapes1 = [len(supports[0]), len(max(supports, key=lambda coll: len(coll[0]))[0]),
                    len(max(outputs, key=lambda coll: len(coll[0]))[0])]
@@ -284,12 +283,6 @@ def cross_validation_split_all_data(n, KBs, supports, outputs, encodedMap):
     # Probably don't need yet.
     # crossErrTest = None if not isinstance(mKBs, numpy.ndarray) else numpy.zeros(
     #     (len(test_indices), len(test_indices[0]), len(mouts[0]), maxout), dtype=float)
-
-    # If localMap is provided then create empty crossLabels array.
-    if isinstance(encodedMap, numpy.ndarray):
-        crossLabels = numpy.empty((len(test_indices), len(test_indices[0])), dtype=dict)
-    else:
-        crossLabels = None
 
     print("Extracting Test Sets")
     for crossNum in range(len(test_indices)): # crossNum is each cross validation fold.
@@ -327,8 +320,7 @@ def cross_validation_split_all_data(n, KBs, supports, outputs, encodedMap):
                                                                    numpy.zeros([fileShapes1[0], fileShapes1[2] - len(
                                                                        outputs[trainIndices[sampleNum]][0])])])
 
-    return crossKBsTest, crossKBsTrain, crossSupportsTrain, crossSupportsTest, crossOutputsTrain, crossOutputsTest,\
-           crossLabels
+    return crossKBsTest, crossKBsTrain, crossSupportsTrain, crossSupportsTest, crossOutputsTrain, crossOutputsTest
 
 
 def get_labels_from_encoding(trueValues, predValues, decodeNonProperty, decodeProperty):
@@ -389,12 +381,13 @@ def convert_encoded_float_to_label(float, decodeNonProperty, decodeProperty):
     else:
         return '0'
 
+
 # $$
 
 
 def flat_system(n_epochs2, learning_rate2, trainlog, evallog, allTheData, n):
     """"The base line recurrent model for comparison with other rnn models."""
-    KBs_test, KBs_train, X_train, X_test, y_train, y_test, iriMap, decodeNonProperty, decodeProperty = allTheData
+    KBs_test, KBs_train, X_train, X_test, y_train, y_test, decodeNonProperty, decodeProperty = allTheData
 
     trainlog.write("Flat LSTM\nEpoch,Mean Squared Error,Root Mean Squared Error\n")
     evallog.write("\nFlat LSTM\n\n")
@@ -445,7 +438,7 @@ def flat_system(n_epochs2, learning_rate2, trainlog, evallog, allTheData, n):
 
 
 def deep_system(n_epochs2, learning_rate2, trainlog, evallog, allTheData, n):
-    KBs_test, KBs_train, X_train, X_test, y_train, y_test, iriMap, decodeNonProperty, decodeProperty = allTheData
+    KBs_test, KBs_train, X_train, X_test, y_train, y_test, decodeNonProperty, decodeProperty = allTheData
 
     trainlog.write("Deep LSTM\nEpoch,Mean Squared Error,Root Mean Squared Error\n")
     evallog.write("\nDeep LSTM\n\n")
@@ -496,7 +489,7 @@ def deep_system(n_epochs2, learning_rate2, trainlog, evallog, allTheData, n):
 
 
 def piecewise_system(n_epochs0, learning_rate0, trainlog, evallog, allTheData, n):
-    KBs_test, KBs_train, X_train, X_test, y_train, y_test, iriMap, decodeNonProperty, decodeProperty = allTheData
+    KBs_test, KBs_train, X_train, X_test, y_train, y_test, decodeNonProperty, decodeProperty = allTheData
 
     trainlog.write("Piecewise LSTM Part One\nEpoch,Mean Squared Error,Root Mean Squared Error\n")
     evallog.write("Piecewise LSTM Part One\n")
@@ -623,7 +616,7 @@ def run_nth_time(trainlog, evallog, epochs, learningRate, nthData, n):
     return evals1, evals2, evals3
 
 
-def n_times_cross_validate(n, epochs, learningRate, decodingNonProperty, decodingProperty, dataFile):
+def n_times_cross_validate(n, epochs, learningRate, dataFile):
     # Sets up logging.
     if not os.path.isdir("crossValidationFolds"): os.mkdir("crossValidationFolds")
     if not os.path.isdir("crossValidationFolds/training"): os.mkdir("crossValidationFolds/training")
@@ -632,17 +625,13 @@ def n_times_cross_validate(n, epochs, learningRate, decodingNonProperty, decodin
     if not os.path.isdir("crossValidationFolds/output"): os.mkdir("crossValidationFolds/output")
 
     # Gets raw data.
-    KB, supports, outputs, encodingMap, numConcepts, numRoles = convert_data_to_arrays(get_rdf_data(dataFile))
+    KB, supports, outputs, decodingNonProperty, decodingProperty = convert_data_to_arrays(get_rdf_data(dataFile))
 
     # Processes data.
 
-    allTheData = cross_validation_split_all_data(n, KB, supports, outputs, encodingMap)
+    allTheData = cross_validation_split_all_data(n, KB, supports, outputs)
 
-    KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests, labelss = allTheData
-
-    if isinstance(labelss, numpy.ndarray):
-        if (labelss.ndim and labelss.size) == 0:
-            labelss = None
+    KBs_tests, KBs_trains, X_trains, X_tests, y_trains, y_tests = allTheData
 
     evals = numpy.zeros((1, 5), dtype=numpy.float64)
     for i in range(n):
@@ -650,8 +639,7 @@ def n_times_cross_validate(n, epochs, learningRate, decodingNonProperty, decodin
         x = run_nth_time(open("crossValidationFolds/training/trainFold[{}].csv".format(i), "w"),
                          open("crossValidationFolds/evals/evalFold[{}].csv".format(i), "w"), epochs, learningRate,
                          (KBs_tests[i], KBs_trains[i], X_trains[i], X_tests[i], y_trains[i], y_tests[i],
-                          (labelss[i] if isinstance(labelss, numpy.ndarray) else None), decodingNonProperty,
-                          decodingProperty), i)
+                          decodingNonProperty, decodingProperty), i)
         evals = evals + x
 
     evals = evals / n
@@ -685,9 +673,9 @@ def read_inputs():
     """Collects arguments to be passed into the model."""
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-e", "--epochs", help="number of epochs for each system", type=int, default=20000)  # 20000
+    parser.add_argument("-e", "--epochs", help="number of epochs for each system", type=int, default=5000)  # 20000
     parser.add_argument("-l", "--learningRate", help="learning rate of each system", type=float, default=0.0001)
-    parser.add_argument("-c", "--cross", help="cross validation k", type=int, default=5)  # 10
+    parser.add_argument("-c", "--cross", help="cross validation k", type=int, default=3)  # 10
 
     args = parser.parse_args()
 
@@ -708,5 +696,5 @@ if __name__ == "__main__":
 
     args = read_inputs()
 
-    n_times_cross_validate(n=args.cross, epochs=args.epochs, learningRate=args.learningRate, decodingNonProperty=28,
-                           decodingProperty=14, dataFile="rdfData/schemaorg.json")
+    n_times_cross_validate(n=args.cross, epochs=args.epochs, learningRate=args.learningRate,
+                           dataFile="rdfData/dublin_core_2012_14_7.json")

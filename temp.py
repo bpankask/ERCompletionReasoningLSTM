@@ -1,1 +1,0 @@
-def lookingGlass(kb):
