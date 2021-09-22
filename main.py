@@ -812,7 +812,7 @@ if __name__ == "__main__":
     tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
     args = read_inputs()
-
+    # This version needs work.
     n_times_cross_validate(n=args.cross, epochs=args.epochs, learningRate=args.learningRate,
                            dataFile="rdfData/dublin.json")
     

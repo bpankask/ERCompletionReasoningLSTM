@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e80c685c-5e3f-47c3-af16-2dee6adca450" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JustInCase/spare_test_tires.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JustInCase/spare_tires.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rdfData/dublin_core_2012_6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snoutput/Dataset/0/KB0.owl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snoutput/Dataset/0/completedKB.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssaves/3foldData.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ERCompletionReasoningLSTM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ERCompletionReasoningLSTM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rdfData/dublin.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rdfData/gfo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saves/10foldData.npz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saves/1foldData.npz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saves/2foldData.npz" beforeDir="false" afterPath="$PROJECT_DIR$/saves/2foldData.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
